@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Curated Developer Guides - DEV Community</title>
+      <meta name="last-updated" content="2023-04-03 17:19:40 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1680542380">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://dev.to/assets/base-9367e1923af849f8b2501fbc3dbb112ec2a9c13b7b7095d2a6c9fa25064774e4.js" defer="defer"></script>
+        <script src="https://dev.to/packs/js/runtime~base-c78c7355d34f41bec100.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-e69699ee885daf54b5a1.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+      
+  <link rel="canonical" href="https://dev.to/guides" />
+  <meta name="description" content="Curated Developer Guides — DEV Community">
+  <meta name="keywords" content="software development, engineering, rails, javascript, ruby">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://dev.to/guides" />
+  <meta property="og:title" content="Curated Developer Guides — DEV Community" />
+  <meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+  <meta property="og:description" content="A collection of some of the most helpful guides for understanding and mastering specific subjects." />
+  <meta property="og:site_name" content="DEV Community" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thepracticaldev">
+  <meta name="twitter:title" content="Curated Developer Guides — DEV Community">
+  <meta name="twitter:description" content="A collection of some of the most helpful guides for understanding and mastering specific subjects.">
+  <meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192" />
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+      <meta property="forem:domain" content="dev.to" />
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-locale="en"
+        data-honeybadger-key="a45862f6"
+        data-deployed-at="2023-04-03T13:19:23Z"
+        data-latest-commit-id="ca89fbcec30810e4c4bd6409700676048edbee07"
+        data-ga-tracking="UA-71991109-1"
+        data-ga4-tracking-id="G-TYEM8Y3JN3"
+        >
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a9t6valjoki7itnyrvquunvw298cpf98" class="crayons-icon"><title id="a9t6valjoki7itnyrvquunvw298cpf98">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ajbp56tri1ar9xods58ref29m2r5afk3" aria-hidden="true" class="crayons-icon"><title id="ajbp56tri1ar9xods58ref29m2r5afk3">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="amhihpzpj7mdfjmrdoodggc5t7zm8nul" class="crayons-icon"><title id="amhihpzpj7mdfjmrdoodggc5t7zm8nul">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aq0qv5vbdi7pv5cl7ck54x3atx6gsqwf" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="aq0qv5vbdi7pv5cl7ck54x3atx6gsqwf">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper stories stories-show" data-current-page="stories-index">
+  <div id="page-content-inner">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+<main id="main-content">
+    <div class="crayons-layout crayons-layout--limited-l">
+      <div class="crayons-card text-styles text-padding">
+        <h1 class="fs-3xl s:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-4 mt-0">Curated Developer Guides</h1>
+
+        <p>This is a list of high quality guides on specific topics gathered for your learning pleasure. This list of community tutorials is an experimental directory <strong>starting with only CSS, Git, and a bit of JavaScript</strong>, but will be expanded to cover more overall topics. Enjoy diving in!</p>
+
+<p>If you want a post of yours featured here, make sure it is <em>high quality</em> and clearly includes all relevant keywords in the title and the first paragraph of the post. We want to maximize for readability, even when skimming.</p>
+
+
+<hr>
+
+<h2>
+  <a name="css-guides" href="#css-guides">
+  </a>
+  CSS Guides
+</h2>
+
+<h3>
+  <a name="css-align-guides" href="#css-align-guides">
+  </a>
+  <a href="https://dev.to/css-align-guides">CSS Align Guides</a>
+</h3>
+
+<p>Oh my, one of the trickier topics! If you're still confused after reading these great guides, it's not your fault, it's CSS.</p>
+
+<h3>
+  <a name="css-animation-guides" href="#css-animation-guides">
+  </a>
+  <a href="https://dev.to/css-animation-guides">CSS Animation Guides</a>
+</h3>
+
+<p>Animation in CSS is one of the most powerful things you can master for excellent UX development. Just don't overdo it!</p>
+
+<h3>
+  <a name="css-background-guides" href="#css-background-guides">
+  </a>
+  <a href="https://dev.to/css-background-guides">CSS Background Guides</a>
+</h3>
+
+<p>CSS Backgrounds can be a great way to add a splash of color to your pages, but there are a lot of options!</p>
+
+<h3>
+  <a name="css-border-guides" href="#css-border-guides">
+  </a>
+  <a href="https://dev.to/css-border-guides">CSS Border Guides</a>
+</h3>
+
+<p>Understanding all things border from <code>border-style</code> to <code>border-size</code> and using them all together.</p>
+
+<h3>
+  <a name="css-box-sizing-guides" href="#css-box-sizing-guides">
+  </a>
+  <a href="https://dev.to/css-box-sizing-guides">CSS Box Sizing Guides</a>
+</h3>
+
+<p>Box sizing can be a challenging overall topic. Fear not, however! All your questions will be answered in these great posts!</p>
+
+<h3>
+  <a name="css-display-guides" href="#css-display-guides">
+  </a>
+  <a href="https://dev.to/css-display-guides">CSS Display Guides</a>
+</h3>
+
+<p>Remember that different HTML elements come with default display properties! Please find all your display needs below.</p>
+
+<h3>
+  <a name="css-flex-guides" href="#css-flex-guides">
+  </a>
+  <a href="https://dev.to/css-flex-guides">CSS Flex Guides</a>
+</h3>
+
+<p>Flexbox and flex properties are incredibly useful and can be mixed with other CSS layout approaches!</p>
+
+<h3>
+  <a name="css-filter-guides" href="#css-filter-guides">
+  </a>
+  <a href="https://dev.to/css-filter-guides">CSS Filter Guides</a>
+</h3>
+
+<p>There is a lot you can do with CSS filters, from blurs to colors and more. It is worth understanding the possibilities here!</p>
+
+<h3>
+  <a name="css-font-guides" href="#css-font-guides">
+  </a>
+  <a href="https://dev.to/css-font-guides">CSS Font Guides</a>
+</h3>
+
+<p>Understanding <code>font-family</code>, <code>font-size</code> and more. Please leave a comment if you find any posts here helpful. These guides also include tips on loading fonts and handling fonts in general.</p>
+
+<h3>
+  <a name="css-grid-guides" href="#css-grid-guides">
+  </a>
+  <a href="https://dev.to/css-grid-guides">CSS Grid Guides</a>
+</h3>
+
+<p>Grid is a powerful concept. Read these guides carefully, there is a lot to learn!</p>
+
+<h3>
+  <a name="css-margin-guides" href="#css-margin-guides">
+  </a>
+  <a href="https://dev.to/css-margin-guides">CSS Margin Guides</a>
+</h3>
+
+<p>There is no right or wrong way to do CSS margins, but there are a lot of iffy ways!</p>
+
+<h3>
+  <a name="css-opacity-guides" href="#css-opacity-guides">
+  </a>
+  <a href="https://dev.to/css-opacity-guides">CSS Opacity Guides</a>
+</h3>
+
+<p>Let's be transparent: Opacity is an important part of a CSS tookkit.</p>
+
+<h3>
+  <a name="css-outline-guides" href="#css-outline-guides">
+  </a>
+  <a href="https://dev.to/css-outline-guides">CSS Outline Guides</a>
+</h3>
+
+<p>A CSS Outline is drawn <em>outside</em> the borders of the CSS. These are tricky concepts, please read the guides thoroughly.</p>
+
+<h3>
+  <a name="css-overflow-guides" href="#css-overflow-guides">
+  </a>
+  <a href="https://dev.to/css-overflow-guides">CSS Overflow Guides</a>
+</h3>
+
+<p>CSS Overflow will determine whether content clips or scrolls, etc. It's important to get right when you're not sure the size of the content you're dealing with.</p>
+
+<h3>
+  <a name="css-padding-guides" href="#css-padding-guides">
+  </a>
+  <a href="https://dev.to/css-padding-guides">CSS Padding Guides</a>
+</h3>
+
+<p>There's a lot of nuance in effective CSS padding.</p>
+
+<h3>
+  <a name="css-position-guides" href="#css-position-guides">
+  </a>
+  <a href="https://dev.to/css-position-guides">CSS Position Guides</a>
+</h3>
+
+<p><code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>! Oh my!!</p>
+
+<h3>
+  <a name="css-shadow-guides" href="#css-shadow-guides">
+  </a>
+  <a href="https://dev.to/css-shadow-guides">CSS Shadow Guides</a>
+</h3>
+
+<p><code>box-shadow</code>, <code>text-shadow</code> and everything about this property! Just don't overdo the shadows, that's never a good look. 😅</p>
+
+<h3>
+  <a name="css-transform-guides" href="#css-transform-guides">
+  </a>
+  <a href="https://dev.to/css-transform-guides">CSS Transform Guides</a>
+</h3>
+
+<p>If you understand how and when to use Transform, you can get a lot done! It's also important to understand the difference between Transform and Animnation. Read along!</p>
+
+<h3>
+  <a name="css-zindex-guides" href="#css-zindex-guides">
+  </a>
+  <a href="https://dev.to/css-z-index-guides">CSS Z-Index Guides</a>
+</h3>
+
+<p>Z-index is all about discipline and having a plan — easier said than done!</p>
+
+
+<hr>
+
+<h2>
+  <a name="git-guides" href="#git-guides">
+  </a>
+  Git Guides
+</h2>
+
+<h3>
+  <a name="git-add-guides" href="#git-add-guides">
+  </a>
+  <a href="https://dev.to/git-add-guides">Git Add Guides</a>
+</h3>
+
+<p>The git add command takes a change in the working directory and stages it. It is the precursor to <code>git commit</code> most of the time. Enjoy the guides here!</p>
+
+<h3>
+  <a name="git-branch-guides" href="#git-branch-guides">
+  </a>
+  <a href="https://dev.to/git-branch-guides">Git Branch Guides</a>
+</h3>
+
+<p>The git branch command lets you create, update, delete git branches depending on the arguments. Enjoy these guides</p>
+
+<h3>
+  <a name="git-checkout-guides" href="#git-checkout-guides">
+  </a>
+  <a href="https://dev.to/git-checkout-guides">Git Checkout Guides</a>
+</h3>
+
+<p>Git checkout is used to navigate between branches. Learn more in these guides</p>
+
+<h3>
+  <a name="git-config-guides" href="#git-config-guides">
+  </a>
+  <a href="https://dev.to/git-config-guides">Git Config Guides</a>
+</h3>
+
+<p>Git config allows you to set configuration values either locally and globally. Learn more with these guides.</p>
+
+<h3>
+  <a name="git-clone-guides" href="#git-clone-guides">
+  </a>
+  <a href="https://dev.to/git-clone-guides">Git Clone Guides</a>
+</h3>
+
+<p>The git clone command is used to point to an existing git repository and make a copy of that repo in a new directory. Learn more with these community guides.</p>
+
+<h3>
+  <a name="git-commit-guides" href="#git-commit-guides">
+  </a>
+  <a href="https://dev.to/git-commit-guides">Git Commit Guides</a>
+</h3>
+
+<p>The git commit command allows you to save your changes to the local git repository you are working in. Before committing, you meed to <code>git add</code> the changes. Learn more in these guides.</p>
+
+<h3>
+  <a name="git-diff-guides" href="#git-diff-guides">
+  </a>
+  <a href="https://dev.to/git-diff-guides">Git Diff Guides</a>
+</h3>
+
+<p>Git diff helps track the differences between changes to a file. It is a multi-use command which can be executed in different contexts. Learn more in these guides.</p>
+
+<h3>
+  <a name="git-merge-guides" href="#git-merge-guides">
+  </a>
+  <a href="https://dev.to/git-merge-guides">Git Merge Guides</a>
+</h3>
+
+<p>Git merge helps take multiple branches and combine them. Learn more in these guides.</p>
+
+<h3>
+  <a name="git-log-guides" href="#git-log-guides">
+  </a>
+  <a href="https://dev.to/git-log-guides">Git Log Guides</a>
+</h3>
+
+<p>Git log will print a the last <code>n</code> commits in a repo. Learn more in the guides below</p>
+
+<h3>
+  <a name="git-pull-guides" href="#git-pull-guides">
+  </a>
+  <a href="https://dev.to/git-pull-guides">Git Pull Guides</a>
+</h3>
+
+<p>Git pull downloads files from a remote repo and updates your current HEAD. Learn more in these guides.</p>
+
+<h3>
+  <a name="git-push-guides" href="#git-push-guides">
+  </a>
+  <a href="https://dev.to/git-push-guides">Git Push Guides</a>
+</h3>
+
+<p>Git push is used to tajke local files and upload them to a remote git repo. Learn more in these guides below.</p>
+
+<h3>
+  <a name="git-remote-guides" href="#git-remote-guides">
+  </a>
+  <a href="https://dev.to/git-remote-guides">Git Remote Guides</a>
+</h3>
+
+<p>The git remote command lets you create, update, delete and view remote repos, such as on GitHub. Learn more below.</p>
+
+<h3>
+  <a name="git-revert-guides" href="#git-revert-guides">
+  </a>
+  <a href="https://dev.to/git-revert-guides">Git Revert Guides</a>
+</h3>
+
+<p>Git revert allows you to change a commit history. Learn more in these community guides below.</p>
+
+<h3>
+  <a name="git-stash-guides" href="#git-stash-guides">
+  </a>
+  <a href="https://dev.to/git-stash-guides">Git Stash Guides</a>
+</h3>
+
+<p>Git stash is used to record the current state of work, but reverts the context back to a clean slate before the changes were made. Learn more below.</p>
+
+
+<hr>
+
+<h2>
+  <a name="javascript-guides" href="#javascript-guides">
+  </a>
+  JavaScript Guides
+</h2>
+
+<h3>
+  <a name="javascript-array-guides" href="#javascript-array-guides">
+  </a>
+  <a href="https://dev.to/javascript-array-guides">JavaScript Array Guides</a>
+</h3>
+
+<p>Let's get to know the functionality of the JavaScript array object. Hopefully you find these guides helpful.</p>
+
+<h3>
+  <a name="javascript-arrow-function-guides" href="#javascript-arrow-function-guides">
+  </a>
+  <a href="https://dev.to/javascript-arrow-function-guides">JavaScript Arrow Function Guides</a>
+</h3>
+
+<p>Let's make sure we get the syntax correct for JavaScript Arrow Functions and differentiate them from other ways of defining functions in JavaScript. Browse below for key guides.</p>
+
+<h3>
+  <a name="javascript-async-guides" href="#javascript-async-guides">
+  </a>
+  <a href="https://dev.to/javascript-async-guides">JavaScript Async Guides</a>
+</h3>
+
+<p>The JavaScript Async function is one of the most powerful, yet sometimes unintuitive concepts in JavaScript. Hopefully you will have a better grip over async and async await once you dive into these guides.</p>
+
+<h3>
+  <a name="javascript-date-guides" href="#javascript-date-guides">
+  </a>
+  <a href="https://dev.to/javascript-date-guides">JavaScript Date Guides</a>
+</h3>
+
+<p>JavaScript date objects, like many other things in JavaScript, can be tricky. Dates, in general, can be tricky. Thankfully we have a lot of great guides here.</p>
+
+<h3>
+  <a name="javascript-event-guides" href="#javascript-event-guides">
+  </a>
+  <a href="https://dev.to/javascript-event-guides">JavaScript Event Guides</a>
+</h3>
+
+<p>A JavaScript Event, in a web dev context, is how a lot of interactivity flows. Sometimes an event is abstracted away by the framework, and sometimes you listen directly. No matter what, hopefully you find these guides helpful!</p>
+
+<h3>
+  <a name="javascript-map-guides" href="#javascript-map-guides">
+  </a>
+  <a href="https://dev.to/javascript-map-guides">JavaScript Map Guides</a>
+</h3>
+
+<p>The JavaScript Map functionality is used consistently to iterate over arrays in a consise and useful way. Use these guides to dive into all the JS Map nuance.</p>
+
+<h3>
+  <a name="javascript-promise-guides" href="#javascript-promise-guides">
+  </a>
+  <a href="https://dev.to/javascript-promise-guides">JavaScript Promise Guides</a>
+</h3>
+
+<p>A JavaScript Promise is one of several ways to do asynchronous programming in JavaScript, and progress from one part of a program to the next. Get into all the details with these guides.</p>
+
+<h3>
+  <a name="javascript-string-guides" href="#javascript-string-guides">
+  </a>
+  <a href="https://dev.to/javascript-string-guides">JavaScript String Guides</a>
+</h3>
+
+<p>JavaScript strings are not always so straightforward, especially how they interpolate and can be interpreted as numbers. Let's get to the bottom of all the functionality in these guides.</p>
+
+
+<hr>
+
+<h2>
+  <a name="react-guides" href="#react-guides">
+  </a>
+  React Guides
+</h2>
+
+<h3>
+  <a name="react-component-guides" href="#react-component-guides">
+  </a>
+  <a href="https://dev.to/react-component-guides">React Component Guides</a>
+</h3>
+
+<p>React Components are the fundamental independent and reusable bits of code in a React program.</p>
+
+<h3>
+  <a name="react-props-guides" href="#react-props-guides">
+  </a>
+  <a href="https://dev.to/react-props-guides">React Props Guides</a>
+</h3>
+
+<p>React Props are arguments which are passed into React components.</p>
+
+<h3>
+  <a name="react-state-guides" href="#react-state-guides">
+  </a>
+  <a href="https://dev.to/react-state-guides">React State Guides</a>
+</h3>
+
+<p>React State allows us to manage changing data in an application.</p>
+
+<h3>
+  <a name="react-usestate-guides" href="#react-usestate-guides">
+  </a>
+  <a href="https://dev.to/react-usestate-guides">React useState Guides</a>
+</h3>
+
+<p>useState allows you to preservevalues between the function calls.</p>
+
+<h3>
+  <a name="react-useeffect-guides" href="#react-useeffect-guides">
+  </a>
+  <a href="https://dev.to/react-useeffect-guides">React useEffect Guides</a>
+</h3>
+
+<p>The useEffect Hook lets you perform side effects in your components.</p>
+
+<h3>
+  <a name="react-usecontext-guides" href="#react-usecontext-guides">
+  </a>
+  <a href="https://dev.to/react-usecontext-guides">React useContext Guides</a>
+</h3>
+
+<p>useContext takes the Context as parameter to retrieve the value from it.</p>
+
+<h3>
+  <a name="react-usereducer-guides" href="#react-usereducer-guides">
+  </a>
+  <a href="https://dev.to/react-usereducer-guides">React useReducer Guides</a>
+</h3>
+
+<p>useReducer allows for custom state logic.</p>
+
+<h3>
+  <a name="react-usecallback-guides" href="#react-usecallback-guides">
+  </a>
+  <a href="https://dev.to/react-usecallback-guides">React useCallback Guides</a>
+</h3>
+
+<p>useCallback is used when a child is rerendering again and again without need.</p>
+
+<h3>
+  <a name="react-usememo-guides" href="#react-usememo-guides">
+  </a>
+  <a href="https://dev.to/react-usememo-guides">React useMemo Guides</a>
+</h3>
+
+<p>useMemo returns a memoized value so that it does not need to be recalculated.</p>
+
+<h3>
+  <a name="react-useref-guides" href="#react-useref-guides">
+  </a>
+  <a href="https://dev.to/react-useref-guides">React useRef Guides</a>
+</h3>
+
+<p>useRef persists values between renders.</p>
+
+<p><strong>Happy coding!</strong></p>
+
+
+      </div>
+    </div>
+</main>
+<div id="IS_CENTERED_PAGE"></div>
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  </body>
+  </html>

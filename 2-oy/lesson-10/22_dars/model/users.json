@@ -1,0 +1,82 @@
+[
+    {
+        "id": "5001c998-33fb-4cbc-874f-4c900b9326ed",
+        "username": "Eshmatjon",
+        "email": "swagger_example@gmail.com",
+        "password": "swagger1234",
+        "isLogged": false,
+        "age": 12
+    },
+    {
+        "id": "02ba05dd-50d4-4632-a376-31547685e0e2",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swagger1234",
+        "isLogged": false,
+        "age": 12
+    },
+    {
+        "id": "738b93b3-ddeb-4418-b9bf-7eb5c06c725f",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swagge",
+        "isLogged": false,
+        "age": 12
+    },
+    {
+        "id": "3dd50f59-7a4a-4697-94f9-bc6a102ea13f",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swagger1234",
+        "isLogged": false,
+        "age": "12"
+    },
+    {
+        "id": "6e7958bc-d845-4f32-8c3b-5832eba26357",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swagger1234",
+        "isLogged": false,
+        "age": "12"
+    },
+    {
+        "id": "e3038b1f-70b7-49f6-9b18-fc8239ad6beb",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swagger1234",
+        "isLogged": false,
+        "age": "12"
+    },
+    {
+        "id": "a10b6b27-142c-42ca-a7a0-93219f8393aa",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swagger1234",
+        "isLogged": false,
+        "age": 12
+    },
+    {
+        "id": "325e395f-fbbd-4b1c-9aa7-31e71cb9158e",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swagger",
+        "isLogged": false,
+        "age": 12
+    },
+    {
+        "id": "5bdb8d12-e6cc-43e8-9097-2d65aeed9f6a",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swag",
+        "isLogged": false,
+        "age": 12
+    },
+    {
+        "id": "0f0f3327-3d2e-4b2e-93da-734102c0f718",
+        "username": "Anvar",
+        "email": "swagger_example@gmail.com",
+        "password": "swagger1234",
+        "isLogged": false,
+        "age": 12
+    }
+]

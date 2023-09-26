@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const router = express_1.Router();
+const fruit_controller_1 = require("../controllers/fruit.controller");
+const TokenMdw_1 = require("../Middleware/TokenMdw");
+router.get("/", TokenMdw_1.tokenMdw, fruit_controller_1.getFruits);
+router.get("/:fruit_id", TokenMdw_1.tokenMdw, fruit_controller_1.getFruitById);
+router.post("/", TokenMdw_1.tokenMdw, fruit_controller_1.createFruit);
+router.put("/:fruit_id", TokenMdw_1.tokenMdw, fruit_controller_1.updateFruit);
+router.delete("/:fruit_id", TokenMdw_1.tokenMdw, fruit_controller_1.deleteFruit);
+exports.default = router;

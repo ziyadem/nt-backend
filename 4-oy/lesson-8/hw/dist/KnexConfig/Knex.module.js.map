@@ -1,0 +1,1 @@
+{"version":3,"file":"Knex.module.js","sourceRoot":"","sources":["../../src/KnexConfig/Knex.module.ts"],"names":[],"mappings":";;;;;;;;;AACA,2CAAwC;AACxC,6CAA0C;AAO1C,IAAa,gBAAgB,GAA7B,MAAa,gBAAgB;CAAG,CAAA;AAAnB,gBAAgB;IAL5B,IAAA,eAAM,EAAC;QACN,OAAO,EAAE,EAAE;QACX,SAAS,EAAE,CAAC,uBAAU,CAAC;QACvB,OAAO,EAAE,CAAC,uBAAU,CAAC;KACtB,CAAC;GACW,gBAAgB,CAAG;AAAnB,4CAAgB"}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <button id="btn">del</button>
+    <script>
+      (async () => {
+        let users = await fetch("http://localhost:5000/users");
+        let userlar = await users.json();
+        for (let user of userlar) {
+          let li = `<li>
+            <span>${user.username}</span>
+            <img width="300" src=${user.imagePath} alt="">
+
+        </li>`;
+          list.innerHTML += li;
+        }
+      })();
+    </script>
+  </body>
+</html>

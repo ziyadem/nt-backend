@@ -1,0 +1,32 @@
+[
+    {
+        "id": "acc6f8fa-4474-4de8-9746-4568ed8e0a21",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "apple",
+        "color": "red"
+    },
+    {
+        "id": "c994481a-9166-401a-a325-3a4beb1de573",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "chery",
+        "color": "green"
+    },
+    {
+        "id": "c0e25a5d-d40a-4daf-a7fa-42ead651d37a",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "banana",
+        "color": "yellow"
+    },
+    {
+        "id": "2e88457c-84ab-4d50-bb8c-9b49c9c85dec",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "fruit",
+        "color": "blabla"
+    },
+    {
+        "id": "1e2d71ac-0839-48e1-9b4c-ecbd16901cd3",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "hurmo",
+        "color": "brawn"
+    }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "about_os": "node os.js",
+    "about_url": "node url.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

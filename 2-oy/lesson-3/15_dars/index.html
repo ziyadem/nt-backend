@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+
+
+        const commentURI = 'https://jsonplaceholder.typicode.com/users';
+
+        const xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+            if (xhr.status === 200) {
+                const comments = JSON.parse(xhr.responseText);
+                console.log(comments);
+            } else {
+                console.log('Server response:', xhr.status);
+            }
+        };
+        xhr.onerror = () => {
+            console.log('An error occurred, not able to process the request.');
+        };
+        xhr.open('GET', commentURI, true);
+        xhr.send();
+    </script>
+
+</body>
+
+</html>

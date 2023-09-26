@@ -1,0 +1,36 @@
+datasource db {
+    url=env("DATABASE_URL")
+    provider = "postgresql"
+    extensions = [uuidOssp(map: "uuid-ossp")]
+}
+
+generator create {
+    provider="prisma-client-js"
+    previewFeatures = ["postgresqlExtensions"]
+}
+
+model Author{
+    id      String  @map("id")  @db.Uuid()          @default(uuid())
+    fname    String  @map("name")  @db.VarChar(32) 
+    lname    String  @map("lname")  @db.VarChar(32) 
+    email    String  @map("email")  @db.VarChar(100) 
+    password    String  @map("password")  @db.VarChar(100) 
+
+    books Book[]
+
+    @@id([id])
+    @@unique([email])
+    @@map("authors")
+}
+
+model Book{
+    id          String      @map("id")          @db.Uuid()          @default(uuid())
+    title       String      @map("title")       @db.VarChar(250) 
+    authorId    String      @map("author_id")   @db.Uuid() 
+    createAt    DateTime    @map("create_at")                       @default(now())
+    
+    author Author @relation(fields: [authorId], references: [id],onDelete: Cascade,onUpdate: NoAction)
+
+    @@id([id])
+    @@map("books")
+}

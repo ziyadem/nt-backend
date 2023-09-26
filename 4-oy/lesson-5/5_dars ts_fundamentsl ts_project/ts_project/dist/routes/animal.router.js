@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const router = express_1.Router();
+const animal_controller_1 = require("../controllers/animal.controller");
+const TokenMdw_1 = require("../Middleware/TokenMdw");
+router.get("/", TokenMdw_1.tokenMdw, animal_controller_1.getAnimals);
+router.get("/:animal_id", TokenMdw_1.tokenMdw, animal_controller_1.getAnimalById);
+router.post("/", TokenMdw_1.tokenMdw, animal_controller_1.createAnimal);
+router.put("/:animal_id", TokenMdw_1.tokenMdw, animal_controller_1.updateAnimal);
+router.delete("/:animal_id", TokenMdw_1.tokenMdw, animal_controller_1.deleteAnimal);
+exports.default = router;

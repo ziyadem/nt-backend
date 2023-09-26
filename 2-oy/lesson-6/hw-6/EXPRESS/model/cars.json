@@ -1,0 +1,28 @@
+[
+    {
+        "id": "fea467d5-738d-443f-8f15-5cfecf36ba9b",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "malibu",
+        "price": "1113",
+        "color": "123"
+    },
+    {
+        "id": "738ad29d-053d-4c7f-882f-43404db4021f",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "fereri",
+        "price": "111000000000000000000000",
+        "color": "111"
+    },
+    {
+        "id": "0283e46b-4fdc-4ad6-82ef-19c3463bcb22",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "jentra",
+        "price": "12322222222"
+    },
+    {
+        "id": "cf81fda8-a0c7-41ee-b1c1-b1a27b0ac2b5",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "Captiva",
+        "price": "10000000000000000"
+    }
+]

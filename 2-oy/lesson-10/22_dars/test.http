@@ -1,0 +1,33 @@
+
+POST http://localhost:3030/create_user
+Content-Type: application/json
+
+{
+        "username": 12,
+        "email": "swagger_example@gmail.com",
+        "password": "swag",
+        "isLogged": false,
+        "age": 12
+}
+
+###
+GET http://localhost:3030/user_list
+
+###
+GET http://localhost:3030/get_user/5001c998-33fb-4cbc-874f-4c900b9326ed
+
+###
+DELETE http://localhost:3030/get_user/5001c998-33fb-4cbc-874f-4c900b9326ed
+
+###
+PUT http://localhost:3030/update_user/97cf3e68-dee4-4e24-a10c-35bfe525ac21
+Content-Type: application/json
+
+{
+        "username": "Toshmat",
+        "email": "swagger_example@gmail.com",
+        "password": "swag",
+        "comfirm_password": "swag",
+        "isLogged": false,
+        "age": 12
+}

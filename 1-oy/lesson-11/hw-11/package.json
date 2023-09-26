@@ -1,0 +1,17 @@
+{
+  "name": "hw-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "create_file": "node create.js",
+    "write_file": "node write.js",
+    "read_file": "node read.js",
+    "delete_file": "node delete.js",
+    "rename_file": "node rename.js",
+    "update_file": "node update.js"
+    
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Penetrationtesting - DEV Community</title>
+      <meta name="last-updated" content="2023-04-04 05:53:55 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1680587635">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://dev.to/assets/base-9367e1923af849f8b2501fbc3dbb112ec2a9c13b7b7095d2a6c9fa25064774e4.js" defer="defer"></script>
+        <script src="https://dev.to/packs/js/runtime~base-c78c7355d34f41bec100.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-e69699ee885daf54b5a1.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+      
+  
+<link rel="canonical" href="https://dev.to/t/penetrationtesting" />
+<meta name="description" content="penetrationtesting content on DEV Community">
+<meta name="keywords" content="software development, engineering, penetrationtesting">
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dev.to/t/penetrationtesting" />
+<meta property="og:title" content="Penetrationtesting" />
+<meta property="og:description" content="Penetrationtesting content on DEV Community" />
+<meta property="og:site_name" content="DEV Community" />
+
+<meta name="twitter:site" content="@thepracticaldev">
+<meta name="twitter:creator" content="@Penetrationtesting">
+<meta name="twitter:title" content="Penetrationtesting">
+<meta name="twitter:description" content="Penetrationtesting content on DEV Community">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+  <meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192" />
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+      <meta property="forem:domain" content="dev.to" />
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-locale="en"
+        data-honeybadger-key="a45862f6"
+        data-deployed-at="2023-04-03T21:49:30Z"
+        data-latest-commit-id="b412daa3eaf890d4c0c17fe5e4412f1193910e30"
+        data-ga-tracking="UA-71991109-1"
+        data-ga4-tracking-id="G-TYEM8Y3JN3"
+        >
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ayongsjw4ll6q4rtzc1vfl0r18bs9l3" class="crayons-icon"><title id="ayongsjw4ll6q4rtzc1vfl0r18bs9l3">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a8nehxm88wubs64haup80t18ybl40pxo" aria-hidden="true" class="crayons-icon"><title id="a8nehxm88wubs64haup80t18ybl40pxo">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="apioonfurkwj33nleilss6m3znep0l1q" class="crayons-icon"><title id="apioonfurkwj33nleilss6m3znep0l1q">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ajc6e7864lium1lizbjrq8thajtnevpj" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="ajc6e7864lium1lizbjrq8thajtnevpj">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper tagged_articles tagged_articles-index" data-current-page="tagged_articles-index">
+  <div id="page-content-inner">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+      <div class="crayons-layout">
+    <header class="crayons-card branded-4 p-4 l:p-6 spec__tag-header" style="border-top-color:  ">
+      <div class="flex">
+        <div class="flex flex-col w-100 justify-center">
+          <div class="flex justify-between items-center">
+            <h1 class="crayons-title">
+                <span class="opacity-50">#</span>
+                penetrationtesting
+            </h1>
+              <button
+                id="user-follow-butt"
+                class="crayons-btn follow-action-button"
+                data-info='{&quot;id&quot;:12469,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;penetrationtesting&quot;}'>
+                Follow
+              </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="home sub-home" id="index-container"
+      data-params="{&quot;tag&quot;:&quot;penetrationtesting&quot;,&quot;sort_by&quot;:&quot;hotness_score&quot;,&quot;sort_direction&quot;:&quot;desc&quot;}" data-which=""
+      data-tag="penetrationtesting"
+      data-feed="base-feed"
+      data-requires-approval="false"
+      data-articles-since="">
+      <div id="sidebar-wrapper-left" class="sidebar-wrapper sidebar-wrapper-left">
+    <div class="sidebar-bg" id="sidebar-bg-left"></div>
+    <aside class="side-bar">
+        <div class="widget js-policy-article-create">
+          <a class="crayons-btn crayons-btn--s" href="/new/penetrationtesting">
+            Create Post
+          </a>
+</div>      <div class="sidebar-data">
+        <div>
+          9 Posts Published
+        </div>
+      </div>
+    </aside>
+  </div>
+
+    <main class="articles-list" id="main-content" data-follow-button-container="true">
+      <header class="flex items-center p-2 m:p-0 m:pb-2" id="on-page-nav-controls">
+        <h1 class="screen-reader-only">Posts</h1>
+        <button type="button" class="crayons-btn crayons-btn--ghost crayons-btn--icon mr-2 inline-block m:hidden mb-auto" id="on-page-nav-butt-left" aria-label="nav-button-left">
+          <div class="crayons-icon nav-icon ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aoynwn1rsldbhlf69bt6l7d7zklmoptu" class="crayons-icon"><title id="aoynwn1rsldbhlf69bt6l7d7zklmoptu">Left menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+          </div>
+        </button>
+          <div class="flex-1 flex items-center justify-between">
+            <div class="crayons-notice w-100" aria-live="polite">👋 <a href="/enter">Sign in</a> for the ability to sort posts by <strong>relevant</strong>, <strong>latest</strong>, or <strong>top</strong>.</div>
+          </div>
+
+        <button type="button" class="crayons-btn crayons-btn--ghost crayons-btn--icon ml-2 inline-block l:hidden mb-auto" id="on-page-nav-butt-right" aria-label="nav-button-right">
+          <div class="crayons-icon nav-icon ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a6qmwbx7bjhpi0d94beeasnglr5srhiz" class="crayons-icon"><title id="a6qmwbx7bjhpi0d94beeasnglr5srhiz">Right menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+          </div>
+        </button>
+      </header>
+
+      <div class="substories" id="substories">
+          <div id="reaction-category-resources" class="hidden" aria-hidden="true">
+    <img data-name="Like" data-slug="like" data-position="1" src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+    <img data-name="Unicorn" data-slug="unicorn" data-position="2" src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+    <img data-name="Exploding Head" data-slug="exploding_head" data-position="3" src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="18" height="18" />
+    <img data-name="Raised Hands" data-slug="raised_hands" data-position="4" src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="18" height="18" />
+    <img data-name="Fire" data-slug="fire" data-position="5" src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="18" height="18" />
+</div>
+
+
+<div class="crayons-story " data-content-user-id="1050529">
+  <a href="/jsquared/coding-a-port-scanner-with-python-5he7" aria-labelledby="article-link-1425423" class="crayons-story__hidden-navigation-link">Coding a Port Scanner with Python</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/jsquared" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--xp0r0x0I--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1050529/52043443-89bc-4028-88dd-fb5b75f7eb74.jpg" alt="jsquared profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/jsquared" class="crayons-story__secondary fw-medium m:hidden">
+              James N.
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1425423" aria-controls="story-author-preview-content-1425423" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="James N. profile details">
+                James N.
+              </button>
+              <div
+                id="story-author-preview-content-1425423"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/jsquared" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--xp0r0x0I--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1050529/52043443-89bc-4028-88dd-fb5b75f7eb74.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">James N.</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:1050529,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;James N.&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="1050529"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/jsquared/coding-a-port-scanner-with-python-5he7" class="crayons-story__tertiary fs-xs"><time datetime="2023-04-04T05:34:51Z">Apr 4</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1680586491"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/jsquared/coding-a-port-scanner-with-python-5he7" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--XT34EZzB--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w7fz1freyzj8vbekb51k.jpg" id="article-link-1425423">
+          Coding a Port Scanner with Python
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(27, 172, 128, 0.10);
+        --tag-prefix: #1bac80;
+        --tag-bg-hover: rgba(27, 172, 128, 0.10);
+        --tag-prefix-hover: #1bac80;
+      " href="/t/security"><span class="crayons-tag__prefix">#</span>security</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/jsquared/coding-a-port-scanner-with-python-5he7" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="1425423" aria-label="Add a comment to post - Coding a Port Scanner with Python">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">1<span class="hidden s:inline"> reaction</span></span>
+            </div>
+          </a>
+            <a href="/jsquared/coding-a-port-scanner-with-python-5he7#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Coding a Port Scanner with Python">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ab5stileqo8rctp5k4q5sik7foondzqp" class="crayons-icon"><title id="ab5stileqo8rctp5k4q5sik7foondzqp">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            3 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1425423"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1425423"
+              data-article-author-id="1050529"
+              aria-label="Save post Coding a Port Scanner with Python to reading list"
+              title="Save post Coding a Port Scanner with Python to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="824759">
+  <a href="/itminds/a-beginners-guide-to-penetration-testing-part-2-45h8" aria-labelledby="article-link-1073096" class="crayons-story__hidden-navigation-link">A Beginner&#39;s Guide to Penetration Testing (Part 2)</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+          <a class="crayons-logo crayons-logo--l" href="/itminds">
+            <img alt="IT Minds logo" src="https://res.cloudinary.com/practicaldev/image/fetch/s--MUFMl0QO--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/796/47de057a-d004-4bff-ad08-2066b179011c.png" class="crayons-logo__image" loading="lazy" />
+          </a>
+
+          <a href="/habitminds" class="crayons-avatar  crayons-avatar--s absolute -right-2 -bottom-2 border-solid border-2 border-base-inverted  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5HvIZ8o9--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/824759/bdead5c3-04dd-4c6d-92da-ae2911c8c2b1.png" alt="habitminds profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/habitminds" class="crayons-story__secondary fw-medium m:hidden">
+              Hjalte Abelskov
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1073096" aria-controls="story-author-preview-content-1073096" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Hjalte Abelskov profile details">
+                Hjalte Abelskov
+              </button>
+              <div
+                id="story-author-preview-content-1073096"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/habitminds" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--5HvIZ8o9--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/824759/bdead5c3-04dd-4c6d-92da-ae2911c8c2b1.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Hjalte Abelskov</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:824759,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Hjalte Abelskov&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="824759"></div>
+                </div>
+              </div>
+            </div>
+
+            <span>
+              <span class="crayons-story__tertiary fw-normal"> for </span><a href="/itminds" class="crayons-story__secondary fw-medium">IT Minds</a>
+            </span>
+          </div>
+          <a href="/itminds/a-beginners-guide-to-penetration-testing-part-2-45h8" class="crayons-story__tertiary fs-xs"><time datetime="2022-05-04T11:23:20Z">May 4 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1651663400"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/itminds/a-beginners-guide-to-penetration-testing-part-2-45h8" data-preload-image="" id="article-link-1073096">
+          A Beginner&#39;s Guide to Penetration Testing (Part 2)
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(0, 131, 53, 0.10);
+        --tag-prefix: #008335;
+        --tag-bg-hover: rgba(0, 131, 53, 0.10);
+        --tag-prefix-hover: #008335;
+      " href="/t/beginners"><span class="crayons-tag__prefix">#</span>beginners</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/hacking"><span class="crayons-tag__prefix">#</span>hacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/hackthebox"><span class="crayons-tag__prefix">#</span>hackthebox</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/itminds/a-beginners-guide-to-penetration-testing-part-2-45h8" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="1073096" aria-label="Add a comment to post - A Beginner&#39;s Guide to Penetration Testing (Part 2)">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">7<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/itminds/a-beginners-guide-to-penetration-testing-part-2-45h8#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - A Beginner&#39;s Guide to Penetration Testing (Part 2)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="akhxfxtlkb4o9qmh2wxkoz3n38n5jao6" class="crayons-icon"><title id="akhxfxtlkb4o9qmh2wxkoz3n38n5jao6">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            6 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1073096"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1073096"
+              data-article-author-id="824759"
+              aria-label="Save post A Beginner&#39;s Guide to Penetration Testing (Part 2) to reading list"
+              title="Save post A Beginner&#39;s Guide to Penetration Testing (Part 2) to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="824759">
+  <a href="/itminds/a-beginners-guide-to-penetration-testing-part-1-4ki0" aria-labelledby="article-link-1009172" class="crayons-story__hidden-navigation-link">A Beginner&#39;s Guide to Penetration Testing (Part 1)</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+          <a class="crayons-logo crayons-logo--l" href="/itminds">
+            <img alt="IT Minds logo" src="https://res.cloudinary.com/practicaldev/image/fetch/s--MUFMl0QO--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/796/47de057a-d004-4bff-ad08-2066b179011c.png" class="crayons-logo__image" loading="lazy" />
+          </a>
+
+          <a href="/habitminds" class="crayons-avatar  crayons-avatar--s absolute -right-2 -bottom-2 border-solid border-2 border-base-inverted  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5HvIZ8o9--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/824759/bdead5c3-04dd-4c6d-92da-ae2911c8c2b1.png" alt="habitminds profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/habitminds" class="crayons-story__secondary fw-medium m:hidden">
+              Hjalte Abelskov
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1009172" aria-controls="story-author-preview-content-1009172" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Hjalte Abelskov profile details">
+                Hjalte Abelskov
+              </button>
+              <div
+                id="story-author-preview-content-1009172"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/habitminds" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--5HvIZ8o9--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/824759/bdead5c3-04dd-4c6d-92da-ae2911c8c2b1.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Hjalte Abelskov</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:824759,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Hjalte Abelskov&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="824759"></div>
+                </div>
+              </div>
+            </div>
+
+            <span>
+              <span class="crayons-story__tertiary fw-normal"> for </span><a href="/itminds" class="crayons-story__secondary fw-medium">IT Minds</a>
+            </span>
+          </div>
+          <a href="/itminds/a-beginners-guide-to-penetration-testing-part-1-4ki0" class="crayons-story__tertiary fs-xs"><time datetime="2022-04-21T11:52:13Z">Apr 21 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1650541933"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/itminds/a-beginners-guide-to-penetration-testing-part-1-4ki0" data-preload-image="" id="article-link-1009172">
+          A Beginner&#39;s Guide to Penetration Testing (Part 1)
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(0, 131, 53, 0.10);
+        --tag-prefix: #008335;
+        --tag-bg-hover: rgba(0, 131, 53, 0.10);
+        --tag-prefix-hover: #008335;
+      " href="/t/beginners"><span class="crayons-tag__prefix">#</span>beginners</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/hacking"><span class="crayons-tag__prefix">#</span>hacking</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/itminds/a-beginners-guide-to-penetration-testing-part-1-4ki0" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="1009172" aria-label="Add a comment to post - A Beginner&#39;s Guide to Penetration Testing (Part 1)">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">8<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/itminds/a-beginners-guide-to-penetration-testing-part-1-4ki0#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - A Beginner&#39;s Guide to Penetration Testing (Part 1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="an8to11mhgjz6w5dhsak8kohshqcb0ut" class="crayons-icon"><title id="an8to11mhgjz6w5dhsak8kohshqcb0ut">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            5 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1009172"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1009172"
+              data-article-author-id="824759"
+              aria-label="Save post A Beginner&#39;s Guide to Penetration Testing (Part 1) to reading list"
+              title="Save post A Beginner&#39;s Guide to Penetration Testing (Part 1) to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="379152">
+  <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212" aria-labelledby="article-link-353764" class="crayons-story__hidden-navigation-link">Getting started with Penetration Testing!</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/chinmaytrpth2" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--UtjlYFPR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/379152/5fc39eed-6181-42ec-8c2f-670fe4f0f259.jpeg" alt="chinmaytrpth2 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/chinmaytrpth2" class="crayons-story__secondary fw-medium m:hidden">
+              Chinmaya Tripathi
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-353764" aria-controls="story-author-preview-content-353764" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Chinmaya Tripathi profile details">
+                Chinmaya Tripathi
+              </button>
+              <div
+                id="story-author-preview-content-353764"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/chinmaytrpth2" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--UtjlYFPR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/379152/5fc39eed-6181-42ec-8c2f-670fe4f0f259.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Chinmaya Tripathi</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:379152,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Chinmaya Tripathi&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="379152"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212" class="crayons-story__tertiary fs-xs"><time datetime="2020-06-12T18:14:25Z">Jun 12 &#39;20</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1591985665"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--fdniT8US--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/eo98zkvbbjlsnylf13gl.jpg" id="article-link-353764">
+          Getting started with Penetration Testing!
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(0, 131, 53, 0.10);
+        --tag-prefix: #008335;
+        --tag-bg-hover: rgba(0, 131, 53, 0.10);
+        --tag-prefix-hover: #008335;
+      " href="/t/beginners"><span class="crayons-tag__prefix">#</span>beginners</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="353764" aria-label="Add a comment to post - Getting started with Penetration Testing!">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">22<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Getting started with Penetration Testing!">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="arl59hzwe0d68yv8gxr305umh9q4f5bw" class="crayons-icon"><title id="arl59hzwe0d68yv8gxr305umh9q4f5bw">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              1<span class="hidden s:inline"> comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            4 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-353764"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="353764"
+              data-article-author-id="379152"
+              aria-label="Save post Getting started with Penetration Testing! to reading list"
+              title="Save post Getting started with Penetration Testing! to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="252547">
+  <a href="/cygnetinfotech/penetration-testing-save-your-business-from-a-hacker-s-paradise-4f8e" aria-labelledby="article-link-224199" class="crayons-story__hidden-navigation-link">Penetration Testing: Save Your Business from a Hacker’s Paradise</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/cygnetinfotech" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cD0MSFtT--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/252547/b056d787-686e-48f8-ba35-37e150a53804.jpg" alt="cygnetinfotech profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/cygnetinfotech" class="crayons-story__secondary fw-medium m:hidden">
+              Harshal Jani
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-224199" aria-controls="story-author-preview-content-224199" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Harshal Jani profile details">
+                Harshal Jani
+              </button>
+              <div
+                id="story-author-preview-content-224199"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/cygnetinfotech" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--cD0MSFtT--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/252547/b056d787-686e-48f8-ba35-37e150a53804.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Harshal Jani</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:252547,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Harshal Jani&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="252547"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/cygnetinfotech/penetration-testing-save-your-business-from-a-hacker-s-paradise-4f8e" class="crayons-story__tertiary fs-xs"><time datetime="2019-12-20T12:06:13Z">Dec 20 &#39;19</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1576843573"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/cygnetinfotech/penetration-testing-save-your-business-from-a-hacker-s-paradise-4f8e" data-preload-image="" id="article-link-224199">
+          Penetration Testing: Save Your Business from a Hacker’s Paradise
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/softwaretesting"><span class="crayons-tag__prefix">#</span>softwaretesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/testingmethodologies"><span class="crayons-tag__prefix">#</span>testingmethodologies</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/typesoftesting"><span class="crayons-tag__prefix">#</span>typesoftesting</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/cygnetinfotech/penetration-testing-save-your-business-from-a-hacker-s-paradise-4f8e" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="224199" aria-label="Add a comment to post - Penetration Testing: Save Your Business from a Hacker’s Paradise">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">4<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/cygnetinfotech/penetration-testing-save-your-business-from-a-hacker-s-paradise-4f8e#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Penetration Testing: Save Your Business from a Hacker’s Paradise">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="an0zhi5bho792si41aqgy9pakx55iz2t" class="crayons-icon"><title id="an0zhi5bho792si41aqgy9pakx55iz2t">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            4 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-224199"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="224199"
+              data-article-author-id="252547"
+              aria-label="Save post Penetration Testing: Save Your Business from a Hacker’s Paradise to reading list"
+              title="Save post Penetration Testing: Save Your Business from a Hacker’s Paradise to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="226576">
+  <a href="/sofianehamlaoui/use-telegram-bot-as-a-penetration-testing-framework-5aaf" aria-labelledby="article-link-221294" class="crayons-story__hidden-navigation-link">Use Telegram bot as a Penetration Testing Framework</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/sofianehamlaoui" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--blz57yaa--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/226576/3448e85d-b301-4c78-98f4-d2540b00582f.jpeg" alt="sofianehamlaoui profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/sofianehamlaoui" class="crayons-story__secondary fw-medium m:hidden">
+              Sofiane Hamlaoui
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-221294" aria-controls="story-author-preview-content-221294" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Sofiane Hamlaoui profile details">
+                Sofiane Hamlaoui
+              </button>
+              <div
+                id="story-author-preview-content-221294"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/sofianehamlaoui" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--blz57yaa--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/226576/3448e85d-b301-4c78-98f4-d2540b00582f.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Sofiane Hamlaoui</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:226576,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Sofiane Hamlaoui&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="226576"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/sofianehamlaoui/use-telegram-bot-as-a-penetration-testing-framework-5aaf" class="crayons-story__tertiary fs-xs"><time datetime="2019-12-15T05:20:56Z">Dec 15 &#39;19</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1576387256"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/sofianehamlaoui/use-telegram-bot-as-a-penetration-testing-framework-5aaf" data-preload-image="" id="article-link-221294">
+          Use Telegram bot as a Penetration Testing Framework
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/sofianehamlaoui"><span class="crayons-tag__prefix">#</span>sofianehamlaoui</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/telegram"><span class="crayons-tag__prefix">#</span>telegram</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/sofianehamlaoui/use-telegram-bot-as-a-penetration-testing-framework-5aaf" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="221294" aria-label="Add a comment to post - Use Telegram bot as a Penetration Testing Framework">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">14<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/sofianehamlaoui/use-telegram-bot-as-a-penetration-testing-framework-5aaf#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Use Telegram bot as a Penetration Testing Framework">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="answerq3khj3jdkbuc28rbthzsow20fv" class="crayons-icon"><title id="answerq3khj3jdkbuc28rbthzsow20fv">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            4 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-221294"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="221294"
+              data-article-author-id="226576"
+              aria-label="Save post Use Telegram bot as a Penetration Testing Framework to reading list"
+              title="Save post Use Telegram bot as a Penetration Testing Framework to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="75405">
+  <a href="/sm0k3/about-penetration-testing-143l" aria-labelledby="article-link-84515" class="crayons-story__hidden-navigation-link">About penetration testing</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/sm0k3" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--zK6dJRME--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/75405/6dd46b52-d33b-4f72-9970-439799da4dbb.jpg" alt="sm0k3 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/sm0k3" class="crayons-story__secondary fw-medium m:hidden">
+              Uladzislau Murashka
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-84515" aria-controls="story-author-preview-content-84515" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Uladzislau Murashka profile details">
+                Uladzislau Murashka
+              </button>
+              <div
+                id="story-author-preview-content-84515"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/sm0k3" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--zK6dJRME--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/75405/6dd46b52-d33b-4f72-9970-439799da4dbb.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Uladzislau Murashka</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:75405,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Uladzislau Murashka&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="75405"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/sm0k3/about-penetration-testing-143l" class="crayons-story__tertiary fs-xs"><time datetime="2019-02-20T14:14:10Z">Feb 20 &#39;19</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1550672050"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/sm0k3/about-penetration-testing-143l" data-preload-image="" id="article-link-84515">
+          About penetration testing
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/pentest"><span class="crayons-tag__prefix">#</span>pentest</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/sm0k3/about-penetration-testing-143l" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="84515" aria-label="Add a comment to post - About penetration testing">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">11<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/sm0k3/about-penetration-testing-143l#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - About penetration testing">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ama8k7zigyv444d94ki0xk18dfxr7f9x" class="crayons-icon"><title id="ama8k7zigyv444d94ki0xk18dfxr7f9x">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              1<span class="hidden s:inline"> comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            3 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-84515"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="84515"
+              data-article-author-id="75405"
+              aria-label="Save post About penetration testing to reading list"
+              title="Save post About penetration testing to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="88900">
+  <a href="/shostarsson/set-up-your-android-app-for-offensive-security-24df" aria-labelledby="article-link-42431" class="crayons-story__hidden-navigation-link">Set up your Android app for Offensive Security</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/shostarsson" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--6-tB5a84--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/88900/d1c7cb23-11c8-497b-9e6f-3331eaefd9b5.jpeg" alt="shostarsson profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/shostarsson" class="crayons-story__secondary fw-medium m:hidden">
+              Rémi Lavedrine
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-42431" aria-controls="story-author-preview-content-42431" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Rémi Lavedrine profile details">
+                Rémi Lavedrine
+              </button>
+              <div
+                id="story-author-preview-content-42431"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/shostarsson" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--6-tB5a84--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/88900/d1c7cb23-11c8-497b-9e6f-3331eaefd9b5.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Rémi Lavedrine</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:88900,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Rémi Lavedrine&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="88900"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/shostarsson/set-up-your-android-app-for-offensive-security-24df" class="crayons-story__tertiary fs-xs"><time datetime="2018-08-07T15:51:23Z">Aug 7 &#39;18</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1533657083"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/shostarsson/set-up-your-android-app-for-offensive-security-24df" data-preload-image="" id="article-link-42431">
+          Set up your Android app for Offensive Security
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(27, 172, 128, 0.10);
+        --tag-prefix: #1bac80;
+        --tag-bg-hover: rgba(27, 172, 128, 0.10);
+        --tag-prefix-hover: #1bac80;
+      " href="/t/security"><span class="crayons-tag__prefix">#</span>security</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(86, 160, 54, 0.10);
+        --tag-prefix: #56a036;
+        --tag-bg-hover: rgba(86, 160, 54, 0.10);
+        --tag-prefix-hover: #56a036;
+      " href="/t/android"><span class="crayons-tag__prefix">#</span>android</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(224, 235, 245, 0.10);
+        --tag-prefix: #E0EBF5;
+        --tag-bg-hover: rgba(224, 235, 245, 0.10);
+        --tag-prefix-hover: #E0EBF5;
+      " href="/t/go"><span class="crayons-tag__prefix">#</span>go</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/shostarsson/set-up-your-android-app-for-offensive-security-24df" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="42431" aria-label="Add a comment to post - Set up your Android app for Offensive Security">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">23<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/shostarsson/set-up-your-android-app-for-offensive-security-24df#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Set up your Android app for Offensive Security">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a1f2ap9wvlnjziilun3ewpxmvs0s8vat" class="crayons-icon"><title id="a1f2ap9wvlnjziilun3ewpxmvs0s8vat">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              2<span class="hidden s:inline"> comments</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            6 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-42431"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="42431"
+              data-article-author-id="88900"
+              aria-label="Save post Set up your Android app for Offensive Security to reading list"
+              title="Save post Set up your Android app for Offensive Security to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="187484">
+  <a href="/stellaengg736/penetration-testing-on-cloud-environment-important-things-to-consider-25cj" aria-labelledby="article-link-390747" class="crayons-story__hidden-navigation-link">Penetration Testing on Cloud Environment – Important Things to Consider
+</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/stellaengg736" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--AKxqn--V--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/187484/e95ced90-e22d-46d0-9f88-448dd1b60c8a.jpg" alt="stellaengg736 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/stellaengg736" class="crayons-story__secondary fw-medium m:hidden">
+              stella
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-390747" aria-controls="story-author-preview-content-390747" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="stella profile details">
+                stella
+              </button>
+              <div
+                id="story-author-preview-content-390747"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/stellaengg736" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--AKxqn--V--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/187484/e95ced90-e22d-46d0-9f88-448dd1b60c8a.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">stella</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:187484,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;stella&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="187484"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/stellaengg736/penetration-testing-on-cloud-environment-important-things-to-consider-25cj" class="crayons-story__tertiary fs-xs"><time datetime="2020-07-10T06:08:30Z">Jul 10 &#39;20</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1594361310"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/stellaengg736/penetration-testing-on-cloud-environment-important-things-to-consider-25cj" data-preload-image="" id="article-link-390747">
+          Penetration Testing on Cloud Environment – Important Things to Consider
+
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/cloudtesting"><span class="crayons-tag__prefix">#</span>cloudtesting</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/stellaengg736/penetration-testing-on-cloud-environment-important-things-to-consider-25cj" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="390747" aria-label="Add a comment to post - Penetration Testing on Cloud Environment – Important Things to Consider
+">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">2<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/stellaengg736/penetration-testing-on-cloud-environment-important-things-to-consider-25cj#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Penetration Testing on Cloud Environment – Important Things to Consider
+">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a19gbkn3k9an89q9foljsm39ld9k7vap" class="crayons-icon"><title id="a19gbkn3k9an89q9foljsm39ld9k7vap">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            5 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-390747"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="390747"
+              data-article-author-id="187484"
+              aria-label="Save post Penetration Testing on Cloud Environment – Important Things to Consider
+ to reading list"
+              title="Save post Penetration Testing on Cloud Environment – Important Things to Consider
+ to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="75405">
+  <a href="/sm0k3/security-testing-fighting-against-bots-2k6o" aria-labelledby="article-link-66950" class="crayons-story__hidden-navigation-link">Security Testing: Fighting against bots</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/sm0k3" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--zK6dJRME--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/75405/6dd46b52-d33b-4f72-9970-439799da4dbb.jpg" alt="sm0k3 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/sm0k3" class="crayons-story__secondary fw-medium m:hidden">
+              Uladzislau Murashka
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-66950" aria-controls="story-author-preview-content-66950" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Uladzislau Murashka profile details">
+                Uladzislau Murashka
+              </button>
+              <div
+                id="story-author-preview-content-66950"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/sm0k3" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--zK6dJRME--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/75405/6dd46b52-d33b-4f72-9970-439799da4dbb.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Uladzislau Murashka</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:75405,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Uladzislau Murashka&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="75405"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/sm0k3/security-testing-fighting-against-bots-2k6o" class="crayons-story__tertiary fs-xs"><time datetime="2018-12-05T09:14:42Z">Dec 5 &#39;18</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1544001282"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/sm0k3/security-testing-fighting-against-bots-2k6o" data-preload-image="" id="article-link-66950">
+          Security Testing: Fighting against bots
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/pentest"><span class="crayons-tag__prefix">#</span>pentest</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/infosec"><span class="crayons-tag__prefix">#</span>infosec</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/vulnerabilities"><span class="crayons-tag__prefix">#</span>vulnerabilities</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/sm0k3/security-testing-fighting-against-bots-2k6o" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="66950" aria-label="Add a comment to post - Security Testing: Fighting against bots">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">8<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/sm0k3/security-testing-fighting-against-bots-2k6o#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Security Testing: Fighting against bots">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="amt9wsgi0l7syq2cp9o83xspiaw5aoje" class="crayons-icon"><title id="amt9wsgi0l7syq2cp9o83xspiaw5aoje">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            3 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-66950"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="66950"
+              data-article-author-id="75405"
+              aria-label="Save post Security Testing: Fighting against bots to reading list"
+              title="Save post Security Testing: Fighting against bots to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="placeholder-div"></div>
+<div class="single-article-small-pic" id="article-index-hidden-div" style="display:none"></div>
+
+      </div>
+      <div class="loading-articles" id="loading-articles">
+        loading...
+      </div>
+    </main>
+      <div id="sidebar-wrapper-right" class="sidebar-wrapper sidebar-wrapper-right">
+    <div class="sidebar-bg" id="sidebar-bg-right"></div>
+    <aside class="side-bar sidebar-additional showing" id="sidebar-additional">
+    </aside>
+  </div>
+
+  </div>
+
+  <script src="https://dev.to/packs/js/runtime~storiesList-580f9a107caf30262631.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/storiesList-1313758cfb355b95d4d8.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~followButtons-728c603f2dc8755ce211.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/6-b93c1529963bca9369db.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/followButtons-b70c2c080f62af0daafb.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~feedPreviewCards-3654d1d985e1784b66b6.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/feedPreviewCards-a14d2ce8a6911ebbc1d2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~hideBookmarkButtons-3f611fd89500bcc725e1.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/hideBookmarkButtons-3ea80ef43f0c60b791f0.chunk.js" defer="defer"></script>
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  </body>
+  </html>

@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "name": "1-dars",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "fruit":"nodemon ./src/fruit.js",
+    "animals":"nodemon ./src/animals.js",
+    "users":"nodemon ./src/users.js",
+    "cars":"nodemon ./src/cars.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

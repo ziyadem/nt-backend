@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Listings - DEV Community</title>
+      <meta name="last-updated" content="2023-04-04 05:41:06 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1680586866">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://dev.to/assets/base-9367e1923af849f8b2501fbc3dbb112ec2a9c13b7b7095d2a6c9fa25064774e4.js" defer="defer"></script>
+        <script src="https://dev.to/packs/js/runtime~base-c78c7355d34f41bec100.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-e69699ee885daf54b5a1.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+      
+
+  <link rel="canonical" href="https://dev.to/listings" />
+  <meta name="description" content="A constructive and inclusive social network for software developers. With you every step of your journey.">
+  <meta name="keywords" content="software development, engineering, rails, javascript, ruby">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dev.to/listings" />
+  <meta property="og:site_name" content="DEV Community" />
+    <meta property="og:title" content="Listings" />
+    <meta property="og:description" content="A constructive and inclusive social network for software developers. With you every step of your journey." />
+    <meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+    <meta name="twitter:title" content="Listings">
+    <meta name="twitter:description" content="A constructive and inclusive social network for software developers. With you every step of your journey.">
+    <meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+  <meta name="twitter:site" content="@thepracticaldev">
+  <meta name="twitter:card" content="summary_large_image">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192" />
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+      <meta property="forem:domain" content="dev.to" />
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-locale="en"
+        data-honeybadger-key="a45862f6"
+        data-deployed-at="2023-04-03T21:49:30Z"
+        data-latest-commit-id="b412daa3eaf890d4c0c17fe5e4412f1193910e30"
+        data-ga-tracking="UA-71991109-1"
+        data-ga4-tracking-id="G-TYEM8Y3JN3"
+        >
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ayongsjw4ll6q4rtzc1vfl0r18bs9l3" class="crayons-icon"><title id="ayongsjw4ll6q4rtzc1vfl0r18bs9l3">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a8nehxm88wubs64haup80t18ybl40pxo" aria-hidden="true" class="crayons-icon"><title id="a8nehxm88wubs64haup80t18ybl40pxo">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="apioonfurkwj33nleilss6m3znep0l1q" class="crayons-icon"><title id="apioonfurkwj33nleilss6m3znep0l1q">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ajc6e7864lium1lizbjrq8thajtnevpj" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="ajc6e7864lium1lizbjrq8thajtnevpj">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper listings listings-index" data-current-page="listings-index">
+  <div id="page-content-inner">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+<main id="main-content">
+
+  <header class="crayons-page-header s:pb-0">
+    <h1 class="crayons-title">Listings</h1>
+
+    <nav class="flex items-center" aria-label="Listings">
+      <ul class="list-none flex">
+        <li> <a href="/listings/new" class="crayons-btn crayons-btn--secondary">Create</a></li>
+        <li> <a href="/listings/dashboard" class="crayons-btn crayons-btn--secondary ml-2">Manage</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="listings-container" id="listings-index-container"
+    data-category="" data-listings="[{&quot;id&quot;:6010,&quot;user_id&quot;:874129,&quot;title&quot;:&quot;Software developer&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eHello, I am a software engineer with over 1+ years of experience in developing applications using Node.js, Express, TypeScript, Docker, GitHub, CI/CD pipelines, and AWS. I am also currently learning React and web3-related technologies to expand my skill set and stay up-to-date with the latest industry trends.\u003cbr\u003e\ngithub: \u003ca href=\&quot;https://github.com/tikul1\&quot;\u003ehttps://github.com/tikul1\u003c/a\u003e\u003cbr\u003e\nemail: \u003ca href=\&quot;mailto:hardik.parmar5@gmail.com\&quot;\u003ehardik.parmar5@gmail.com\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-04T05:27:52.580Z&quot;,&quot;slug&quot;:&quot;software-developer-2ch1&quot;,&quot;location&quot;:&quot;&quot;,&quot;originally_published_at&quot;:&quot;2023-04-04T05:27:52.580Z&quot;,&quot;tag_list&quot;:[&quot;remote&quot;,&quot;node&quot;,&quot;aws&quot;,&quot;docker&quot;,&quot;express&quot;,&quot;typescript&quot;,&quot;react&quot;],&quot;category&quot;:&quot;collabs&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Hardik Parmar&quot;,&quot;username&quot;:&quot;tikul1&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--4UU3XC9Y--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/874129/d903c97e-6008-4d51-90bf-d7fd7c4e57cc.png&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;tikul1&quot;}},{&quot;id&quot;:6009,&quot;user_id&quot;:863112,&quot;title&quot;:&quot;Extensible JavaScript Libraries for surveys and forms&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eSurveyJS is a set of four fully customizable JS libraries that allow you to create, easily modify, and run multiple web forms in any web app, while retaining all sensitive data on your own servers. All libraries are compatible with React, Angular, jQuery, Vue, and Knockout.\u003c/p\u003e\n\n\u003cp\u003eOver a hundred free demos to get you started: \u003ca href=\&quot;https://surveyjs.io/\&quot;\u003ehttps://surveyjs.io/\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-03T18:29:19.250Z&quot;,&quot;slug&quot;:&quot;extensible-javascript-libraries-for-surveys-and-forms-4k6m&quot;,&quot;location&quot;:&quot;&quot;,&quot;originally_published_at&quot;:&quot;2023-04-03T18:29:19.250Z&quot;,&quot;tag_list&quot;:[&quot;javascript&quot;,&quot;forms&quot;,&quot;formbuilder&quot;,&quot;opensource&quot;,&quot;surveys&quot;,&quot;createsurvey&quot;,&quot;surveycreator&quot;],&quot;category&quot;:&quot;products&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;SurveyJS&quot;,&quot;username&quot;:&quot;surveyjs&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--MWEzVJaC--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/863112/c86654ef-e30a-4859-aa34-d4d15bc4dcdc.png&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;surveyjs&quot;}},{&quot;id&quot;:6008,&quot;user_id&quot;:410394,&quot;title&quot;:&quot;🎆✨Laravel for Beginners Tutorial&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eThis tutorial explains the basic use of the Laravel framework by building a simple blogging system.\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\&quot;https://dev.to/ericnanhu/laravel-for-beginners-1-43kn\&quot;\u003eClick here to get started ⬅️\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-03T14:56:36.731Z&quot;,&quot;slug&quot;:&quot;laravel-for-beginners-tutorial-2ol&quot;,&quot;location&quot;:&quot;&quot;,&quot;originally_published_at&quot;:&quot;2023-04-03T14:56:36.731Z&quot;,&quot;tag_list&quot;:[&quot;laravel&quot;,&quot;php&quot;,&quot;webdev&quot;,&quot;tutorial&quot;,&quot;beginners&quot;],&quot;category&quot;:&quot;education&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Eric Hu&quot;,&quot;username&quot;:&quot;ericnanhu&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--iGEJBYYz--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/410394/21acc6dd-d0ba-4bb1-8cbd-bcf3fa418096.jpeg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;ericnanhu&quot;}},{&quot;id&quot;:6007,&quot;user_id&quot;:932742,&quot;title&quot;:&quot;Cloud-Native Hackathon&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eHi all! The folks at Napptive and WeMakeDevs are organizing a cloud-native Hackathon with really cool prizes.\u003cbr\u003e\nTo register sign up here \u003ca href=\&quot;https://wemakedevs.org/events/hackathons/napptive\&quot;\u003ehttps://wemakedevs.org/events/hackathons/napptive\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-03T14:53:31.771Z&quot;,&quot;slug&quot;:&quot;cloud-native-hackathon-2pag&quot;,&quot;location&quot;:&quot;Online&quot;,&quot;originally_published_at&quot;:&quot;2023-04-03T14:53:31.771Z&quot;,&quot;tag_list&quot;:[&quot;hackathon&quot;,&quot;kubernetes&quot;,&quot;cloudnative&quot;,&quot;cloud&quot;,&quot;beginners&quot;,&quot;devops&quot;,&quot;meetup&quot;,&quot;conference&quot;],&quot;category&quot;:&quot;events&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Napptive&quot;,&quot;username&quot;:&quot;napptive&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--VAYMdoro--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/932742/59b3c665-c1be-4af8-877a-55bf7535e6a2.jpg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;napptive&quot;}},{&quot;id&quot;:6006,&quot;user_id&quot;:17066,&quot;title&quot;:&quot;Job hunting alone sucks&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003e👋🏻 my name is Jean-Michel and I have a very unconventional take on the tech recruiting process as you can see in my series \u003ca href=\&quot;https://dev.to/jmfayard/series/9282\&quot;\u003ehiring is broken\u003c/a\u003e.\u003cbr\u003e\nI also think job hunting sucks much less when you are not alone. I have time this week so if you are interested in free debriefing \u0026amp; mentoring sessions, learn about me and drop me an email at \u003ca href=\&quot;https://jmfayard.dev/\&quot;\u003ehttps://jmfayard.dev/\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-03T14:06:17.104Z&quot;,&quot;slug&quot;:&quot;job-hunting-alone-sucks-4kig&quot;,&quot;location&quot;:&quot;Internet&quot;,&quot;originally_published_at&quot;:&quot;2023-04-03T14:06:17.104Z&quot;,&quot;tag_list&quot;:[&quot;job&quot;,&quot;mentoring&quot;],&quot;category&quot;:&quot;mentors&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Jean-Michel Fayard 🇫🇷🇩🇪🇬🇧🇪🇸🇨🇴&quot;,&quot;username&quot;:&quot;jmfayard&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--nXpiRf8M--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/17066/483c36ce-ca15-45f9-ab16-fbe032dda0b1.jpeg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;jmfayard&quot;}},{&quot;id&quot;:6005,&quot;user_id&quot;:122897,&quot;title&quot;:&quot;Chingu - Get Out of Tutorial Purgatory!&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eLevel up your web development skills like designing, building, and deploying projects in a team! This boosts your knowledge and hard skills, and also \&quot;soft\&quot; skills like Agile methodology, teamwork, design, etc.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eBenefits:\u003c/strong\u003e\u003c/p\u003e\n\n\u003cul\u003e\n\u003cli\u003eConfidence \u0026amp; motivation\u003c/li\u003e\n\u003cli\u003eSupportive peer community\u003c/li\u003e\n\u003cli\u003eStretch your comfort zone\u003c/li\u003e\n\u003cli\u003eBuild your portfolio \u0026amp; gain expertise\u003c/li\u003e\n\u003c/ul\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-03T12:14:12.310Z&quot;,&quot;slug&quot;:&quot;chingu-get-out-of-tutorial-purgatory-d4f&quot;,&quot;location&quot;:&quot;https://chingu.io&quot;,&quot;originally_published_at&quot;:&quot;2023-04-03T12:14:12.310Z&quot;,&quot;tag_list&quot;:[&quot;education&quot;,&quot;career&quot;,&quot;collaboration&quot;],&quot;category&quot;:&quot;collabs&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Chingu &quot;,&quot;username&quot;:&quot;chingu&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--aImpBPn2--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/462/1eba8151-95e3-4df8-b2a0-6d6b5a4c9bdd.png&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;jdmedlock&quot;}},{&quot;id&quot;:6004,&quot;user_id&quot;:546143,&quot;title&quot;:&quot;Full Stack React: From Beginner to Advanced Developer with 1-on-1 Mentorship&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eUnlock your full potential in React with our comprehensive course, designed to transform you from a beginner to an advanced full-stack developer. With hands-on projects and personalized 1-on-1 support. \u003ca href=\&quot;https://payhip.com/b/oS7QP\&quot;\u003eEnroll Now!\u003c/a\u003e limited spots available. coupon code 20% off : MFX3F4TIWJ\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-03T10:54:30.435Z&quot;,&quot;slug&quot;:&quot;full-stack-react-from-beginner-to-advanced-developer-with-1-on-1-mentorship-365b&quot;,&quot;location&quot;:&quot;&quot;,&quot;originally_published_at&quot;:&quot;2023-04-03T10:54:30.435Z&quot;,&quot;tag_list&quot;:[&quot;react&quot;,&quot;webdev&quot;,&quot;beginners&quot;,&quot;javascript&quot;,&quot;typescript&quot;,&quot;tutorial&quot;,&quot;career&quot;,&quot;jamstack&quot;],&quot;category&quot;:&quot;mentors&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;sk&quot;,&quot;username&quot;:&quot;sfundomhlungu&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--i-MeSFOz--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/546143/68383c00-a9fa-4128-a794-c8bc31aa8ade.jpg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;sfundomhlungu&quot;}},{&quot;id&quot;:5842,&quot;user_id&quot;:282902,&quot;title&quot;:&quot;🚀 [BOOK] Building with Fullstack applications with Django, React, Docker and AWS: The Book for Practical Experience 🚀&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003e🚀 Exciting news! \u003c/p\u003e\n\n\u003cp\u003eMy book \u003cstrong\u003eFull Stack Django and React: Get hands-on experience in fullstack web development with Python, React, and AWS\u003c/strong\u003e is finally here!\u003c/p\u003e\n\n\u003cp\u003eLearn \u003cstrong\u003eDjango\u003c/strong\u003e, \u003cstrong\u003eReact\u003c/strong\u003e, \u003cem\u003eDocker\u003c/em\u003e, \u003cem\u003eGithub Actions\u003c/em\u003e, and \u003cem\u003eAWS\u003c/em\u003e by building a social media app with best industry practices.🤩\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\&quot;https://packt.link/a/9781803242972\&quot;\u003eGet your copy today and take your Fullstack skills to the next level!\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-03T08:43:32.820Z&quot;,&quot;slug&quot;:&quot;building-with-fullstack-applications-with-django-react-docker-and-aws-the-book-for-practical-experience-2l8k&quot;,&quot;location&quot;:&quot;&quot;,&quot;originally_published_at&quot;:&quot;2023-02-20T22:49:28.019Z&quot;,&quot;tag_list&quot;:[&quot;javascript&quot;,&quot;react&quot;,&quot;django&quot;,&quot;python&quot;,&quot;aws&quot;,&quot;docker&quot;,&quot;github&quot;,&quot;testing&quot;],&quot;category&quot;:&quot;products&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Mangabo Kolawole&quot;,&quot;username&quot;:&quot;koladev&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--vt47OcF3--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/282902/12da645a-1ec2-4189-b351-b748bc7dc841.jpg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;koladev&quot;}},{&quot;id&quot;:6003,&quot;user_id&quot;:536350,&quot;title&quot;:&quot;Frontend Developer&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eHi, I&#39;m React developer and I&#39;m looking for Frontend position. I&#39;ve 9 months of professional experience. \u003cbr\u003e\nMy portfolio: \u003ca href=\&quot;https://jaxongir-rahimov.netlify.app/\&quot;\u003ehttps://jaxongir-rahimov.netlify.app/\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-02T07:30:55.652Z&quot;,&quot;slug&quot;:&quot;frontend-developer-2poa&quot;,&quot;location&quot;:&quot;&quot;,&quot;originally_published_at&quot;:&quot;2023-04-02T07:30:55.652Z&quot;,&quot;tag_list&quot;:[&quot;remote&quot;,&quot;intermediate&quot;],&quot;category&quot;:&quot;forhire&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Jaxongir&quot;,&quot;username&quot;:&quot;johongirr&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--OnQ-ZQY6--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/536350/763622ed-c95c-4dfa-99ac-63236ccceb10.jpg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;johongirr&quot;}},{&quot;id&quot;:6002,&quot;user_id&quot;:356282,&quot;title&quot;:&quot;Donenote - Instant Notes For Website&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eEasily collaborate by placing notes directly on web pages with DoneNote - a convenient tool for teamwork. Visit Chrome Extensions - \u003ca href=\&quot;https://donenote.com/\&quot;\u003ehttps://donenote.com/\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-02T01:23:43.129Z&quot;,&quot;slug&quot;:&quot;donenote-instant-notes-for-website-3mk5&quot;,&quot;location&quot;:&quot;&quot;,&quot;originally_published_at&quot;:&quot;2023-04-02T01:23:43.129Z&quot;,&quot;tag_list&quot;:[&quot;chromeextensions&quot;,&quot;design&quot;,&quot;discuss&quot;,&quot;qa&quot;],&quot;category&quot;:&quot;products&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;George Novik&quot;,&quot;username&quot;:&quot;nov2k_&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--BTOwewF2--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/356282/1c5f02de-e68c-403c-a9c4-884d4e894cac.jpg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;nov2k_&quot;}},{&quot;id&quot;:6001,&quot;user_id&quot;:11612,&quot;title&quot;:&quot;🚀  CSSBattle battle 24 started! Join the best CSS Game ⚔️&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003e📢 A month-long new battle is starting on CSSBattle.dev. There will be 2 new targets opening each week!\u003c/p\u003e\n\n\u003cp\u003eIf you want to practice your CSS skills, there is no better place than CSSBattle!\u003c/p\u003e\n\n\u003cp\u003eSo hop on - \u003ca href=\&quot;https://cssbattle.dev/battle/24\&quot;\u003ehttps://cssbattle.dev/battle/24\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003eRead what people say about CSSBattle - \u003ca href=\&quot;https://twitter.com/i/events/1126897704787791872\&quot;\u003ehttps://twitter.com/i/events/1126897704787791872\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-01T16:47:56.520Z&quot;,&quot;slug&quot;:&quot;cssbattle-battle-24-started-join-the-best-css-game-o61&quot;,&quot;location&quot;:&quot;https://cssbattle.dev/battle/24&quot;,&quot;originally_published_at&quot;:&quot;2023-04-01T16:47:56.520Z&quot;,&quot;tag_list&quot;:[&quot;css&quot;,&quot;frontend&quot;,&quot;webdev&quot;,&quot;game&quot;],&quot;category&quot;:&quot;events&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Kushagra Gour&quot;,&quot;username&quot;:&quot;chinchang&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--j5ZYEFS9--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/11612/379918.jpeg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;chinchang&quot;}},{&quot;id&quot;:5894,&quot;user_id&quot;:436259,&quot;title&quot;:&quot;Advanced VueJS: Build Better Applications Efficiently&quot;,&quot;processed_html&quot;:&quot;\u003cp\u003eIf you just started as a \u003cstrong\u003eVue developer\u003c/strong\u003e and want to refine your skills further, this is the course for you! In \u003cstrong\u003e51 lessons\u003c/strong\u003e, the course \u003cstrong\u003e\&quot;Advanced VueJS: Build Better Applications Efficiently \&quot;\u003c/strong\u003e helps you understand the ins and outs of advanced Vue features, such as custom form controls!\u003c/p\u003e\n\n\u003cp\u003eLink: \u003ca href=\&quot;https://www.educative.io/courses/advanced-vuejs-build-better-applications-efficiently\&quot;\u003ehttps://www.educative.io/courses/advanced-vuejs-build-better-applications-efficiently\u003c/a\u003e\u003c/p\u003e\n&quot;,&quot;bumped_at&quot;:&quot;2023-04-01T11:08:17.029Z&quot;,&quot;slug&quot;:&quot;advanced-vuejs-build-better-applications-efficiently-2o3&quot;,&quot;location&quot;:&quot;&quot;,&quot;originally_published_at&quot;:&quot;2023-03-11T17:03:55.429Z&quot;,&quot;tag_list&quot;:[&quot;vue&quot;,&quot;paid&quot;,&quot;javascript&quot;,&quot;webdev&quot;,&quot;programming&quot;,&quot;frontend&quot;,&quot;development&quot;,&quot;learning&quot;],&quot;category&quot;:&quot;education&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;Pascal Thormeier&quot;,&quot;username&quot;:&quot;thormeier&quot;,&quot;profile_image_90&quot;:&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--ea2od0yd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/436259/00cde9af-e704-48b7-a00a-32cdc4997190.jpeg&quot;},&quot;user&quot;:{&quot;username&quot;:&quot;thormeier&quot;}}]"
+    data-allcategories="[{&quot;slug&quot;:&quot;collabs&quot;,&quot;name&quot;:&quot;Contributors/Collaborators Wanted&quot;},{&quot;slug&quot;:&quot;cfp&quot;,&quot;name&quot;:&quot;Conference CFP&quot;},{&quot;slug&quot;:&quot;forhire&quot;,&quot;name&quot;:&quot;Available for Hire&quot;},{&quot;slug&quot;:&quot;education&quot;,&quot;name&quot;:&quot;Education/Courses&quot;},{&quot;slug&quot;:&quot;jobs&quot;,&quot;name&quot;:&quot;Job Listings&quot;},{&quot;slug&quot;:&quot;mentors&quot;,&quot;name&quot;:&quot;Offering Mentorship&quot;},{&quot;slug&quot;:&quot;mentees&quot;,&quot;name&quot;:&quot;Seeking a Mentor&quot;},{&quot;slug&quot;:&quot;forsale&quot;,&quot;name&quot;:&quot;Stuff for Sale&quot;},{&quot;slug&quot;:&quot;events&quot;,&quot;name&quot;:&quot;Upcoming Events&quot;},{&quot;slug&quot;:&quot;misc&quot;,&quot;name&quot;:&quot;Miscellaneous&quot;},{&quot;slug&quot;:&quot;products&quot;,&quot;name&quot;:&quot;Products/Tools&quot;}]"
+>
+  </div>
+
+</main>
+<script src="https://dev.to/packs/js/runtime~listings-b487e7b7895dc5460261.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/listings-19c37b217c7d675bd1fc.chunk.js" defer="defer"></script>
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  </body>
+  </html>

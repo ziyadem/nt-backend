@@ -1,0 +1,3185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ethicalhacking - DEV Community</title>
+      <meta name="last-updated" content="2023-04-04 05:53:47 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1680587627">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://dev.to/assets/base-9367e1923af849f8b2501fbc3dbb112ec2a9c13b7b7095d2a6c9fa25064774e4.js" defer="defer"></script>
+        <script src="https://dev.to/packs/js/runtime~base-c78c7355d34f41bec100.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-e69699ee885daf54b5a1.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+      
+  
+<link rel="canonical" href="https://dev.to/t/ethicalhacking" />
+<meta name="description" content="ethicalhacking content on DEV Community">
+<meta name="keywords" content="software development, engineering, ethicalhacking">
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dev.to/t/ethicalhacking" />
+<meta property="og:title" content="Ethicalhacking" />
+<meta property="og:description" content="Ethicalhacking content on DEV Community" />
+<meta property="og:site_name" content="DEV Community" />
+
+<meta name="twitter:site" content="@thepracticaldev">
+<meta name="twitter:creator" content="@Ethicalhacking">
+<meta name="twitter:title" content="Ethicalhacking">
+<meta name="twitter:description" content="Ethicalhacking content on DEV Community">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+  <meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192" />
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+      <meta property="forem:domain" content="dev.to" />
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-locale="en"
+        data-honeybadger-key="a45862f6"
+        data-deployed-at="2023-04-03T21:49:30Z"
+        data-latest-commit-id="b412daa3eaf890d4c0c17fe5e4412f1193910e30"
+        data-ga-tracking="UA-71991109-1"
+        data-ga4-tracking-id="G-TYEM8Y3JN3"
+        >
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ayongsjw4ll6q4rtzc1vfl0r18bs9l3" class="crayons-icon"><title id="ayongsjw4ll6q4rtzc1vfl0r18bs9l3">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a8nehxm88wubs64haup80t18ybl40pxo" aria-hidden="true" class="crayons-icon"><title id="a8nehxm88wubs64haup80t18ybl40pxo">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="apioonfurkwj33nleilss6m3znep0l1q" class="crayons-icon"><title id="apioonfurkwj33nleilss6m3znep0l1q">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ajc6e7864lium1lizbjrq8thajtnevpj" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="ajc6e7864lium1lizbjrq8thajtnevpj">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper tagged_articles tagged_articles-index" data-current-page="tagged_articles-index">
+  <div id="page-content-inner">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+      <div class="crayons-layout">
+    <header class="crayons-card branded-4 p-4 l:p-6 spec__tag-header" style="border-top-color:  ">
+      <div class="flex">
+        <div class="flex flex-col w-100 justify-center">
+          <div class="flex justify-between items-center">
+            <h1 class="crayons-title">
+                <span class="opacity-50">#</span>
+                ethicalhacking
+            </h1>
+              <button
+                id="user-follow-butt"
+                class="crayons-btn follow-action-button"
+                data-info='{&quot;id&quot;:17026,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;ethicalhacking&quot;}'>
+                Follow
+              </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="home sub-home" id="index-container"
+      data-params="{&quot;tag&quot;:&quot;ethicalhacking&quot;,&quot;sort_by&quot;:&quot;hotness_score&quot;,&quot;sort_direction&quot;:&quot;desc&quot;}" data-which=""
+      data-tag="ethicalhacking"
+      data-feed="base-feed"
+      data-requires-approval="false"
+      data-articles-since="">
+      <div id="sidebar-wrapper-left" class="sidebar-wrapper sidebar-wrapper-left">
+    <div class="sidebar-bg" id="sidebar-bg-left"></div>
+    <aside class="side-bar">
+        <div class="widget js-policy-article-create">
+          <a class="crayons-btn crayons-btn--s" href="/new/ethicalhacking">
+            Create Post
+          </a>
+</div>      <div class="sidebar-data">
+        <div>
+          19 Posts Published
+        </div>
+      </div>
+    </aside>
+  </div>
+
+    <main class="articles-list" id="main-content" data-follow-button-container="true">
+      <header class="flex items-center p-2 m:p-0 m:pb-2" id="on-page-nav-controls">
+        <h1 class="screen-reader-only">Posts</h1>
+        <button type="button" class="crayons-btn crayons-btn--ghost crayons-btn--icon mr-2 inline-block m:hidden mb-auto" id="on-page-nav-butt-left" aria-label="nav-button-left">
+          <div class="crayons-icon nav-icon ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ahwlz0vyeeb89cj7qnjmw3qj51th07zp" class="crayons-icon"><title id="ahwlz0vyeeb89cj7qnjmw3qj51th07zp">Left menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+          </div>
+        </button>
+          <div class="flex-1 flex items-center justify-between">
+            <div class="crayons-notice w-100" aria-live="polite">👋 <a href="/enter">Sign in</a> for the ability to sort posts by <strong>relevant</strong>, <strong>latest</strong>, or <strong>top</strong>.</div>
+          </div>
+
+        <button type="button" class="crayons-btn crayons-btn--ghost crayons-btn--icon ml-2 inline-block l:hidden mb-auto" id="on-page-nav-butt-right" aria-label="nav-button-right">
+          <div class="crayons-icon nav-icon ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aigtq0tsdcmqjeomczvre7ohgp71uigr" class="crayons-icon"><title id="aigtq0tsdcmqjeomczvre7ohgp71uigr">Right menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+          </div>
+        </button>
+      </header>
+
+      <div class="substories" id="substories">
+          <div id="reaction-category-resources" class="hidden" aria-hidden="true">
+    <img data-name="Like" data-slug="like" data-position="1" src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+    <img data-name="Unicorn" data-slug="unicorn" data-position="2" src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+    <img data-name="Exploding Head" data-slug="exploding_head" data-position="3" src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="18" height="18" />
+    <img data-name="Raised Hands" data-slug="raised_hands" data-position="4" src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="18" height="18" />
+    <img data-name="Fire" data-slug="fire" data-position="5" src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="18" height="18" />
+</div>
+
+
+<div class="crayons-story " data-content-user-id="1050529">
+  <a href="/jsquared/coding-a-port-scanner-with-python-5he7" aria-labelledby="article-link-1425423" class="crayons-story__hidden-navigation-link">Coding a Port Scanner with Python</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/jsquared" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--xp0r0x0I--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1050529/52043443-89bc-4028-88dd-fb5b75f7eb74.jpg" alt="jsquared profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/jsquared" class="crayons-story__secondary fw-medium m:hidden">
+              James N.
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1425423" aria-controls="story-author-preview-content-1425423" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="James N. profile details">
+                James N.
+              </button>
+              <div
+                id="story-author-preview-content-1425423"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/jsquared" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--xp0r0x0I--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1050529/52043443-89bc-4028-88dd-fb5b75f7eb74.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">James N.</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:1050529,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;James N.&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="1050529"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/jsquared/coding-a-port-scanner-with-python-5he7" class="crayons-story__tertiary fs-xs"><time datetime="2023-04-04T05:34:51Z">Apr 4</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1680586491"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/jsquared/coding-a-port-scanner-with-python-5he7" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--XT34EZzB--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w7fz1freyzj8vbekb51k.jpg" id="article-link-1425423">
+          Coding a Port Scanner with Python
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(27, 172, 128, 0.10);
+        --tag-prefix: #1bac80;
+        --tag-bg-hover: rgba(27, 172, 128, 0.10);
+        --tag-prefix-hover: #1bac80;
+      " href="/t/security"><span class="crayons-tag__prefix">#</span>security</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/jsquared/coding-a-port-scanner-with-python-5he7" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="1425423" aria-label="Add a comment to post - Coding a Port Scanner with Python">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">1<span class="hidden s:inline"> reaction</span></span>
+            </div>
+          </a>
+            <a href="/jsquared/coding-a-port-scanner-with-python-5he7#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Coding a Port Scanner with Python">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ael2c9rqtxwm734oy4ly1wqx6wrt2x5r" class="crayons-icon"><title id="ael2c9rqtxwm734oy4ly1wqx6wrt2x5r">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            3 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1425423"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1425423"
+              data-article-author-id="1050529"
+              aria-label="Save post Coding a Port Scanner with Python to reading list"
+              title="Save post Coding a Port Scanner with Python to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="500763">
+  <a href="/dennysjmarquez/ethical-hacking-conceptos-basicos-1coc" aria-labelledby="article-link-1423766" class="crayons-story__hidden-navigation-link">Ethical Hacking - Conceptos básicos</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/dennysjmarquez" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7n5bgq0f--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/500763/46d429ce-b487-43eb-957f-9e2d68e9da64.jpg" alt="dennysjmarquez profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/dennysjmarquez" class="crayons-story__secondary fw-medium m:hidden">
+              Dennys José Márquez Reyes
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1423766" aria-controls="story-author-preview-content-1423766" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Dennys José Márquez Reyes profile details">
+                Dennys José Márquez Reyes
+              </button>
+              <div
+                id="story-author-preview-content-1423766"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/dennysjmarquez" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--7n5bgq0f--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/500763/46d429ce-b487-43eb-957f-9e2d68e9da64.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Dennys José Márquez Reyes</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:500763,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Dennys José Márquez Reyes&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="500763"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/dennysjmarquez/ethical-hacking-conceptos-basicos-1coc" class="crayons-story__tertiary fs-xs"><time datetime="2023-04-03T01:46:00Z">Apr 3</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1680486360"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/dennysjmarquez/ethical-hacking-conceptos-basicos-1coc" data-preload-image="" id="article-link-1423766">
+          Ethical Hacking - Conceptos básicos
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ciberseguridad"><span class="crayons-tag__prefix">#</span>ciberseguridad</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/pentesting"><span class="crayons-tag__prefix">#</span>pentesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(27, 172, 128, 0.10);
+        --tag-prefix: #1bac80;
+        --tag-bg-hover: rgba(27, 172, 128, 0.10);
+        --tag-prefix-hover: #1bac80;
+      " href="/t/security"><span class="crayons-tag__prefix">#</span>security</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+            <a href="/dennysjmarquez/ethical-hacking-conceptos-basicos-1coc#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Ethical Hacking - Conceptos básicos">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="acaot3pnzam76cp1qz1dxdp2lpxzfaah" class="crayons-icon"><title id="acaot3pnzam76cp1qz1dxdp2lpxzfaah">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            12 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1423766"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1423766"
+              data-article-author-id="500763"
+              aria-label="Save post Ethical Hacking - Conceptos básicos to reading list"
+              title="Save post Ethical Hacking - Conceptos básicos to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="793920">
+  <a href="/fx2301/privesc-with-ldpreload-4fhh" aria-labelledby="article-link-1220678" class="crayons-story__hidden-navigation-link">PrivEsc with LD_PRELOAD</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/fx2301" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png" alt="fx2301 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/fx2301" class="crayons-story__secondary fw-medium m:hidden">
+              fx2301
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1220678" aria-controls="story-author-preview-content-1220678" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="fx2301 profile details">
+                fx2301
+              </button>
+              <div
+                id="story-author-preview-content-1220678"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/fx2301" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">fx2301</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:793920,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;fx2301&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="793920"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/fx2301/privesc-with-ldpreload-4fhh" class="crayons-story__tertiary fs-xs"><time datetime="2022-10-15T17:55:22Z">Oct 15 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1665856522"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/fx2301/privesc-with-ldpreload-4fhh" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--Ri-HHOhT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bok9c4a5j3078d1ui8k4.png" id="article-link-1220678">
+          PrivEsc with LD_PRELOAD
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/redteam"><span class="crayons-tag__prefix">#</span>redteam</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/privesc"><span class="crayons-tag__prefix">#</span>privesc</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/fx2301/privesc-with-ldpreload-4fhh" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="1220678" aria-label="Add a comment to post - PrivEsc with LD_PRELOAD">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">2<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/fx2301/privesc-with-ldpreload-4fhh#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - PrivEsc with LD_PRELOAD">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="al4xbts4zohe38f0u516emr399ujn6cc" class="crayons-icon"><title id="al4xbts4zohe38f0u516emr399ujn6cc">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            1 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1220678"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1220678"
+              data-article-author-id="793920"
+              aria-label="Save post PrivEsc with LD_PRELOAD to reading list"
+              title="Save post PrivEsc with LD_PRELOAD to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="268333">
+  <a href="/mdorante/my-hacking-journey-31kd" aria-labelledby="article-link-1155064" class="crayons-story__hidden-navigation-link">My Hacking Journey</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/mdorante" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ie5qz8dJ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/268333/c26f93cb-568d-48e3-9ee2-61b30be5185a.jpg" alt="mdorante profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/mdorante" class="crayons-story__secondary fw-medium m:hidden">
+              mdorante
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1155064" aria-controls="story-author-preview-content-1155064" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="mdorante profile details">
+                mdorante
+              </button>
+              <div
+                id="story-author-preview-content-1155064"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/mdorante" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--ie5qz8dJ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/268333/c26f93cb-568d-48e3-9ee2-61b30be5185a.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">mdorante</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:268333,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;mdorante&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="268333"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/mdorante/my-hacking-journey-31kd" class="crayons-story__tertiary fs-xs"><time datetime="2022-07-29T22:54:17Z">Jul 29 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1659135257"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/mdorante/my-hacking-journey-31kd" data-preload-image="" id="article-link-1155064">
+          My Hacking Journey
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/pentesting"><span class="crayons-tag__prefix">#</span>pentesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/linux"><span class="crayons-tag__prefix">#</span>linux</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/mdorante/my-hacking-journey-31kd" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="1155064" aria-label="Add a comment to post - My Hacking Journey">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">3<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/mdorante/my-hacking-journey-31kd#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - My Hacking Journey">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a7aws5b8h0tzwe36vn7y47zulacml5ep" class="crayons-icon"><title id="a7aws5b8h0tzwe36vn7y47zulacml5ep">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              1<span class="hidden s:inline"> comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            2 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1155064"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1155064"
+              data-article-author-id="268333"
+              aria-label="Save post My Hacking Journey to reading list"
+              title="Save post My Hacking Journey to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="835610">
+  <a href="/acama/vulnerability-management-j8g" aria-labelledby="article-link-1037815" class="crayons-story__hidden-navigation-link">Vulnerability Management</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/acama" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--RwXpwlKZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/835610/273381b2-773a-4201-a7d0-6e71019eb4fb.jpeg" alt="acama profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/acama" class="crayons-story__secondary fw-medium m:hidden">
+              Angel Castro Martinez
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1037815" aria-controls="story-author-preview-content-1037815" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Angel Castro Martinez profile details">
+                Angel Castro Martinez
+              </button>
+              <div
+                id="story-author-preview-content-1037815"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/acama" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--RwXpwlKZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/835610/273381b2-773a-4201-a7d0-6e71019eb4fb.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Angel Castro Martinez</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:835610,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Angel Castro Martinez&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="835610"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/acama/vulnerability-management-j8g" class="crayons-story__tertiary fs-xs"><time datetime="2022-03-31T09:26:25Z">Mar 31 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1648718785"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/acama/vulnerability-management-j8g" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--6yQbnN53--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vgk7at229zqcazmpc2pb.jpg" id="article-link-1037815">
+          Vulnerability Management
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(0, 131, 53, 0.10);
+        --tag-prefix: #008335;
+        --tag-bg-hover: rgba(0, 131, 53, 0.10);
+        --tag-prefix-hover: #008335;
+      " href="/t/beginners"><span class="crayons-tag__prefix">#</span>beginners</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/acama/vulnerability-management-j8g" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="1037815" aria-label="Add a comment to post - Vulnerability Management">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">10<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/acama/vulnerability-management-j8g#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Vulnerability Management">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="abtub6186mb2u7nbu6f4wnb2kgzn9eof" class="crayons-icon"><title id="abtub6186mb2u7nbu6f4wnb2kgzn9eof">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            2 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1037815"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1037815"
+              data-article-author-id="835610"
+              aria-label="Save post Vulnerability Management to reading list"
+              title="Save post Vulnerability Management to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="746252">
+  <a href="/ixmprove/deauthentication-attack-using-aireplay-ng-46i" aria-labelledby="article-link-1002818" class="crayons-story__hidden-navigation-link">Disconnect devices from WiFi networks. Deauthentication Attack using aireplay-ng</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/ixmprove" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--W8hsofm7--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/746252/a88a0a7a-e159-4b0f-ae68-2aa86fd98e72.png" alt="ixmprove profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/ixmprove" class="crayons-story__secondary fw-medium m:hidden">
+              Thijs Boelman
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-1002818" aria-controls="story-author-preview-content-1002818" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Thijs Boelman profile details">
+                Thijs Boelman
+              </button>
+              <div
+                id="story-author-preview-content-1002818"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/ixmprove" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--W8hsofm7--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/746252/a88a0a7a-e159-4b0f-ae68-2aa86fd98e72.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Thijs Boelman</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:746252,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Thijs Boelman&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="746252"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/ixmprove/deauthentication-attack-using-aireplay-ng-46i" class="crayons-story__tertiary fs-xs"><time datetime="2022-02-27T04:24:37Z">Feb 27 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1645935877"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/ixmprove/deauthentication-attack-using-aireplay-ng-46i" data-preload-image="" id="article-link-1002818">
+          Disconnect devices from WiFi networks. Deauthentication Attack using aireplay-ng
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/hacking"><span class="crayons-tag__prefix">#</span>hacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/linux"><span class="crayons-tag__prefix">#</span>linux</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/ixmprove/deauthentication-attack-using-aireplay-ng-46i" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="1002818" aria-label="Add a comment to post - Disconnect devices from WiFi networks. Deauthentication Attack using aireplay-ng">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">4<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/ixmprove/deauthentication-attack-using-aireplay-ng-46i#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Disconnect devices from WiFi networks. Deauthentication Attack using aireplay-ng">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="abufrcn8udqk9yrm4gf2qhfojptlt7ar" class="crayons-icon"><title id="abufrcn8udqk9yrm4gf2qhfojptlt7ar">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            3 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-1002818"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="1002818"
+              data-article-author-id="746252"
+              aria-label="Save post Disconnect devices from WiFi networks. Deauthentication Attack using aireplay-ng to reading list"
+              title="Save post Disconnect devices from WiFi networks. Deauthentication Attack using aireplay-ng to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="793920">
+  <a href="/fx2301/exploiting-unverified-jwt-signatures-554p" aria-labelledby="article-link-960918" class="crayons-story__hidden-navigation-link">Exploiting unverified JWT signatures</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/fx2301" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png" alt="fx2301 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/fx2301" class="crayons-story__secondary fw-medium m:hidden">
+              fx2301
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-960918" aria-controls="story-author-preview-content-960918" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="fx2301 profile details">
+                fx2301
+              </button>
+              <div
+                id="story-author-preview-content-960918"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/fx2301" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">fx2301</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:793920,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;fx2301&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="793920"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/fx2301/exploiting-unverified-jwt-signatures-554p" class="crayons-story__tertiary fs-xs"><time datetime="2022-01-19T19:47:27Z">Jan 19 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1642621647"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/fx2301/exploiting-unverified-jwt-signatures-554p" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--vf5K2xF9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gfxuv0t51dye6ct0e55h.png" id="article-link-960918">
+          Exploiting unverified JWT signatures
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/jwt"><span class="crayons-tag__prefix">#</span>jwt</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/redteam"><span class="crayons-tag__prefix">#</span>redteam</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/fx2301/exploiting-unverified-jwt-signatures-554p" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="960918" aria-label="Add a comment to post - Exploiting unverified JWT signatures">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">7<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/fx2301/exploiting-unverified-jwt-signatures-554p#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Exploiting unverified JWT signatures">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="apfvlcyiwiiuztf6xthbas50blndqz5p" class="crayons-icon"><title id="apfvlcyiwiiuztf6xthbas50blndqz5p">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            2 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-960918"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="960918"
+              data-article-author-id="793920"
+              aria-label="Save post Exploiting unverified JWT signatures to reading list"
+              title="Save post Exploiting unverified JWT signatures to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="793920">
+  <a href="/fx2301/graphql-api-recon-with-mitmproxy-2f5d" aria-labelledby="article-link-955692" class="crayons-story__hidden-navigation-link">GraphQL API recon with mitmproxy</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/fx2301" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png" alt="fx2301 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/fx2301" class="crayons-story__secondary fw-medium m:hidden">
+              fx2301
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-955692" aria-controls="story-author-preview-content-955692" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="fx2301 profile details">
+                fx2301
+              </button>
+              <div
+                id="story-author-preview-content-955692"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/fx2301" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">fx2301</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:793920,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;fx2301&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="793920"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/fx2301/graphql-api-recon-with-mitmproxy-2f5d" class="crayons-story__tertiary fs-xs"><time datetime="2022-01-15T02:03:08Z">Jan 15 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1642212188"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/fx2301/graphql-api-recon-with-mitmproxy-2f5d" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--cj4NPP0T--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3vyd0vefai1xvdemedh3.png" id="article-link-955692">
+          GraphQL API recon with mitmproxy
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/recon"><span class="crayons-tag__prefix">#</span>recon</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(23, 30, 38, 0.10);
+        --tag-prefix: #171e26;
+        --tag-bg-hover: rgba(23, 30, 38, 0.10);
+        --tag-prefix-hover: #171e26;
+      " href="/t/graphql"><span class="crayons-tag__prefix">#</span>graphql</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/fx2301/graphql-api-recon-with-mitmproxy-2f5d" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="955692" aria-label="Add a comment to post - GraphQL API recon with mitmproxy">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">6<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/fx2301/graphql-api-recon-with-mitmproxy-2f5d#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - GraphQL API recon with mitmproxy">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ak4mzdg5s7l2l4qc20h5l60gfj4eju9c" class="crayons-icon"><title id="ak4mzdg5s7l2l4qc20h5l60gfj4eju9c">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            1 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-955692"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="955692"
+              data-article-author-id="793920"
+              aria-label="Save post GraphQL API recon with mitmproxy to reading list"
+              title="Save post GraphQL API recon with mitmproxy to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="793920">
+  <a href="/fx2301/unpacking-jsmap-files-4fl0" aria-labelledby="article-link-955344" class="crayons-story__hidden-navigation-link">Unpacking js.map files</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/fx2301" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png" alt="fx2301 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/fx2301" class="crayons-story__secondary fw-medium m:hidden">
+              fx2301
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-955344" aria-controls="story-author-preview-content-955344" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="fx2301 profile details">
+                fx2301
+              </button>
+              <div
+                id="story-author-preview-content-955344"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/fx2301" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">fx2301</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:793920,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;fx2301&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="793920"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/fx2301/unpacking-jsmap-files-4fl0" class="crayons-story__tertiary fs-xs"><time datetime="2022-01-14T16:50:59Z">Jan 14 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1642179059"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/fx2301/unpacking-jsmap-files-4fl0" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--qjlFbYO1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9ymn3zollgr28naujcma.png" id="article-link-955344">
+          Unpacking js.map files
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/hacking"><span class="crayons-tag__prefix">#</span>hacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(247, 223, 30, 0.10);
+        --tag-prefix: #f7df1e;
+        --tag-bg-hover: rgba(247, 223, 30, 0.10);
+        --tag-prefix-hover: #f7df1e;
+      " href="/t/javascript"><span class="crayons-tag__prefix">#</span>javascript</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/fx2301/unpacking-jsmap-files-4fl0" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="955344" aria-label="Add a comment to post - Unpacking js.map files">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">7<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/fx2301/unpacking-jsmap-files-4fl0#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Unpacking js.map files">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a7ya5ng79vyb34s8uymgoxxhio03oixs" class="crayons-icon"><title id="a7ya5ng79vyb34s8uymgoxxhio03oixs">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            1 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-955344"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="955344"
+              data-article-author-id="793920"
+              aria-label="Save post Unpacking js.map files to reading list"
+              title="Save post Unpacking js.map files to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="793920">
+  <a href="/fx2301/modifying-a-sites-javascript-with-mitmproxy-1beo" aria-labelledby="article-link-955361" class="crayons-story__hidden-navigation-link">Modifying a site&#39;s JavaScript with mitmproxy</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/fx2301" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png" alt="fx2301 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/fx2301" class="crayons-story__secondary fw-medium m:hidden">
+              fx2301
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-955361" aria-controls="story-author-preview-content-955361" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="fx2301 profile details">
+                fx2301
+              </button>
+              <div
+                id="story-author-preview-content-955361"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/fx2301" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--7JftrbYP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/793920/253be76c-30e2-4040-8533-a30f2074c216.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">fx2301</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:793920,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;fx2301&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="793920"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/fx2301/modifying-a-sites-javascript-with-mitmproxy-1beo" class="crayons-story__tertiary fs-xs"><time datetime="2022-01-14T17:35:57Z">Jan 14 &#39;22</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1642181757"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/fx2301/modifying-a-sites-javascript-with-mitmproxy-1beo" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--IGPCfZk1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5hy3l9qiohhpjuuv1piz.png" id="article-link-955361">
+          Modifying a site&#39;s JavaScript with mitmproxy
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(247, 223, 30, 0.10);
+        --tag-prefix: #f7df1e;
+        --tag-bg-hover: rgba(247, 223, 30, 0.10);
+        --tag-prefix-hover: #f7df1e;
+      " href="/t/javascript"><span class="crayons-tag__prefix">#</span>javascript</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/mitm"><span class="crayons-tag__prefix">#</span>mitm</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/fx2301/modifying-a-sites-javascript-with-mitmproxy-1beo" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="955361" aria-label="Add a comment to post - Modifying a site&#39;s JavaScript with mitmproxy">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">6<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/fx2301/modifying-a-sites-javascript-with-mitmproxy-1beo#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Modifying a site&#39;s JavaScript with mitmproxy">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a5k7kqlsh0njlrhjhln2j9i0on1n9ck7" class="crayons-icon"><title id="a5k7kqlsh0njlrhjhln2j9i0on1n9ck7">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            1 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-955361"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="955361"
+              data-article-author-id="793920"
+              aria-label="Save post Modifying a site&#39;s JavaScript with mitmproxy to reading list"
+              title="Save post Modifying a site&#39;s JavaScript with mitmproxy to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="545304">
+  <a href="/kiransethu46/how-to-install-nuclei-in-any-linux-eo1" aria-labelledby="article-link-779978" class="crayons-story__hidden-navigation-link">How to install nuclei in any  linux ☠️</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/kiransethu46" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--EbHPZEbt--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/545304/b1189796-f800-4e16-a619-e7f814a97dbc.jpeg" alt="kiransethu46 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/kiransethu46" class="crayons-story__secondary fw-medium m:hidden">
+              Kiran Sethumadhavan
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-779978" aria-controls="story-author-preview-content-779978" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Kiran Sethumadhavan profile details">
+                Kiran Sethumadhavan
+              </button>
+              <div
+                id="story-author-preview-content-779978"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/kiransethu46" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--EbHPZEbt--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/545304/b1189796-f800-4e16-a619-e7f814a97dbc.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Kiran Sethumadhavan</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:545304,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Kiran Sethumadhavan&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="545304"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/kiransethu46/how-to-install-nuclei-in-any-linux-eo1" class="crayons-story__tertiary fs-xs"><time datetime="2021-08-03T04:55:30Z">Aug 3 &#39;21</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1627966530"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/kiransethu46/how-to-install-nuclei-in-any-linux-eo1" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--yEJkLQW5--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0dyr5kb0cbhaon7ex2tj.png" id="article-link-779978">
+          How to install nuclei in any  linux ☠️
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/kalilinux"><span class="crayons-tag__prefix">#</span>kalilinux</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/bugbounty"><span class="crayons-tag__prefix">#</span>bugbounty</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/tools"><span class="crayons-tag__prefix">#</span>tools</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/kiransethu46/how-to-install-nuclei-in-any-linux-eo1" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="779978" aria-label="Add a comment to post - How to install nuclei in any  linux ☠️">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">7<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/kiransethu46/how-to-install-nuclei-in-any-linux-eo1#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - How to install nuclei in any  linux ☠️">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ao2ce65ywqdveklkvgtjt8jjlzj6l9fx" class="crayons-icon"><title id="ao2ce65ywqdveklkvgtjt8jjlzj6l9fx">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              3<span class="hidden s:inline"> comments</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            1 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-779978"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="779978"
+              data-article-author-id="545304"
+              aria-label="Save post How to install nuclei in any  linux ☠️ to reading list"
+              title="Save post How to install nuclei in any  linux ☠️ to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="661214">
+  <a href="/maximking1/top-6-ethical-hacking-tools-4i8a" aria-labelledby="article-link-747673" class="crayons-story__hidden-navigation-link">Top 6 Ethical Hacking Tools</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/maximking1" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--kHPAHkH9--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/661214/73da84fd-b6b0-4346-9b68-6a28077ab382.png" alt="maximking1 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/maximking1" class="crayons-story__secondary fw-medium m:hidden">
+              Maxim King
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-747673" aria-controls="story-author-preview-content-747673" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Maxim King profile details">
+                Maxim King
+              </button>
+              <div
+                id="story-author-preview-content-747673"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/maximking1" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--kHPAHkH9--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/661214/73da84fd-b6b0-4346-9b68-6a28077ab382.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Maxim King</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:661214,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Maxim King&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="661214"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/maximking1/top-6-ethical-hacking-tools-4i8a" class="crayons-story__tertiary fs-xs"><time datetime="2021-07-04T12:45:26Z">Jul 4 &#39;21</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1625402726"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/maximking1/top-6-ethical-hacking-tools-4i8a" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--Xiil99sN--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pb73jfna6xwrmjw5nik1.jpeg" id="article-link-747673">
+          Top 6 Ethical Hacking Tools
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/pentesting"><span class="crayons-tag__prefix">#</span>pentesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/kali"><span class="crayons-tag__prefix">#</span>kali</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/linux"><span class="crayons-tag__prefix">#</span>linux</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/maximking1/top-6-ethical-hacking-tools-4i8a" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="747673" aria-label="Add a comment to post - Top 6 Ethical Hacking Tools">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">17<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/maximking1/top-6-ethical-hacking-tools-4i8a#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Top 6 Ethical Hacking Tools">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="adklm1cz6kjxtp2kumt8tcygfb6mx028" class="crayons-icon"><title id="adklm1cz6kjxtp2kumt8tcygfb6mx028">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            3 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-747673"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="747673"
+              data-article-author-id="661214"
+              aria-label="Save post Top 6 Ethical Hacking Tools to reading list"
+              title="Save post Top 6 Ethical Hacking Tools to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="510214">
+  <a href="/hansikaherath/ethical-hacking-2lmh" aria-labelledby="article-link-712532" class="crayons-story__hidden-navigation-link">Ethical Hacking</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/hansikaherath" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--BjDOQ3cg--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/510214/5e5f32db-2360-4f7a-96f3-89839ea886a1.jpeg" alt="hansikaherath profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/hansikaherath" class="crayons-story__secondary fw-medium m:hidden">
+              Hansika Herath
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-712532" aria-controls="story-author-preview-content-712532" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Hansika Herath profile details">
+                Hansika Herath
+              </button>
+              <div
+                id="story-author-preview-content-712532"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/hansikaherath" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--BjDOQ3cg--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/510214/5e5f32db-2360-4f7a-96f3-89839ea886a1.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Hansika Herath</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:510214,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Hansika Herath&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="510214"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/hansikaherath/ethical-hacking-2lmh" class="crayons-story__tertiary fs-xs"><time datetime="2021-05-30T04:54:34Z">May 30 &#39;21</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1622350474"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/hansikaherath/ethical-hacking-2lmh" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--TerRMjzJ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/47usohvl6zbcviyewllu.jpg" id="article-link-712532">
+          Ethical Hacking
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethics"><span class="crayons-tag__prefix">#</span>ethics</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/hansikaherath/ethical-hacking-2lmh" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="712532" aria-label="Add a comment to post - Ethical Hacking">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">4<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/hansikaherath/ethical-hacking-2lmh#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Ethical Hacking">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="as6u1sd5o4ahpjjcfr49y503kreitfa0" class="crayons-icon"><title id="as6u1sd5o4ahpjjcfr49y503kreitfa0">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            3 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-712532"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="712532"
+              data-article-author-id="510214"
+              aria-label="Save post Ethical Hacking to reading list"
+              title="Save post Ethical Hacking to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="120168">
+  <a href="/denisehilton/make-money-as-a-bug-bounty-hunter-on-these-9-platforms-2i67" aria-labelledby="article-link-459920" class="crayons-story__hidden-navigation-link">Make Money as a Bug Bounty Hunter on these 9 Platforms</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/denisehilton" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--nA1oKlea--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/120168/2363732a-9199-4906-9671-090d652f82ac.png" alt="denisehilton profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/denisehilton" class="crayons-story__secondary fw-medium m:hidden">
+              Denise Hilton
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-459920" aria-controls="story-author-preview-content-459920" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Denise Hilton profile details">
+                Denise Hilton
+              </button>
+              <div
+                id="story-author-preview-content-459920"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/denisehilton" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--nA1oKlea--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/120168/2363732a-9199-4906-9671-090d652f82ac.png"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Denise Hilton</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:120168,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Denise Hilton&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="120168"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/denisehilton/make-money-as-a-bug-bounty-hunter-on-these-9-platforms-2i67" class="crayons-story__tertiary fs-xs"><time datetime="2020-09-18T19:13:42Z">Sep 18 &#39;20</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1600456422"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/denisehilton/make-money-as-a-bug-bounty-hunter-on-these-9-platforms-2i67" data-preload-image="" id="article-link-459920">
+          Make Money as a Bug Bounty Hunter on these 9 Platforms
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/bugbounty"><span class="crayons-tag__prefix">#</span>bugbounty</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/denisehilton/make-money-as-a-bug-bounty-hunter-on-these-9-platforms-2i67" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="459920" aria-label="Add a comment to post - Make Money as a Bug Bounty Hunter on these 9 Platforms">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">17<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/denisehilton/make-money-as-a-bug-bounty-hunter-on-these-9-platforms-2i67#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Make Money as a Bug Bounty Hunter on these 9 Platforms">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a3c0ll9p0mhwsszpk96sacz9bqd6x9c" class="crayons-icon"><title id="a3c0ll9p0mhwsszpk96sacz9bqd6x9c">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              1<span class="hidden s:inline"> comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            2 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-459920"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="459920"
+              data-article-author-id="120168"
+              aria-label="Save post Make Money as a Bug Bounty Hunter on these 9 Platforms to reading list"
+              title="Save post Make Money as a Bug Bounty Hunter on these 9 Platforms to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="139424">
+  <a href="/salvietta150x40/top-15-free-hacking-tools-for-ethical-hackers-76m" aria-labelledby="article-link-358872" class="crayons-story__hidden-navigation-link">Top 15 Free Hacking Tools For Ethical Hackers</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/salvietta150x40" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--CeMkpurc--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/139424/38e19eda-87ec-4d77-a96c-a57c663895b6.jpg" alt="salvietta150x40 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/salvietta150x40" class="crayons-story__secondary fw-medium m:hidden">
+              Salvietta150x40
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-358872" aria-controls="story-author-preview-content-358872" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Salvietta150x40 profile details">
+                Salvietta150x40
+              </button>
+              <div
+                id="story-author-preview-content-358872"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/salvietta150x40" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--CeMkpurc--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/139424/38e19eda-87ec-4d77-a96c-a57c663895b6.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Salvietta150x40</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:139424,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Salvietta150x40&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="139424"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/salvietta150x40/top-15-free-hacking-tools-for-ethical-hackers-76m" class="crayons-story__tertiary fs-xs"><time datetime="2020-06-19T01:02:42Z">Jun 19 &#39;20</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1592528562"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/salvietta150x40/top-15-free-hacking-tools-for-ethical-hackers-76m" data-preload-image="" id="article-link-358872">
+          Top 15 Free Hacking Tools For Ethical Hackers
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/hacking"><span class="crayons-tag__prefix">#</span>hacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhackers"><span class="crayons-tag__prefix">#</span>ethicalhackers</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/hackingtools"><span class="crayons-tag__prefix">#</span>hackingtools</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/salvietta150x40/top-15-free-hacking-tools-for-ethical-hackers-76m" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="358872" aria-label="Add a comment to post - Top 15 Free Hacking Tools For Ethical Hackers">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">17<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/salvietta150x40/top-15-free-hacking-tools-for-ethical-hackers-76m#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Top 15 Free Hacking Tools For Ethical Hackers">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a3067zxhi7bf4u7qn5duq8xlcp27f6r8" class="crayons-icon"><title id="a3067zxhi7bf4u7qn5duq8xlcp27f6r8">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              2<span class="hidden s:inline"> comments</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            1 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-358872"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="358872"
+              data-article-author-id="139424"
+              aria-label="Save post Top 15 Free Hacking Tools For Ethical Hackers to reading list"
+              title="Save post Top 15 Free Hacking Tools For Ethical Hackers to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="379152">
+  <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212" aria-labelledby="article-link-353764" class="crayons-story__hidden-navigation-link">Getting started with Penetration Testing!</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/chinmaytrpth2" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--UtjlYFPR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/379152/5fc39eed-6181-42ec-8c2f-670fe4f0f259.jpeg" alt="chinmaytrpth2 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/chinmaytrpth2" class="crayons-story__secondary fw-medium m:hidden">
+              Chinmaya Tripathi
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-353764" aria-controls="story-author-preview-content-353764" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Chinmaya Tripathi profile details">
+                Chinmaya Tripathi
+              </button>
+              <div
+                id="story-author-preview-content-353764"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/chinmaytrpth2" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--UtjlYFPR--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/379152/5fc39eed-6181-42ec-8c2f-670fe4f0f259.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Chinmaya Tripathi</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:379152,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Chinmaya Tripathi&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="379152"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212" class="crayons-story__tertiary fs-xs"><time datetime="2020-06-12T18:14:25Z">Jun 12 &#39;20</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1591985665"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--fdniT8US--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/eo98zkvbbjlsnylf13gl.jpg" id="article-link-353764">
+          Getting started with Penetration Testing!
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/penetrationtesting"><span class="crayons-tag__prefix">#</span>penetrationtesting</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(0, 131, 53, 0.10);
+        --tag-prefix: #008335;
+        --tag-bg-hover: rgba(0, 131, 53, 0.10);
+        --tag-prefix-hover: #008335;
+      " href="/t/beginners"><span class="crayons-tag__prefix">#</span>beginners</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="353764" aria-label="Add a comment to post - Getting started with Penetration Testing!">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">22<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/chinmaytrpth2/getting-started-with-penetration-testing-212#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Getting started with Penetration Testing!">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="af2yiskb6fszcacn4fdi1113yvct1ns4" class="crayons-icon"><title id="af2yiskb6fszcacn4fdi1113yvct1ns4">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              1<span class="hidden s:inline"> comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            4 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-353764"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="353764"
+              data-article-author-id="379152"
+              aria-label="Save post Getting started with Penetration Testing! to reading list"
+              title="Save post Getting started with Penetration Testing! to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="331807">
+  <a href="/koenigsolutions/importance-of-ceh-exam-251n" aria-labelledby="article-link-257264" class="crayons-story__hidden-navigation-link">Importance of CEH Exam</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/koenigsolutions" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--bsW1HCZn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/331807/2d205299-b7b0-46dc-bbb2-698751ca1acf.jpg" alt="koenigsolutions profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/koenigsolutions" class="crayons-story__secondary fw-medium m:hidden">
+              Koenig Solutions
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-257264" aria-controls="story-author-preview-content-257264" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Koenig Solutions profile details">
+                Koenig Solutions
+              </button>
+              <div
+                id="story-author-preview-content-257264"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/koenigsolutions" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--bsW1HCZn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/331807/2d205299-b7b0-46dc-bbb2-698751ca1acf.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Koenig Solutions</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:331807,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Koenig Solutions&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="331807"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/koenigsolutions/importance-of-ceh-exam-251n" class="crayons-story__tertiary fs-xs"><time datetime="2020-02-07T11:37:50Z">Feb 7 &#39;20</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1581075470"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/koenigsolutions/importance-of-ceh-exam-251n" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--ONABsyfJ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/xq80ogikddt3auucjyoc.png" id="article-link-257264">
+          Importance of CEH Exam
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ceh"><span class="crayons-tag__prefix">#</span>ceh</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/cehexam"><span class="crayons-tag__prefix">#</span>cehexam</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/koenigsolutions/importance-of-ceh-exam-251n" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="257264" aria-label="Add a comment to post - Importance of CEH Exam">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">5<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/koenigsolutions/importance-of-ceh-exam-251n#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Importance of CEH Exam">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="anv1ax4h9arrsb1tkyhmud3dadka2eex" class="crayons-icon"><title id="anv1ax4h9arrsb1tkyhmud3dadka2eex">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            2 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-257264"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="257264"
+              data-article-author-id="331807"
+              aria-label="Save post Importance of CEH Exam to reading list"
+              title="Save post Importance of CEH Exam to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="57513">
+  <a href="/protium/extract-code-from-android-apk-with-3-commands-1o4a" aria-labelledby="article-link-129322" class="crayons-story__hidden-navigation-link">Extract code from Android APK with 3 commands</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/protium" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--mik8foYb--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/57513/a942e705-8b47-4a00-ac4f-302983772dd5.jpeg" alt="protium profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/protium" class="crayons-story__secondary fw-medium m:hidden">
+              protium
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-129322" aria-controls="story-author-preview-content-129322" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="protium profile details">
+                protium
+              </button>
+              <div
+                id="story-author-preview-content-129322"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/protium" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--mik8foYb--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/57513/a942e705-8b47-4a00-ac4f-302983772dd5.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">protium</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:57513,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;protium&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="57513"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/protium/extract-code-from-android-apk-with-3-commands-1o4a" class="crayons-story__tertiary fs-xs"><time datetime="2019-06-27T16:36:26Z">Jun 27 &#39;19</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1561653386"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/protium/extract-code-from-android-apk-with-3-commands-1o4a" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--73VYaZB_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/yk14x4z4sbg3h55lqm5h.png" id="article-link-129322">
+          Extract code from Android APK with 3 commands
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(86, 160, 54, 0.10);
+        --tag-prefix: #56a036;
+        --tag-bg-hover: rgba(86, 160, 54, 0.10);
+        --tag-prefix-hover: #56a036;
+      " href="/t/android"><span class="crayons-tag__prefix">#</span>android</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(126, 72, 16, 0.10);
+        --tag-prefix: #7e4810;
+        --tag-bg-hover: rgba(126, 72, 16, 0.10);
+        --tag-prefix-hover: #7e4810;
+      " href="/t/java"><span class="crayons-tag__prefix">#</span>java</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/protium/extract-code-from-android-apk-with-3-commands-1o4a" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="129322" aria-label="Add a comment to post - Extract code from Android APK with 3 commands">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">36<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/protium/extract-code-from-android-apk-with-3-commands-1o4a#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Extract code from Android APK with 3 commands">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="acmb8wkng3odtd9884s6xd66jih5vi8v" class="crayons-icon"><title id="acmb8wkng3odtd9884s6xd66jih5vi8v">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              2<span class="hidden s:inline"> comments</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            1 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-129322"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="129322"
+              data-article-author-id="57513"
+              aria-label="Save post Extract code from Android APK with 3 commands to reading list"
+              title="Save post Extract code from Android APK with 3 commands to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="112545">
+  <a href="/nandod1707/should-you-care-about-xss-in-vuejs-1ea6" aria-labelledby="article-link-64025" class="crayons-story__hidden-navigation-link">Should you care about XSS in Vue.js?</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/nandod1707" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--i6z-xrIg--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/112545/6393527e-71f9-4505-81f5-cfbf5b6b7b95.jpeg" alt="nandod1707 profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/nandod1707" class="crayons-story__secondary fw-medium m:hidden">
+              Nando Delgado
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-64025" aria-controls="story-author-preview-content-64025" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Nando Delgado profile details">
+                Nando Delgado
+              </button>
+              <div
+                id="story-author-preview-content-64025"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/nandod1707" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--i6z-xrIg--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/112545/6393527e-71f9-4505-81f5-cfbf5b6b7b95.jpeg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Nando Delgado</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:112545,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Nando Delgado&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="112545"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/nandod1707/should-you-care-about-xss-in-vuejs-1ea6" class="crayons-story__tertiary fs-xs"><time datetime="2018-11-20T15:06:29Z">Nov 20 &#39;18</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1542726389"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/nandod1707/should-you-care-about-xss-in-vuejs-1ea6" data-preload-image="" id="article-link-64025">
+          Should you care about XSS in Vue.js?
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(86, 39, 101, 0.10);
+        --tag-prefix: #562765;
+        --tag-bg-hover: rgba(86, 39, 101, 0.10);
+        --tag-prefix-hover: #562765;
+      " href="/t/webdev"><span class="crayons-tag__prefix">#</span>webdev</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/netsec"><span class="crayons-tag__prefix">#</span>netsec</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(27, 172, 128, 0.10);
+        --tag-prefix: #1bac80;
+        --tag-bg-hover: rgba(27, 172, 128, 0.10);
+        --tag-prefix-hover: #1bac80;
+      " href="/t/security"><span class="crayons-tag__prefix">#</span>security</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/nandod1707/should-you-care-about-xss-in-vuejs-1ea6" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="64025" aria-label="Add a comment to post - Should you care about XSS in Vue.js?">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">33<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/nandod1707/should-you-care-about-xss-in-vuejs-1ea6#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - Should you care about XSS in Vue.js?">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aq78d37g957qrm4npgfijz9dk97hga7c" class="crayons-icon"><title id="aq78d37g957qrm4npgfijz9dk97hga7c">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              8<span class="hidden s:inline"> comments</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            5 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-64025"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="64025"
+              data-article-author-id="112545"
+              aria-label="Save post Should you care about XSS in Vue.js? to reading list"
+              title="Save post Should you care about XSS in Vue.js? to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="crayons-story " data-content-user-id="331807">
+  <a href="/koenigsolutions/7-things-you-must-know-about-cyber-security-in-the-cloud-1fnk" aria-labelledby="article-link-257257" class="crayons-story__hidden-navigation-link">7 Things You Must Know About Cyber Security in the Cloud</a>
+
+
+  <div class="crayons-story__body">
+    <div class="crayons-story__top">
+      <div class="crayons-story__meta">
+        <div class="crayons-story__author-pic">
+
+          <a href="/koenigsolutions" class="crayons-avatar  crayons-avatar--l  ">
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--bsW1HCZn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/331807/2d205299-b7b0-46dc-bbb2-698751ca1acf.jpg" alt="koenigsolutions profile" class="crayons-avatar__image" loading="lazy" />
+          </a>
+        </div>
+        <div>
+          <div>
+            <a href="/koenigsolutions" class="crayons-story__secondary fw-medium m:hidden">
+              Koenig Solutions
+            </a>
+            <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:inline-block">
+              <button id="story-author-preview-trigger-257257" aria-controls="story-author-preview-content-257257" class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" aria-label="Koenig Solutions profile details">
+                Koenig Solutions
+              </button>
+              <div
+                id="story-author-preview-content-257257"
+                class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                style="border-top-color: var(--card-color);"
+                data-repositioning-dropdown="true"
+                data-testid="profile-preview-card">
+                <div class="gap-4 grid">
+                  <div class="-mt-4">
+                    <a href="/koenigsolutions" class="flex">
+                      <span class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                        <img
+                          src="https://res.cloudinary.com/practicaldev/image/fetch/s--bsW1HCZn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/331807/2d205299-b7b0-46dc-bbb2-698751ca1acf.jpg"
+                          class="crayons-avatar__image"
+                          alt=""
+                          loading="lazy" />
+                      </span>
+                      <span class="crayons-link crayons-subtitle-2 mt-5">Koenig Solutions</span>
+                    </a>
+                  </div>
+                  <div class="print-hidden">
+                    <button
+                      class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                      data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:331807,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Koenig Solutions&quot;}'>
+                      Follow
+                    </button>
+                  </div>
+                  <div
+                    class="author-preview-metadata-container"
+                    data-author-id="331807"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <a href="/koenigsolutions/7-things-you-must-know-about-cyber-security-in-the-cloud-1fnk" class="crayons-story__tertiary fs-xs"><time datetime="2020-02-07T11:18:07Z">Feb 7 &#39;20</time><span class="time-ago-indicator-initial-placeholder" data-seconds="1581074287"></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="crayons-story__indention">
+      <h2 class="crayons-story__title">
+        <a href="/koenigsolutions/7-things-you-must-know-about-cyber-security-in-the-cloud-1fnk" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--BL1nQoil--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/ex4q1m6co2zu795vwhvg.jpg" id="article-link-257257">
+          7 Things You Must Know About Cyber Security in the Cloud
+        </a>
+      </h2>
+      <div class="crayons-story__tags">
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/cloudcomputing"><span class="crayons-tag__prefix">#</span>cloudcomputing</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ethicalhacking"><span class="crayons-tag__prefix">#</span>ethicalhacking</a>
+          <a class="crayons-tag  crayons-tag--monochrome " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/ceh"><span class="crayons-tag__prefix">#</span>ceh</a>
+      </div>
+      <div class="crayons-story__bottom">
+        <div class="crayons-story__details">
+          <a href="/koenigsolutions/7-things-you-must-know-about-cyber-security-in-the-cloud-1fnk" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left" data-reaction-count data-reactable-id="257257" aria-label="Add a comment to post - 7 Things You Must Know About Cyber Security in the Cloud">
+            <div class="multiple_reactions_aggregate">
+              <span class="multiple_reactions_icons_container" dir="rtl">
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+                  </span>
+                  <span class="crayons_icon_container">
+                    <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+                  </span>
+              </span>
+              <span class="aggregate_reactions_counter">4<span class="hidden s:inline"> reactions</span></span>
+            </div>
+          </a>
+            <a href="/koenigsolutions/7-things-you-must-know-about-cyber-security-in-the-cloud-1fnk#comments" class="crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon-left flex items-center" aria-label="Add a comment to post - 7 Things You Must Know About Cyber Security in the Cloud">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="amefkrrydrzupwo9bgg68zi4vq22eyff" class="crayons-icon"><title id="amefkrrydrzupwo9bgg68zi4vq22eyff">Comments</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+              <span class="hidden s:inline">Add Comment</span>
+            </a>
+        </div>
+        <div class="crayons-story__save">
+          <small class="crayons-story__tertiary fs-xs mr-2">
+            2 min read
+          </small>
+            <button
+              type="button"
+              id="article-save-button-257257"
+              class="c-btn c-btn--icon-alone bookmark-button"
+              data-reactable-id="257257"
+              data-article-author-id="331807"
+              aria-label="Save post 7 Things You Must Know About Cyber Security in the Cloud to reading list"
+              title="Save post 7 Things You Must Know About Cyber Security in the Cloud to reading list">
+              <span class="bm-initial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path></svg>
+
+              </span>
+              <span class="bm-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"><path d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75z"></path></svg>
+
+              </span>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="placeholder-div"></div>
+<div class="single-article-small-pic" id="article-index-hidden-div" style="display:none"></div>
+
+      </div>
+      <div class="loading-articles" id="loading-articles">
+        loading...
+      </div>
+    </main>
+      <div id="sidebar-wrapper-right" class="sidebar-wrapper sidebar-wrapper-right">
+    <div class="sidebar-bg" id="sidebar-bg-right"></div>
+    <aside class="side-bar sidebar-additional showing" id="sidebar-additional">
+    </aside>
+  </div>
+
+  </div>
+
+  <script src="https://dev.to/packs/js/runtime~storiesList-580f9a107caf30262631.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/storiesList-1313758cfb355b95d4d8.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~followButtons-728c603f2dc8755ce211.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/6-b93c1529963bca9369db.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/followButtons-b70c2c080f62af0daafb.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~feedPreviewCards-3654d1d985e1784b66b6.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/feedPreviewCards-a14d2ce8a6911ebbc1d2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~hideBookmarkButtons-3f611fd89500bcc725e1.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/hideBookmarkButtons-3ea80ef43f0c60b791f0.chunk.js" defer="defer"></script>
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  </body>
+  </html>

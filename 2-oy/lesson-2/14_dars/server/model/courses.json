@@ -1,0 +1,37 @@
+[
+    {
+        "id": "a4669232-1a67-459e-acb8-7fc283ba84c0",
+        "title": "Vue",
+        "price": "800000",
+        "author": "Eshmat Toshmatov",
+        "userId": "400a30ef-6d60-4f6c-984d-98c939ccf7b8"
+    },
+    {
+        "id": "36805be0-f5dc-4d6a-8f1a-605bab53afda",
+        "title": "React",
+        "price": "800000",
+        "author": "Eshmat Toshmatov",
+        "userId": "400a30ef-6d60-4f6c-984d-98c939ccf7b8"
+    },
+    {
+        "id": "62a6face-3296-4594-bee3-b8d88e609386",
+        "title": "Angular",
+        "price": "800000",
+        "author": "Eshmat Toshmatov",
+        "userId": "400a30ef-6d60-4f6c-984d-98c939ccf7b8"
+    },
+    {
+        "id": "0e82e564-28fa-4350-a724-eb7f6764ea7f",
+        "title": "express",
+        "price": "800000",
+        "author": "Eshmat Toshmatov",
+        "userId": "3943c883-3680-4f02-bc01-98fa19b078de"
+    },
+    {
+        "id": "8281841b-dff0-4497-bc5a-9e70ce71794e",
+        "title": "nestjs",
+        "price": "800000",
+        "author": "Eshmat Toshmatov",
+        "userId": "3943c883-3680-4f02-bc01-98fa19b078de"
+    }
+]

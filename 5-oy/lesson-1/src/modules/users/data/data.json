@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "username": "Eshmat",
+        "password": "123456",
+        "gender": {
+            "MALE": "male",
+            "FEMALE": "female"
+        },
+        "email": "jkjhvm@gmail.com"
+    },
+    {
+        "id": 2,
+        "username": "Eshmat",
+        "password": "123456",
+        "gender": {
+            "MALE": "male",
+            "FEMALE": "female"
+        },
+        "email": "d@gmail.com"
+    },
+    {
+        "id": 3,
+        "username": "Eshmat",
+        "email": "fa@gmail.com"
+    },
+    {
+        "id": 4,
+        "email": "shdj@gmail.com"
+    }
+]

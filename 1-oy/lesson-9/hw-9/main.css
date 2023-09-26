@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: radial-gradient(rgb(40, 83, 159),rgb(11, 26, 72));
+    gap: 20px;
+    color: white;
+}
+h2{
+    font-size: 50px;
+}
+h1{
+    font-size: 200px;
+    font-weight: 900;
+}

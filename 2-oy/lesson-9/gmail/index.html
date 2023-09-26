@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send gmail</title>
+
+    <style>
+
+        #form{
+            justify-content: center;
+            display: flex;
+        }
+        #input {
+            width:  300px;
+            height: 30px;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Send gmail</h1>
+    <form id="form">
+        <input type="text" placeholder="email..." name="email" id="input">
+        <br>
+        <br>
+        <button type="submit">send to email</button>
+    </form>
+ 
+    
+
+    <script>
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+
+            const { email } = e.target
+
+            fetch('http://localhost:4000/send_gmail', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+
+                },
+                body: JSON.stringify({
+                    email: email.value
+                })
+            }).then(res => res.json())
+               .then(data => alert(data.msg))
+        })
+    </script>
+</body>
+</html>

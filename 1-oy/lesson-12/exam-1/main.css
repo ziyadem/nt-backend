@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.lorem{
+    padding: 30px 0;
+}
+h2{
+   text-align: center;
+   margin-top: 10px;
+   font-size: 30px;
+}
+.btn1{
+  padding: 5px 10px;
+  border: 1px solid rgb(33, 115, 236);
+  background-color: rgb(33, 115, 236);
+  color: white;
+}
+.btn1:hover{
+  background-color: white;
+  color: rgb(33, 115, 236);
+}
+.btn2{
+  padding: 5px 10px;
+  border: 1px solid rgb(58, 234, 117);
+  background-color: rgb(58, 234, 117);
+  color: white;
+}
+.btn2:hover{
+  background-color: white;
+  color: rgb(58, 234, 117);
+}
+h1{
+    padding-bottom: 10px;
+}
+.btns{
+    margin-bottom: 10px;
+}

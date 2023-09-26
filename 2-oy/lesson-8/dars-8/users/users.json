@@ -1,0 +1,42 @@
+[
+    {
+        "username": "ziyadem",
+        "age": "20",
+        "gender": "fmale",
+        "id": 1,
+        "socket_id": "5B0lADlTxNghnFDUAAAF",
+        "timeUser": "22:37"
+    },
+    {
+        "username": "jon",
+        "age": "78",
+        "gender": "male",
+        "id": 2,
+        "socket_id": "gM7P0rzwI1K2r9lPAAAD",
+        "timeUser": "22:38"
+    },
+    {
+        "username": "anna",
+        "age": "20",
+        "gender": "fmale",
+        "id": 3,
+        "socket_id": "RQN5pHRVYidC8AGjAAAF",
+        "timeUser": "22:40"
+    },
+    {
+        "username": "Bill",
+        "age": "22",
+        "gender": "male",
+        "id": 4,
+        "socket_id": "c-hzdbK6mGDcduaDAAAH",
+        "timeUser": "22:40"
+    },
+    {
+        "username": "ella",
+        "age": "20",
+        "gender": "fmale",
+        "id": 5,
+        "socket_id": "dt90dB3aVky72lSmAAAL",
+        "timeUser": "22:45"
+    }
+]

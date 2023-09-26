@@ -1,0 +1,2677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tags - DEV Community</title>
+      <meta name="last-updated" content="2023-04-04 00:54:31 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1680569671">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://dev.to/assets/base-9367e1923af849f8b2501fbc3dbb112ec2a9c13b7b7095d2a6c9fa25064774e4.js" defer="defer"></script>
+        <script src="https://dev.to/packs/js/runtime~base-c78c7355d34f41bec100.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-e69699ee885daf54b5a1.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+      
+  <link rel="canonical" href="https://dev.to/tags" />
+  <meta name="description" content="Tags to follow on DEV Community">
+  <meta name="keywords" content="software development, engineering, rails, javascript, ruby">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://dev.to/tags" />
+  <meta property="og:title" content="Tags to follow on DEV Community" />
+  <meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png" />
+  <meta property="og:description" content="DEV Community is great!" />
+  <meta property="og:site_name" content="DEV Community" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thepracticaldev">
+  <meta name="twitter:title" content="Tags to follow on DEV Community">
+  <meta name="twitter:description" content="DEV Community is great!">
+  <meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192" />
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+      <meta property="forem:domain" content="dev.to" />
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-locale="en"
+        data-honeybadger-key="a45862f6"
+        data-deployed-at="2023-04-03T21:49:30Z"
+        data-latest-commit-id="b412daa3eaf890d4c0c17fe5e4412f1193910e30"
+        data-ga-tracking="UA-71991109-1"
+        data-ga4-tracking-id="G-TYEM8Y3JN3"
+        >
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ayongsjw4ll6q4rtzc1vfl0r18bs9l3" class="crayons-icon"><title id="ayongsjw4ll6q4rtzc1vfl0r18bs9l3">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a8nehxm88wubs64haup80t18ybl40pxo" aria-hidden="true" class="crayons-icon"><title id="a8nehxm88wubs64haup80t18ybl40pxo">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="apioonfurkwj33nleilss6m3znep0l1q" class="crayons-icon"><title id="apioonfurkwj33nleilss6m3znep0l1q">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ajc6e7864lium1lizbjrq8thajtnevpj" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="ajc6e7864lium1lizbjrq8thajtnevpj">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper tags tags-index" data-current-page="tags-index">
+  <div id="page-content-inner">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+
+<main id="main-content" class="crayons-layout crayons-layout--header-inside">
+  <header class="crayons-page-header">
+    <h1 class="crayons-title">
+        Top tags
+    </h1>
+    <form accept-charset="UTF-8" method="get" action="/tags" role="search">
+      <div class="crayons-fields crayons-fields--horizontal">
+        <div class="crayons-field flex-1 relative">
+          <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" aria-label="Tag search term" name="q" placeholder="Search for tag" autocomplete="off" />
+          <button type="submit" aria-label="Search tags" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aswrt3v42d4smuw4ok64f3bn8ywk6hqv" aria-hidden="true" class="crayons-icon"><title id="aswrt3v42d4smuw4ok64f3bn8ywk6hqv">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+          </button>
+        </div>
+          <a class="crayons-btn crayons-btn--ghost" href="/dashboard/following_tags">Following tags</a>
+      </div>
+    </form>
+  </header>
+    <div class="grid gap-3 m:gap-4 l:gap-6 m:grid-cols-2 l:grid-cols-3 px-3 m:px-0 pb-3" data-follow-button-container="true">
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #562765; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(86, 39, 101, 0.10);
+        --tag-prefix: #562765;
+        --tag-bg-hover: rgba(86, 39, 101, 0.10);
+        --tag-prefix-hover: #562765;
+      " href="/t/webdev"><span class="crayons-tag__prefix">#</span>webdev</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Because the internet...</p>
+          <p class="mb-3 fs-s color-base-60">
+            109581 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:8,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;webdev&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #f7df1e; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(247, 223, 30, 0.10);
+        --tag-prefix: #f7df1e;
+        --tag-bg-hover: rgba(247, 223, 30, 0.10);
+        --tag-prefix-hover: #f7df1e;
+      " href="/t/javascript"><span class="crayons-tag__prefix">#</span>javascript</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Once relegated to the browser as one of the 3 core technologies of the web, JavaScript can now be found almost anywhere you find code. 
+
+JavaScript developers move fast and push software development forward; they can be as opinionated as the frameworks they use, so let's keep it clean here and make it a place to learn from each other!</p>
+          <p class="mb-3 fs-s color-base-60">
+            121841 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:6,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;javascript&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--QiqFhwmE--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/16/js-badge.png" style="width: 64px; height: 64px; transform: rotate(5deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #008335; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 131, 53, 0.10);
+        --tag-prefix: #008335;
+        --tag-bg-hover: rgba(0, 131, 53, 0.10);
+        --tag-prefix-hover: #008335;
+      " href="/t/beginners"><span class="crayons-tag__prefix">#</span>beginners</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">"A journey of a thousand miles begins with a single step." -Chinese Proverb</p>
+          <p class="mb-3 fs-s color-base-60">
+            79582 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:555,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;beginners&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #890606; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(137, 6, 6, 0.10);
+        --tag-prefix: #890606;
+        --tag-bg-hover: rgba(137, 6, 6, 0.10);
+        --tag-prefix-hover: #890606;
+      " href="/t/programming"><span class="crayons-tag__prefix">#</span>programming</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">The magic behind computers. 💻  🪄</p>
+          <p class="mb-3 fs-s color-base-60">
+            62742 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:33,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;programming&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #FEFFA5; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(254, 255, 165, 0.10);
+        --tag-prefix: #FEFFA5;
+        --tag-bg-hover: rgba(254, 255, 165, 0.10);
+        --tag-prefix-hover: #FEFFA5;
+      " href="/t/tutorial"><span class="crayons-tag__prefix">#</span>tutorial</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Tutorial is a general purpose tag. We welcome all types of tutorial - code related or not! 
+
+It's all about learning, and using tutorials to teach others!</p>
+          <p class="mb-3 fs-s color-base-60">
+            52127 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:297,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;tutorial&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #222222; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(34, 34, 34, 0.10);
+        --tag-prefix: #222222;
+        --tag-bg-hover: rgba(34, 34, 34, 0.10);
+        --tag-prefix-hover: #222222;
+      " href="/t/react"><span class="crayons-tag__prefix">#</span>react</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Official tag for Facebook's React JavaScript library for building user interfaces</p>
+          <p class="mb-3 fs-s color-base-60">
+            46909 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:125,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;react&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Hx4s8tX---/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/26/react-sticker.png" style="width: 64px; height: 64px; transform: rotate(0deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #1E38BB; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(30, 56, 187, 0.10);
+        --tag-prefix: #1E38BB;
+        --tag-bg-hover: rgba(30, 56, 187, 0.10);
+        --tag-prefix-hover: #1E38BB;
+      " href="/t/python"><span class="crayons-tag__prefix">#</span>python</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">import antigravity</p>
+          <p class="mb-3 fs-s color-base-60">
+            34597 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:25,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;python&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--AqHNoO65--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/20/57795360-bec24f00-7713-11e9-9516-20f5f5d0f034.png" style="width: 64px; height: 64px; transform: rotate(0deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #06B500; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(6, 181, 0, 0.10);
+        --tag-prefix: #06B500;
+        --tag-bg-hover: rgba(6, 181, 0, 0.10);
+        --tag-prefix-hover: #06B500;
+      " href="/t/devops"><span class="crayons-tag__prefix">#</span>devops</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Content centering around the shifting left of responsibility, deconstruction of responsibility silos, and the automation of repetitive work tasks.</p>
+          <p class="mb-3 fs-s color-base-60">
+            22856 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:168,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;devops&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #2A0798; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(42, 7, 152, 0.10);
+        --tag-prefix: #2A0798;
+        --tag-bg-hover: rgba(42, 7, 152, 0.10);
+        --tag-prefix-hover: #2A0798;
+      " href="/t/productivity"><span class="crayons-tag__prefix">#</span>productivity</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Productivity includes tips on how to use tools and software, process optimization, useful references, experience, and mindstate optimization.</p>
+          <p class="mb-3 fs-s color-base-60">
+            26545 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:112,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;productivity&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #2A2566; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(42, 37, 102, 0.10);
+        --tag-prefix: #2A2566;
+        --tag-bg-hover: rgba(42, 37, 102, 0.10);
+        --tag-prefix-hover: #2A2566;
+      " href="/t/career"><span class="crayons-tag__prefix">#</span>career</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">This tag is for anything relating to careers! Job offers, workplace conflict, interviews, resumes, promotions, etc.</p>
+          <p class="mb-3 fs-s color-base-60">
+            21421 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:630,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;career&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #212b3a; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(33, 43, 58, 0.10);
+        --tag-prefix: #212b3a;
+        --tag-bg-hover: rgba(33, 43, 58, 0.10);
+        --tag-prefix-hover: #212b3a;
+      " href="/t/aws"><span class="crayons-tag__prefix">#</span>aws</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Amazon Web Services (AWS) is a collection of web-services for computing, storage, machine learning, security, and more
+
+There are over 150+ AWS service with new services being announced yearly.</p>
+          <p class="mb-3 fs-s color-base-60">
+            17837 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:397,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;aws&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #26BE00; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(38, 190, 0, 0.10);
+        --tag-prefix: #26BE00;
+        --tag-bg-hover: rgba(38, 190, 0, 0.10);
+        --tag-prefix-hover: #26BE00;
+      " href="/t/opensource"><span class="crayons-tag__prefix">#</span>opensource</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">May The Source Be With You!
+
+Articles about Open Source and Free Software as a philosophy, and its application to software development and project management.</p>
+          <p class="mb-3 fs-s color-base-60">
+            18960 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:228,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;opensource&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #3d8836; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(61, 136, 54, 0.10);
+        --tag-prefix: #3d8836;
+        --tag-bg-hover: rgba(61, 136, 54, 0.10);
+        --tag-prefix-hover: #3d8836;
+      " href="/t/node"><span class="crayons-tag__prefix">#</span>node</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A JavaScript runtime built on Chrome's V8 JavaScript engine.</p>
+          <p class="mb-3 fs-s color-base-60">
+            20758 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:15,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;node&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--gROBFAy1--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/23/node-sticker.png" style="width: 64px; height: 64px; transform: rotate(0deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #2965F1; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(41, 101, 241, 0.10);
+        --tag-prefix: #2965F1;
+        --tag-bg-hover: rgba(41, 101, 241, 0.10);
+        --tag-prefix-hover: #2965F1;
+      " href="/t/css"><span class="crayons-tag__prefix">#</span>css</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Cascading Style Sheets (CSS) is a simple language for adding style (e.g., fonts, colors, spacing) to HTML documents. It describes how HTML elements should be displayed.</p>
+          <p class="mb-3 fs-s color-base-60">
+            24977 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:23,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;css&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LBduLDHs--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/18/57795357-be29b880-7713-11e9-9748-b08c782b58d7.png" style="width: 64px; height: 64px; transform: rotate(-10deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #1ad643; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(26, 214, 67, 0.10);
+        --tag-prefix: #1ad643;
+        --tag-bg-hover: rgba(26, 214, 67, 0.10);
+        --tag-prefix-hover: #1ad643;
+      " href="/t/discuss"><span class="crayons-tag__prefix">#</span>discuss</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Craft a prompt and start a conversation! </p>
+          <p class="mb-3 fs-s color-base-60">
+            22084 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:715,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;discuss&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #111111; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(17, 17, 17, 0.10);
+        --tag-prefix: #111111;
+        --tag-bg-hover: rgba(17, 17, 17, 0.10);
+        --tag-prefix-hover: #111111;
+      " href="/t/news"><span class="crayons-tag__prefix">#</span>news</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Expect to see announcements of new and updated products, services, and features for languages &amp; frameworks. You also will find high-level news relevant to the tech and software development industry covered here. </p>
+          <p class="mb-3 fs-s color-base-60">
+            35188 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:44,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;news&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #234A84; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(35, 74, 132, 0.10);
+        --tag-prefix: #234A84;
+        --tag-bg-hover: rgba(35, 74, 132, 0.10);
+        --tag-prefix-hover: #234A84;
+      " href="/t/typescript"><span class="crayons-tag__prefix">#</span>typescript</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Optional static type-checking for JavaScript.</p>
+          <p class="mb-3 fs-s color-base-60">
+            16925 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:169,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;typescript&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #F53900; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(245, 57, 0, 0.10);
+        --tag-prefix: #F53900;
+        --tag-bg-hover: rgba(245, 57, 0, 0.10);
+        --tag-prefix-hover: #F53900;
+      " href="/t/html"><span class="crayons-tag__prefix">#</span>html</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Hypertext Markup Language — the standard markup language for documents designed to be displayed in a web browser.</p>
+          <p class="mb-3 fs-s color-base-60">
+            18802 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:57,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;html&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #8f13fc; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(143, 19, 252, 0.10);
+        --tag-prefix: #8f13fc;
+        --tag-bg-hover: rgba(143, 19, 252, 0.10);
+        --tag-prefix-hover: #8f13fc;
+      " href="/t/codenewbie"><span class="crayons-tag__prefix">#</span>codenewbie</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">The most supportive community of programmers and people learning to code.</p>
+          <p class="mb-3 fs-s color-base-60">
+            17607 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:165,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;codenewbie&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--tGdmXeeC--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/217/codenewbie-bubble-outlined.png" style="width: 64px; height: 64px; transform: rotate(0deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #000000; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/github"><span class="crayons-tag__prefix">#</span>github</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">"Where the world builds software"</p>
+          <p class="mb-3 fs-s color-base-60">
+            13423 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:342,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;github&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #019b65; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(1, 155, 101, 0.10);
+        --tag-prefix: #019b65;
+        --tag-bg-hover: rgba(1, 155, 101, 0.10);
+        --tag-prefix-hover: #019b65;
+      " href="/t/testing"><span class="crayons-tag__prefix">#</span>testing</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Find those bugs before your users do! 🐛</p>
+          <p class="mb-3 fs-s color-base-60">
+            12196 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:203,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;testing&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #FF9900; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(255, 153, 0, 0.10);
+        --tag-prefix: #FF9900;
+        --tag-bg-hover: rgba(255, 153, 0, 0.10);
+        --tag-prefix-hover: #FF9900;
+      " href="/t/cloud"><span class="crayons-tag__prefix">#</span>cloud</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">There is no cloud, only other peoples computers.</p>
+          <p class="mb-3 fs-s color-base-60">
+            9138 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:465,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;cloud&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #1bac80; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(27, 172, 128, 0.10);
+        --tag-prefix: #1bac80;
+        --tag-bg-hover: rgba(27, 172, 128, 0.10);
+        --tag-prefix-hover: #1bac80;
+      " href="/t/security"><span class="crayons-tag__prefix">#</span>security</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Hopefully not just an afterthought!</p>
+          <p class="mb-3 fs-s color-base-60">
+            10913 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:56,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;security&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #2d2a2a; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(45, 42, 42, 0.10);
+        --tag-prefix: #2d2a2a;
+        --tag-bg-hover: rgba(45, 42, 42, 0.10);
+        --tag-prefix-hover: #2d2a2a;
+      " href="/t/ai"><span class="crayons-tag__prefix">#</span>ai</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Artificial intelligence leverages computers and machines to mimic the problem-solving and decision-making capabilities found in humans and in nature.</p>
+          <p class="mb-3 fs-s color-base-60">
+            5032 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:307,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;ai&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #ED1556; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(237, 21, 86, 0.10);
+        --tag-prefix: #ED1556;
+        --tag-bg-hover: rgba(237, 21, 86, 0.10);
+        --tag-prefix-hover: #ED1556;
+      " href="/t/database"><span class="crayons-tag__prefix">#</span>database</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Posts on building, using, and learning about databases.</p>
+          <p class="mb-3 fs-s color-base-60">
+            9374 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:439,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;database&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #9725ea; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(151, 37, 234, 0.10);
+        --tag-prefix: #9725ea;
+        --tag-bg-hover: rgba(151, 37, 234, 0.10);
+        --tag-prefix-hover: #9725ea;
+      " href="/t/api"><span class="crayons-tag__prefix">#</span>api</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Application Programming Interface</p>
+          <p class="mb-3 fs-s color-base-60">
+            7654 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:154,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;api&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #7e4810; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(126, 72, 16, 0.10);
+        --tag-prefix: #7e4810;
+        --tag-bg-hover: rgba(126, 72, 16, 0.10);
+        --tag-prefix-hover: #7e4810;
+      " href="/t/java"><span class="crayons-tag__prefix">#</span>java</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">More than just a cup of coffee, Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+          <p class="mb-3 fs-s color-base-60">
+            13674 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:24,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;java&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--j6NiXruY--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/19/57803385-45802780-7726-11e9-84d9-2e4c4ca8bcdb.png" style="width: 64px; height: 64px; transform: rotate(-5deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #23A1AA; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(35, 161, 170, 0.10);
+        --tag-prefix: #23A1AA;
+        --tag-bg-hover: rgba(35, 161, 170, 0.10);
+        --tag-prefix-hover: #23A1AA;
+      " href="/t/php"><span class="crayons-tag__prefix">#</span>php</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Home for all the PHP-related posts on Dev.to!</p>
+          <p class="mb-3 fs-s color-base-60">
+            11129 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:16,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;php&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--9ZSmEJj7--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/21/php-elephant.png" style="width: 64px; height: 64px; transform: rotate(5deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #326de6; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(50, 109, 230, 0.10);
+        --tag-prefix: #326de6;
+        --tag-bg-hover: rgba(50, 109, 230, 0.10);
+        --tag-prefix-hover: #326de6;
+      " href="/t/kubernetes"><span class="crayons-tag__prefix">#</span>kubernetes</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">An open-source container orchestration system for automating software deployment, scaling, and management.</p>
+          <p class="mb-3 fs-s color-base-60">
+            7435 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:961,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;kubernetes&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--XXaJdQCT--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/88/kubernetes-badge.png" style="width: 64px; height: 64px; transform: rotate(-20deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #a3fc55; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(163, 252, 85, 0.10);
+        --tag-prefix: #a3fc55;
+        --tag-bg-hover: rgba(163, 252, 85, 0.10);
+        --tag-prefix-hover: #a3fc55;
+      " href="/t/mobile"><span class="crayons-tag__prefix">#</span>mobile</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">iOS, Android, and any other types of mobile development... all are welcome!</p>
+          <p class="mb-3 fs-s color-base-60">
+            9789 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:840,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;mobile&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #ff33e0; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(255, 51, 224, 0.10);
+        --tag-prefix: #ff33e0;
+        --tag-bg-hover: rgba(255, 51, 224, 0.10);
+        --tag-prefix-hover: #ff33e0;
+      " href="/t/frontend"><span class="crayons-tag__prefix">#</span>frontend</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">"If you're already a front-end developer, well, pretend you're also wearing a pirate hat." - Ethan Marcotte</p>
+          <p class="mb-3 fs-s color-base-60">
+            4889 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:245,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;frontend&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #F54D27; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(245, 77, 39, 0.10);
+        --tag-prefix: #F54D27;
+        --tag-bg-hover: rgba(245, 77, 39, 0.10);
+        --tag-prefix-hover: #F54D27;
+      " href="/t/git"><span class="crayons-tag__prefix">#</span>git</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development.</p>
+          <p class="mb-3 fs-s color-base-60">
+            8577 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:29,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;git&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--HaftsN5---/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/22/git-sticker.png" style="width: 64px; height: 64px; transform: rotate(20deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #73c7e6; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(115, 199, 230, 0.10);
+        --tag-prefix: #73c7e6;
+        --tag-bg-hover: rgba(115, 199, 230, 0.10);
+        --tag-prefix-hover: #73c7e6;
+      " href="/t/docker"><span class="crayons-tag__prefix">#</span>docker</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Stories about Docker as a technology (containers, CLI, Engine) or company (Docker Hub, Docker Swarm).</p>
+          <p class="mb-3 fs-s color-base-60">
+            9890 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:31,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;docker&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7L1txQC1--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/87/docker-badge.png" style="width: 64px; height: 64px; transform: rotate(-20deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #A9022A; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(169, 2, 42, 0.10);
+        --tag-prefix: #A9022A;
+        --tag-bg-hover: rgba(169, 2, 42, 0.10);
+        --tag-prefix-hover: #A9022A;
+      " href="/t/angular"><span class="crayons-tag__prefix">#</span>angular</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">One of the world's most popular frontend JavaScript frameworks.</p>
+          <p class="mb-3 fs-s color-base-60">
+            9723 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:215,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;angular&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--fNBdZ1DX--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/28/angular-sticker.png" style="width: 64px; height: 64px; transform: rotate(0deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #000000; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/linux"><span class="crayons-tag__prefix">#</span>linux</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">What are clouds made of?
+
+Linux servers, mostly.</p>
+          <p class="mb-3 fs-s color-base-60">
+            9987 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:118,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;linux&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #113a62; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(17, 58, 98, 0.10);
+        --tag-prefix: #113a62;
+        --tag-bg-hover: rgba(17, 58, 98, 0.10);
+        --tag-prefix-hover: #113a62;
+      " href="/t/blockchain"><span class="crayons-tag__prefix">#</span>blockchain</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A decentralized, distributed, and oftentimes public, digital ledger consisting of records called blocks that are used to record transactions across many computers so that any involved block cannot be altered retroactively, without the alteration of all subsequent blocks.</p>
+          <p class="mb-3 fs-s color-base-60">
+            9200 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:650,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;blockchain&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #56a036; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(86, 160, 54, 0.10);
+        --tag-prefix: #56a036;
+        --tag-bg-hover: rgba(86, 160, 54, 0.10);
+        --tag-prefix-hover: #56a036;
+      " href="/t/android"><span class="crayons-tag__prefix">#</span>android</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Brought to you by the good folks at Google...</p>
+          <p class="mb-3 fs-s color-base-60">
+            24567 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:316,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;android&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZNZqM01O--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/85/android-badge.png" style="width: 64px; height: 64px; transform: rotate(5deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #009999; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 153, 153, 0.10);
+        --tag-prefix: #009999;
+        --tag-bg-hover: rgba(0, 153, 153, 0.10);
+        --tag-prefix-hover: #009999;
+      " href="/t/datascience"><span class="crayons-tag__prefix">#</span>datascience</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Data Science allows us to extract meaning from and interpret data. </p>
+          <p class="mb-3 fs-s color-base-60">
+            7541 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:844,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;datascience&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #1C1C1C; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(28, 28, 28, 0.10);
+        --tag-prefix: #1C1C1C;
+        --tag-bg-hover: rgba(28, 28, 28, 0.10);
+        --tag-prefix-hover: #1C1C1C;
+      " href="/t/serverless"><span class="crayons-tag__prefix">#</span>serverless</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">All computing — without servers!</p>
+          <p class="mb-3 fs-s color-base-60">
+            6937 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:918,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;serverless&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #06ff6a; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(6, 255, 106, 0.10);
+        --tag-prefix: #06ff6a;
+        --tag-bg-hover: rgba(6, 255, 106, 0.10);
+        --tag-prefix-hover: #06ff6a;
+      " href="/t/design"><span class="crayons-tag__prefix">#</span>design</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">More than just making things look nice...</p>
+          <p class="mb-3 fs-s color-base-60">
+            7803 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:39,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;design&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #E0EBF5; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(224, 235, 245, 0.10);
+        --tag-prefix: #E0EBF5;
+        --tag-bg-hover: rgba(224, 235, 245, 0.10);
+        --tag-prefix-hover: #E0EBF5;
+      " href="/t/go"><span class="crayons-tag__prefix">#</span>go</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A statically typed, compiled programming language designed at Google</p>
+          <p class="mb-3 fs-s color-base-60">
+            8525 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:13,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;go&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1lX38geu--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/34/gopher-badge.png" style="width: 64px; height: 64px; transform: rotate(-10deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #41b883; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(65, 184, 131, 0.10);
+        --tag-prefix: #41b883;
+        --tag-bg-hover: rgba(65, 184, 131, 0.10);
+        --tag-prefix-hover: #41b883;
+      " href="/t/vue"><span class="crayons-tag__prefix">#</span>vue</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Official tag for the Vue.js JavaScript Framework</p>
+          <p class="mb-3 fs-s color-base-60">
+            9523 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:1760,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;vue&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--KflrVC4o--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/27/vue-sticker.png" style="width: 64px; height: 64px; transform: rotate(-25deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #dc2d17; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(220, 45, 23, 0.10);
+        --tag-prefix: #dc2d17;
+        --tag-bg-hover: rgba(220, 45, 23, 0.10);
+        --tag-prefix-hover: #dc2d17;
+      " href="/t/laravel"><span class="crayons-tag__prefix">#</span>laravel</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A PHP web application framework with expressive, elegant syntax.</p>
+          <p class="mb-3 fs-s color-base-60">
+            7831 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:208,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;laravel&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #000000; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/nextjs"><span class="crayons-tag__prefix">#</span>nextjs</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Next.js gives you hybrid static and server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.</p>
+          <p class="mb-3 fs-s color-base-60">
+            5311 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:891,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;nextjs&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--5fTLhkYu--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/89/next-js-badge.png" style="width: 64px; height: 64px; transform: rotate(-20deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #ebdf37; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(235, 223, 55, 0.10);
+        --tag-prefix: #ebdf37;
+        --tag-bg-hover: rgba(235, 223, 55, 0.10);
+        --tag-prefix-hover: #ebdf37;
+      " href="/t/architecture"><span class="crayons-tag__prefix">#</span>architecture</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">The fundamental structures of a software system.</p>
+          <p class="mb-3 fs-s color-base-60">
+            6111 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:714,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;architecture&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #E5FFE3; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(229, 255, 227, 0.10);
+        --tag-prefix: #E5FFE3;
+        --tag-bg-hover: rgba(229, 255, 227, 0.10);
+        --tag-prefix-hover: #E5FFE3;
+      " href="/t/machinelearning"><span class="crayons-tag__prefix">#</span>machinelearning</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.</p>
+          <p class="mb-3 fs-s color-base-60">
+            8851 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:262,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;machinelearning&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #07CD00; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(7, 205, 0, 0.10);
+        --tag-prefix: #07CD00;
+        --tag-bg-hover: rgba(7, 205, 0, 0.10);
+        --tag-prefix-hover: #07CD00;
+      " href="/t/csharp"><span class="crayons-tag__prefix">#</span>csharp</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Official tag for the C# programming language.</p>
+          <p class="mb-3 fs-s color-base-60">
+            7101 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:634,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;csharp&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Y240oqxN--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/33/csharp-badge.png" style="width: 64px; height: 64px; transform: rotate(-5deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #512ad5; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(81, 42, 213, 0.10);
+        --tag-prefix: #512ad5;
+        --tag-bg-hover: rgba(81, 42, 213, 0.10);
+        --tag-prefix-hover: #512ad5;
+      " href="/t/dotnet"><span class="crayons-tag__prefix">#</span>dotnet</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">.NET is an open source developer platform, created by Microsoft, for building many types of applications. With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, gaming, and IoT. Find more at https://dot.net</p>
+          <p class="mb-3 fs-s color-base-60">
+            7452 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:718,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;dotnet&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #56C5F6; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(86, 197, 246, 0.10);
+        --tag-prefix: #56C5F6;
+        --tag-bg-hover: rgba(86, 197, 246, 0.10);
+        --tag-prefix-hover: #56C5F6;
+      " href="/t/flutter"><span class="crayons-tag__prefix">#</span>flutter</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">An open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.</p>
+          <p class="mb-3 fs-s color-base-60">
+            5772 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:1905,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;flutter&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #091b47; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(9, 27, 71, 0.10);
+        --tag-prefix: #091b47;
+        --tag-bg-hover: rgba(9, 27, 71, 0.10);
+        --tag-prefix-hover: #091b47;
+      " href="/t/showdev"><span class="crayons-tag__prefix">#</span>showdev</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Show off what you've built!</p>
+          <p class="mb-3 fs-s color-base-60">
+            11371 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:223,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;showdev&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #008000; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 128, 0, 0.10);
+        --tag-prefix: #008000;
+        --tag-bg-hover: rgba(0, 128, 0, 0.10);
+        --tag-prefix-hover: #008000;
+      " href="/t/algorithms"><span class="crayons-tag__prefix">#</span>algorithms</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Heap, Binary Tree, Data Structure it doesn't matter. This tag should be used for anything Algorithm &amp; Data Structure focused. 
+</p>
+          <p class="mb-3 fs-s color-base-60">
+            6000 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:542,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;algorithms&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #007fff; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 127, 255, 0.10);
+        --tag-prefix: #007fff;
+        --tag-bg-hover: rgba(0, 127, 255, 0.10);
+        --tag-prefix-hover: #007fff;
+      " href="/t/azure"><span class="crayons-tag__prefix">#</span>azure</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">The dev.to tag for Microsoft Azure, the Cloud Computing Platform.</p>
+          <p class="mb-3 fs-s color-base-60">
+            6667 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:678,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;azure&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7hpeo0cM--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/86/azure-badge.png" style="width: 64px; height: 64px; transform: rotate(15deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #e3ff00; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(227, 255, 0, 0.10);
+        --tag-prefix: #e3ff00;
+        --tag-bg-hover: rgba(227, 255, 0, 0.10);
+        --tag-prefix-hover: #e3ff00;
+      " href="/t/cybersecurity"><span class="crayons-tag__prefix">#</span>cybersecurity</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Articles related to cybersecurity and much more</p>
+          <p class="mb-3 fs-s color-base-60">
+            2319 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:5999,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;cybersecurity&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #CC342D; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(204, 52, 45, 0.10);
+        --tag-prefix: #CC342D;
+        --tag-bg-hover: rgba(204, 52, 45, 0.10);
+        --tag-prefix-hover: #CC342D;
+      " href="/t/ruby"><span class="crayons-tag__prefix">#</span>ruby</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">This tag is for posts related to the Ruby language, including its libraries.</p>
+          <p class="mb-3 fs-s color-base-60">
+            8102 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:1,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;ruby&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--f0WP7n7p--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/17/57802960-3482e680-7725-11e9-9354-77712df6a949.png" style="width: 64px; height: 64px; transform: rotate(-20deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #ED1556; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(237, 21, 86, 0.10);
+        --tag-prefix: #ED1556;
+        --tag-bg-hover: rgba(237, 21, 86, 0.10);
+        --tag-prefix-hover: #ED1556;
+      " href="/t/sql"><span class="crayons-tag__prefix">#</span>sql</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Posts on tips and tricks, using and learning about SQL for database development and analysis.</p>
+          <p class="mb-3 fs-s color-base-60">
+            4439 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:17,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;sql&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #d98cd9; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(217, 140, 217, 0.10);
+        --tag-prefix: #d98cd9;
+        --tag-bg-hover: rgba(217, 140, 217, 0.10);
+        --tag-prefix-hover: #d98cd9;
+      " href="/t/computerscience"><span class="crayons-tag__prefix">#</span>computerscience</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">This tag is for sharing and asking questions about anything related to computer science, including data structures, algorithms, research, and white papers! 🤓</p>
+          <p class="mb-3 fs-s color-base-60">
+            7140 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:2118,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;computerscience&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #ED1556; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(237, 21, 86, 0.10);
+        --tag-prefix: #ED1556;
+        --tag-bg-hover: rgba(237, 21, 86, 0.10);
+        --tag-prefix-hover: #ED1556;
+      " href="/t/postgres"><span class="crayons-tag__prefix">#</span>postgres</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Posts on tips and tricks, using and learning about PostgreSQL for database development and analysis.</p>
+          <p class="mb-3 fs-s color-base-60">
+            3186 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:76,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;postgres&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #103e2e; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(16, 62, 46, 0.10);
+        --tag-prefix: #103e2e;
+        --tag-bg-hover: rgba(16, 62, 46, 0.10);
+        --tag-prefix-hover: #103e2e;
+      " href="/t/django"><span class="crayons-tag__prefix">#</span>django</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. </p>
+          <p class="mb-3 fs-s color-base-60">
+            4527 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:446,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;django&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #E6FFFB; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(230, 255, 251, 0.10);
+        --tag-prefix: #E6FFFB;
+        --tag-bg-hover: rgba(230, 255, 251, 0.10);
+        --tag-prefix-hover: #E6FFFB;
+      " href="/t/startup"><span class="crayons-tag__prefix">#</span>startup</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A company or project undertaken by an entrepreneur to seek, develop, and validate a scalable business model.</p>
+          <p class="mb-3 fs-s color-base-60">
+            5612 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:280,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;startup&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #f6690f; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(246, 105, 15, 0.10);
+        --tag-prefix: #f6690f;
+        --tag-bg-hover: rgba(246, 105, 15, 0.10);
+        --tag-prefix-hover: #f6690f;
+      " href="/t/web3"><span class="crayons-tag__prefix">#</span>web3</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A new kind of internet service that is built using decentralized blockchains.</p>
+          <p class="mb-3 fs-s color-base-60">
+            3716 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:10211,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;web3&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #1ddbe7; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(29, 219, 231, 0.10);
+        --tag-prefix: #1ddbe7;
+        --tag-bg-hover: rgba(29, 219, 231, 0.10);
+        --tag-prefix-hover: #1ddbe7;
+      " href="/t/reactnative"><span class="crayons-tag__prefix">#</span>reactnative</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">An open-source JavaScript framework, designed for building apps on multiple platforms like iOS, Android, and also web applications.</p>
+          <p class="mb-3 fs-s color-base-60">
+            5783 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:841,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;reactnative&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #ff3232; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(255, 50, 50, 0.10);
+        --tag-prefix: #ff3232;
+        --tag-bg-hover: rgba(255, 50, 50, 0.10);
+        --tag-prefix-hover: #ff3232;
+      " href="/t/help"><span class="crayons-tag__prefix">#</span>help</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A place to ask questions and provide answers. We're here to work things out together. </p>
+          <p class="mb-3 fs-s color-base-60">
+            5523 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:1798,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;help&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #cc0000; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(204, 0, 0, 0.10);
+        --tag-prefix: #cc0000;
+        --tag-bg-hover: rgba(204, 0, 0, 0.10);
+        --tag-prefix-hover: #cc0000;
+      " href="/t/rails"><span class="crayons-tag__prefix">#</span>rails</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Ruby on Rails is a popular web framework that happens to power dev.to ❤️</p>
+          <p class="mb-3 fs-s color-base-60">
+            6416 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:47,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;rails&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--2N8R6WvF--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/32/rails-badge.png" style="width: 64px; height: 64px; transform: rotate(10deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #0099bd; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 153, 189, 0.10);
+        --tag-prefix: #0099bd;
+        --tag-bg-hover: rgba(0, 153, 189, 0.10);
+        --tag-prefix-hover: #0099bd;
+      " href="/t/archlinux"><span class="crayons-tag__prefix">#</span>archlinux</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A lightweight and flexible Linux distribution that tries to Keep It Simple.</p>
+          <p class="mb-3 fs-s color-base-60">
+            37864 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:3371,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;archlinux&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #d4a174; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(212, 161, 116, 0.10);
+        --tag-prefix: #d4a174;
+        --tag-bg-hover: rgba(212, 161, 116, 0.10);
+        --tag-prefix-hover: #d4a174;
+      " href="/t/rust"><span class="crayons-tag__prefix">#</span>rust</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">This tag is for posts related to the Rust programming language, including its libraries.</p>
+          <p class="mb-3 fs-s color-base-60">
+            4038 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:2,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;rust&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--4RD0-X0v--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/35/rust-badge.png" style="width: 64px; height: 64px; transform: rotate(-15deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #108EC2; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(16, 142, 194, 0.10);
+        --tag-prefix: #108EC2;
+        --tag-bg-hover: rgba(16, 142, 194, 0.10);
+        --tag-prefix-hover: #108EC2;
+      " href="/t/wordpress"><span class="crayons-tag__prefix">#</span>wordpress</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">the world’s most popular website builder</p>
+          <p class="mb-3 fs-s color-base-60">
+            4476 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:528,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;wordpress&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #3ca5ea; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(60, 165, 234, 0.10);
+        --tag-prefix: #3ca5ea;
+        --tag-bg-hover: rgba(60, 165, 234, 0.10);
+        --tag-prefix-hover: #3ca5ea;
+      " href="/t/vscode"><span class="crayons-tag__prefix">#</span>vscode</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Official tag for Visual Studio Code, Microsoft's open-source editor</p>
+          <p class="mb-3 fs-s color-base-60">
+            4725 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:303,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;vscode&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #014784; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(1, 71, 132, 0.10);
+        --tag-prefix: #014784;
+        --tag-bg-hover: rgba(1, 71, 132, 0.10);
+        --tag-prefix-hover: #014784;
+      " href="/t/cpp"><span class="crayons-tag__prefix">#</span>cpp</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Official tag for the C++ programming language.</p>
+          <p class="mb-3 fs-s color-base-60">
+            4152 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:808,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;cpp&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--lRZA1qmc--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/95/cpp_logo.png" style="width: 64px; height: 64px; transform: rotate(15deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #000000; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/tailwindcss"><span class="crayons-tag__prefix">#</span>tailwindcss</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A utility-first CSS framework</p>
+          <p class="mb-3 fs-s color-base-60">
+            3031 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:5594,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;tailwindcss&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #0c76e2; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(12, 118, 226, 0.10);
+        --tag-prefix: #0c76e2;
+        --tag-bg-hover: rgba(12, 118, 226, 0.10);
+        --tag-prefix-hover: #0c76e2;
+      " href="/t/ios"><span class="crayons-tag__prefix">#</span>ios</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">This tag is for anything related to Apple's iOS devices, operating system, and development environment. Development, usage, apps, tips, requests for help: if it's related to iOS it's welcome here!</p>
+          <p class="mb-3 fs-s color-base-60">
+            5292 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:12,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;ios&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: ; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/automation"><span class="crayons-tag__prefix">#</span>automation</a>
+          </h3>
+          <p class="mb-3 fs-s color-base-60">
+            2845 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:88,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;automation&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #6a009f; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(106, 0, 159, 0.10);
+        --tag-prefix: #6a009f;
+        --tag-bg-hover: rgba(106, 0, 159, 0.10);
+        --tag-prefix-hover: #6a009f;
+      " href="/t/gamedev"><span class="crayons-tag__prefix">#</span>gamedev</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">👾 👾 👾</p>
+          <p class="mb-3 fs-s color-base-60">
+            3761 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:338,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;gamedev&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #767676; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(118, 118, 118, 0.10);
+        --tag-prefix: #767676;
+        --tag-bg-hover: rgba(118, 118, 118, 0.10);
+        --tag-prefix-hover: #767676;
+      " href="/t/chatgpt"><span class="crayons-tag__prefix">#</span>chatgpt</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3"> GPT models are capable of natural language processing tasks such as text generation, summarization, and analysis. ChatGPT interacts in a conversational way. The dialogue format makes it possible for ChatGPT to answer follow-up questions, admit its mistakes, challenge incorrect premises, and reject inappropriate requests.</p>
+          <p class="mb-3 fs-s color-base-60">
+            926 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:150847,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;chatgpt&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #ffa364; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(255, 163, 100, 0.10);
+        --tag-prefix: #ffa364;
+        --tag-bg-hover: rgba(255, 163, 100, 0.10);
+        --tag-prefix-hover: #ffa364;
+      " href="/t/performance"><span class="crayons-tag__prefix">#</span>performance</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Tag for content related to software performance.</p>
+          <p class="mb-3 fs-s color-base-60">
+            3761 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:677,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;performance&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #ad20a3; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(173, 32, 163, 0.10);
+        --tag-prefix: #ad20a3;
+        --tag-bg-hover: rgba(173, 32, 163, 0.10);
+        --tag-prefix-hover: #ad20a3;
+      " href="/t/codepen"><span class="crayons-tag__prefix">#</span>codepen</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A social development environment for front-end designers and developers.</p>
+          <p class="mb-3 fs-s color-base-60">
+            5658 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:1808,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;codepen&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #171e26; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(23, 30, 38, 0.10);
+        --tag-prefix: #171e26;
+        --tag-bg-hover: rgba(23, 30, 38, 0.10);
+        --tag-prefix-hover: #171e26;
+      " href="/t/graphql"><span class="crayons-tag__prefix">#</span>graphql</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">GraphQL is a query language and execution engine for client‐server applications</p>
+          <p class="mb-3 fs-s color-base-60">
+            4315 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:81,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;graphql&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--lcaw_Emg--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/29/graphql-sticker.png" style="width: 64px; height: 64px; transform: rotate(-20deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #f79600; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(247, 150, 0, 0.10);
+        --tag-prefix: #f79600;
+        --tag-bg-hover: rgba(247, 150, 0, 0.10);
+        --tag-prefix-hover: #f79600;
+      " href="/t/community"><span class="crayons-tag__prefix">#</span>community</a>
+          </h3>
+          <p class="mb-3 fs-s color-base-60">
+            3074 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:219,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;community&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #5931c9; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(89, 49, 201, 0.10);
+        --tag-prefix: #5931c9;
+        --tag-bg-hover: rgba(89, 49, 201, 0.10);
+        --tag-prefix-hover: #5931c9;
+      " href="/t/actionshackathon21"><span class="crayons-tag__prefix">#</span>actionshackathon21</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">This tag is for submissions and content related to the DEV x GitHub Actions Hackathon 2021. Details on contest rules, key dates, and more below. .</p>
+          <p class="mb-3 fs-s color-base-60">
+            311 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:113466,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;actionshackathon21&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #c1d82f; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(193, 216, 47, 0.10);
+        --tag-prefix: #c1d82f;
+        --tag-bg-hover: rgba(193, 216, 47, 0.10);
+        --tag-prefix-hover: #c1d82f;
+      " href="/t/tooling"><span class="crayons-tag__prefix">#</span>tooling</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Working with a new tool you want to share? Created a new workflow for a task? Found some great configurations? Share them with the community! </p>
+          <p class="mb-3 fs-s color-base-60">
+            2259 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:2078,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;tooling&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #820000; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(130, 0, 0, 0.10);
+        --tag-prefix: #820000;
+        --tag-bg-hover: rgba(130, 0, 0, 0.10);
+        --tag-prefix-hover: #820000;
+      " href="/t/devjournal"><span class="crayons-tag__prefix">#</span>devjournal</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Dear Diary...</p>
+          <p class="mb-3 fs-s color-base-60">
+            3213 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:32214,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;devjournal&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #7bcc7c; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(123, 204, 124, 0.10);
+        --tag-prefix: #7bcc7c;
+        --tag-bg-hover: rgba(123, 204, 124, 0.10);
+        --tag-prefix-hover: #7bcc7c;
+      " href="/t/mongodb"><span class="crayons-tag__prefix">#</span>mongodb</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">A popular NoSQL database</p>
+          <p class="mb-3 fs-s color-base-60">
+            3323 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:65,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;mongodb&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #6c00b9; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(108, 0, 185, 0.10);
+        --tag-prefix: #6c00b9;
+        --tag-bg-hover: rgba(108, 0, 185, 0.10);
+        --tag-prefix-hover: #6c00b9;
+      " href="/t/motivation"><span class="crayons-tag__prefix">#</span>motivation</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Keep on keeping on!</p>
+          <p class="mb-3 fs-s color-base-60">
+            3416 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:113,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;motivation&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #000000; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/microservices"><span class="crayons-tag__prefix">#</span>microservices</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">An architectural and organizational approach to software development where software is composed of small independent services that communicate over well-defined APIs</p>
+          <p class="mb-3 fs-s color-base-60">
+            3223 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:532,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;microservices&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #D0ECFF; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(208, 236, 255, 0.10);
+        --tag-prefix: #D0ECFF;
+        --tag-bg-hover: rgba(208, 236, 255, 0.10);
+        --tag-prefix-hover: #D0ECFF;
+      " href="/t/watercooler"><span class="crayons-tag__prefix">#</span>watercooler</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Light, and off-topic conversation.</p>
+          <p class="mb-3 fs-s color-base-60">
+            4488 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:26303,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;watercooler&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #004d4d; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 77, 77, 0.10);
+        --tag-prefix: #004d4d;
+        --tag-bg-hover: rgba(0, 77, 77, 0.10);
+        --tag-prefix-hover: #004d4d;
+      " href="/t/100daysofcode"><span class="crayons-tag__prefix">#</span>100daysofcode</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">The 100 Days of Code is a coding challenge created by Alexander Kallaway to encourage people to learn new coding skills. </p>
+          <p class="mb-3 fs-s color-base-60">
+            5230 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:225,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;100daysofcode&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #f22e07; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(242, 46, 7, 0.10);
+        --tag-prefix: #f22e07;
+        --tag-bg-hover: rgba(242, 46, 7, 0.10);
+        --tag-prefix-hover: #f22e07;
+      " href="/t/management"><span class="crayons-tag__prefix">#</span>management</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">"Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me." - Michael Scott (The Office)</p>
+          <p class="mb-3 fs-s color-base-60">
+            2838 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:110,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;management&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: ; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/terraform"><span class="crayons-tag__prefix">#</span>terraform</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">All subjects concerning Hashicorp's IaC tool `Terraform`.</p>
+          <p class="mb-3 fs-s color-base-60">
+            1910 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:1358,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;terraform&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: ; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/development"><span class="crayons-tag__prefix">#</span>development</a>
+          </h3>
+          <p class="mb-3 fs-s color-base-60">
+            5628 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:62,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;development&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #41C4FF; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(65, 196, 255, 0.10);
+        --tag-prefix: #41C4FF;
+        --tag-bg-hover: rgba(65, 196, 255, 0.10);
+        --tag-prefix-hover: #41C4FF;
+      " href="/t/dart"><span class="crayons-tag__prefix">#</span>dart</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">On the Dart language and ecosystem.</p>
+          <p class="mb-3 fs-s color-base-60">
+            2431 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:5,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;dart&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #8bebff; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(139, 235, 255, 0.10);
+        --tag-prefix: #8bebff;
+        --tag-bg-hover: rgba(139, 235, 255, 0.10);
+        --tag-prefix-hover: #8bebff;
+      " href="/t/writing"><span class="crayons-tag__prefix">#</span>writing</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">"Writing is the best way to talk without being interrupted." - Jules Renard</p>
+          <p class="mb-3 fs-s color-base-60">
+            3390 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:746,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;writing&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #0065B3; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 101, 179, 0.10);
+        --tag-prefix: #0065B3;
+        --tag-bg-hover: rgba(0, 101, 179, 0.10);
+        --tag-prefix-hover: #0065B3;
+      " href="/t/ux"><span class="crayons-tag__prefix">#</span>ux</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">User Experience tips, tricks, discussions, and more! </p>
+          <p class="mb-3 fs-s color-base-60">
+            3330 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:353,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;ux&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #fcb318; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(252, 179, 24, 0.10);
+        --tag-prefix: #fcb318;
+        --tag-bg-hover: rgba(252, 179, 24, 0.10);
+        --tag-prefix-hover: #fcb318;
+      " href="/t/spanish"><span class="crayons-tag__prefix">#</span>spanish</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">¿Qué pasa?</p>
+          <p class="mb-3 fs-s color-base-60">
+            2099 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:1773,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;spanish&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #cdcd00; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(205, 205, 0, 0.10);
+        --tag-prefix: #cdcd00;
+        --tag-bg-hover: rgba(205, 205, 0, 0.10);
+        --tag-prefix-hover: #cdcd00;
+      " href="/t/braziliandevs"><span class="crayons-tag__prefix">#</span>braziliandevs</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Tag dedicada a comunidade brasileira, com foco em conteúdo em Português do Brasil.
+</p>
+          <p class="mb-3 fs-s color-base-60">
+            1924 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:54400,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;braziliandevs&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #e5fffd; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(229, 255, 253, 0.10);
+        --tag-prefix: #e5fffd;
+        --tag-bg-hover: rgba(229, 255, 253, 0.10);
+        --tag-prefix-hover: #e5fffd;
+      " href="/t/codequality"><span class="crayons-tag__prefix">#</span>codequality</a>
+          </h3>
+          <p class="mb-3 fs-s color-base-60">
+            3026 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:214,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;codequality&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #bf1942; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(191, 25, 66, 0.10);
+        --tag-prefix: #bf1942;
+        --tag-bg-hover: rgba(191, 25, 66, 0.10);
+        --tag-prefix-hover: #bf1942;
+      " href="/t/challenge"><span class="crayons-tag__prefix">#</span>challenge</a>
+          </h3>
+          <p class="mb-3 fs-s color-base-60">
+            3109 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:2000,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;challenge&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #943d3b; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(148, 61, 59, 0.10);
+        --tag-prefix: #943d3b;
+        --tag-bg-hover: rgba(148, 61, 59, 0.10);
+        --tag-prefix-hover: #943d3b;
+      " href="/t/bash"><span class="crayons-tag__prefix">#</span>bash</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Bourne Again Shell</p>
+          <p class="mb-3 fs-s color-base-60">
+            2972 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:349,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;bash&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--pdVaH0Ym--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/24/shell-sticker.png" style="width: 64px; height: 64px; transform: rotate(20deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: ; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/web"><span class="crayons-tag__prefix">#</span>web</a>
+          </h3>
+          <p class="mb-3 fs-s color-base-60">
+            3675 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:124,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;web&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #B3BCC5; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(179, 188, 197, 0.10);
+        --tag-prefix: #B3BCC5;
+        --tag-bg-hover: rgba(179, 188, 197, 0.10);
+        --tag-prefix-hover: #B3BCC5;
+      " href="/t/c"><span class="crayons-tag__prefix">#</span>c</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">Official tag for the C programming language.</p>
+          <p class="mb-3 fs-s color-base-60">
+            2500 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:336,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;c&quot;}'>
+                Follow
+              </button>
+            </div>
+
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1Boi6qBt--/c_limit,f_auto,fl_progressive,q_80,w_180/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/25/c-sticker.png" style="width: 64px; height: 64px; transform: rotate(5deg);" class="right-1 bottom-1 absolute" alt="" loading="lazy" />
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: ; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(59, 73, 223, 0.10);
+        --tag-prefix: #3b49df;
+        --tag-bg-hover: rgba(59, 73, 223, 0.10);
+        --tag-prefix-hover: #3b49df;
+      " href="/t/express"><span class="crayons-tag__prefix">#</span>express</a>
+          </h3>
+          <p class="mb-3 fs-s color-base-60">
+            1838 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:205,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;express&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+        <div class="tag-card crayons-card branded-4 p-3 pt-2 m:p-6 m:pt-4 relative" style="border-top-color: #af27f2; ">
+          <h3 class="mb-1 -ml-2">
+            <a class="crayons-tag   " style="
+        --tag-bg: rgba(175, 39, 242, 0.10);
+        --tag-prefix: #af27f2;
+        --tag-bg-hover: rgba(175, 39, 242, 0.10);
+        --tag-prefix-hover: #af27f2;
+      " href="/t/coding"><span class="crayons-tag__prefix">#</span>coding</a>
+          </h3>
+            <p class="mb-2 color-base-70 truncate-at-3">while (!(succeed = try()))</p>
+          <p class="mb-3 fs-s color-base-60">
+            5074 posts published
+          </p>
+
+            <div class="mt-auto">
+              <button
+                class="crayons-btn crayons-btn--secondary follow-action-button"
+                data-info='{&quot;followStyle&quot;:&quot;secondary&quot;,&quot;id&quot;:35,&quot;className&quot;:&quot;Tag&quot;,&quot;name&quot;:&quot;coding&quot;}'>
+                Follow
+              </button>
+            </div>
+
+        </div>
+    </div>
+</main>
+<script src="https://dev.to/packs/js/runtime~followButtons-728c603f2dc8755ce211.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/6-b93c1529963bca9369db.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/followButtons-b70c2c080f62af0daafb.chunk.js" defer="defer"></script>
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  </body>
+  </html>

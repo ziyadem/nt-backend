@@ -1,0 +1,17 @@
+/*
+
+   animals
+   fruits
+   cars     CRUD by user
+
+
+
+
+   rest soap graphql
+   rest api
+   crud
+
+
+
+
+*/

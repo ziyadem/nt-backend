@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Beginner&#39;s Guide to Prompt Engineering with GitHub Copilot - DEV Community</title>
+      <meta name="last-updated" content="2023-04-03 20:50:23 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1680555023">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://dev.to/assets/base-9367e1923af849f8b2501fbc3dbb112ec2a9c13b7b7095d2a6c9fa25064774e4.js" defer="defer"></script>
+        <script src="https://dev.to/packs/js/runtime~base-c78c7355d34f41bec100.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-e69699ee885daf54b5a1.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+      
+    <link rel="canonical" href="https://dev.to/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp" />
+    <meta name="description" content="When I started using GitHub Copilot and other generative AI tools, I felt frustrated because I wasn&#39;t... Tagged with github, githubcopilot, ai, programming.">
+    <meta name="keywords" content="github, githubcopilot, ai, programming, software, coding, development, engineering, inclusive, community">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dev.to/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp" />
+    <meta property="og:title" content="A Beginner&#39;s Guide to Prompt Engineering with GitHub Copilot" />
+    <meta property="og:description" content="When I started using GitHub Copilot and other generative AI tools, I felt frustrated because I wasn&#39;t..." />
+    <meta property="og:site_name" content="DEV Community" />
+    <meta name="twitter:site" content="@thepracticaldev">
+    <meta name="twitter:creator" content="@blackgirlbytes">
+    <meta name="twitter:title" content="A Beginner&#39;s Guide to Prompt Engineering with GitHub Copilot">
+    <meta name="twitter:description" content="When I started using GitHub Copilot and other generative AI tools, I felt frustrated because I wasn&#39;t...">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:widgets:new-embed-design" content="on">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+      <meta property="og:image" content="https://res.cloudinary.com/practicaldev/image/fetch/s--_BEyf-xN--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czg3bbsq68zhkstcgxph.png" />
+      <meta name="twitter:image:src" content="https://res.cloudinary.com/practicaldev/image/fetch/s--_BEyf-xN--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czg3bbsq68zhkstcgxph.png">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192" />
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+      <meta property="forem:domain" content="dev.to" />
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-locale="en"
+        data-honeybadger-key="a45862f6"
+        data-deployed-at="2023-04-03T20:13:46Z"
+        data-latest-commit-id="e3b6e5b08db1b8401d3591b43f1518eeaa54d523"
+        data-ga-tracking="UA-71991109-1"
+        data-ga4-tracking-id="G-TYEM8Y3JN3"
+        >
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ak70zfvbcou5l91vlxuq6q92cl190rgm" class="crayons-icon"><title id="ak70zfvbcou5l91vlxuq6q92cl190rgm">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a7p2lu5n0dokejnvxomvxoizvfgytevj" aria-hidden="true" class="crayons-icon"><title id="a7p2lu5n0dokejnvxomvxoizvfgytevj">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aojllji1giuvpguut051r3c84q2zmhxe" class="crayons-icon"><title id="aojllji1giuvpguut051r3c84q2zmhxe">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="apermos03nv93w6shrkh9fl7xd3a04wr" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="apermos03nv93w6shrkh9fl7xd3a04wr">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper stories stories-show" data-current-page="stories-show">
+  <div id="page-content-inner">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+
+
+<style>
+  .html-variant-wrapper { display: none}
+</style>
+
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.10/webcomponents-loader.js"
+        integrity="sha384-3HK5hxQbkFqOIxMbpROlRmRtYl2LBZ52t+tqcjzsmr9NJuOWQxl8RgQSyFvq2lhy"
+        crossorigin="anonymous" defer></script>
+
+  <script src="https://dev.to/packs/js/runtime~webShare-7453f2c5038b6f8709c0.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/webShare-da771b62f52682b7ace0.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~articlePage-51763968b51ee1187abe.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/articlePage-81dea6f892d5f0d31b6d.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~commentDropdowns-b9f7408d47a74ece0fa5.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/commentDropdowns-103b2e9cda88ab083838.chunk.js" defer="defer"></script>
+
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.to/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp"},"url":"https://dev.to/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp","image":["https://res.cloudinary.com/practicaldev/image/fetch/s--J_UE6Azn--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czg3bbsq68zhkstcgxph.png","https://res.cloudinary.com/practicaldev/image/fetch/s--7c1IAD0k--/c_imagga_scale,f_auto,fl_progressive,h_720,q_auto,w_1280/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czg3bbsq68zhkstcgxph.png","https://res.cloudinary.com/practicaldev/image/fetch/s--cWIARhWK--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czg3bbsq68zhkstcgxph.png"],"publisher":{"@context":"http://schema.org","@type":"Organization","name":"DEV Community","logo":{"@context":"http://schema.org","@type":"ImageObject","url":"https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png","width":"192","height":"192"}},"headline":"A Beginner's Guide to Prompt Engineering with GitHub Copilot","author":{"@context":"http://schema.org","@type":"Person","url":"https://dev.to/blackgirlbytes","name":"Rizèl Scarlett"},"datePublished":"2023-04-03T20:19:57Z","dateModified":"2023-04-03T20:19:57Z"}
+    </script>
+
+  
+<div class="crayons-layout crayons-layout--3-cols crayons-layout--article">
+  <aside class="crayons-layout__sidebar-left" aria-label="Article actions">
+    <div class="crayons-article-actions print-hidden">
+  <div class="crayons-article-actions__inner">
+        
+<div class="reaction-drawer__outer hoverdown" style="">
+  <button
+    id="reaction-drawer-trigger"
+    aria-label="reaction-drawer-trigger"
+    aria-pressed="false"
+    class="hoverdown-trigger crayons-reaction pseudo-reaction crayons-tooltip__activator relative">
+      <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction--like crayons-reaction__icon--inactive" style="width: 40px; height: 40px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon">
+    <g clip-path="url(#clip0_988_3276)">
+        <path d="M19 14V17H22V19H18.999L19 22H17L16.999 19H14V17H17V14H19ZM20.243 4.75698C22.505 7.02498 22.583 10.637 20.479 12.992L19.059 11.574C20.39 10.05 20.32 7.65998 18.827 6.16998C17.324 4.67098 14.907 4.60698 13.337 6.01698L12.002 7.21498L10.666 6.01798C9.09103 4.60598 6.67503 4.66798 5.17203 6.17198C3.68203 7.66198 3.60703 10.047 4.98003 11.623L13.412 20.069L12 21.485L3.52003 12.993C1.41603 10.637 1.49503 7.01898 3.75603 4.75698C6.02103 2.49298 9.64403 2.41698 12 4.52898C14.349 2.41998 17.979 2.48998 20.242 4.75698H20.243Z" fill="#525252"></path>
+    </g>
+    <defs>
+        <clipPath id="clip0_988_3276">
+        <rect width="24" height="24" fill="white"></rect>
+        </clipPath>
+    </defs>
+</svg>
+
+      </span>
+      <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--active" style="width: 40px; height: 40px">
+        <img aria_hidden="true" height="24" width="24" src="https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg" />
+      </span>
+      <span class="crayons-reaction__count" id="reaction_total_count">
+        <span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span>
+      </span>
+      <span class="crayons-tooltip__content">
+        Add reaction
+      </span>
+  </button>
+
+  <div class="reaction-drawer" aria-expanded="false">
+    <div class="reaction-drawer__container">
+        <button
+  id="reaction-butt-like"
+  aria-label="Like"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="like">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-like"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+</button>
+
+        <button
+  id="reaction-butt-unicorn"
+  aria-label="Unicorn"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="unicorn">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-unicorn"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Unicorn
+    </span>
+</button>
+
+        <button
+  id="reaction-butt-exploding_head"
+  aria-label="Exploding Head"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="exploding_head">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-exploding_head"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Exploding Head
+    </span>
+</button>
+
+        <button
+  id="reaction-butt-raised_hands"
+  aria-label="Raised Hands"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="raised_hands">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-raised_hands"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Raised Hands
+    </span>
+</button>
+
+        <button
+  id="reaction-butt-fire"
+  aria-label="Fire"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="fire">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-fire"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Fire
+    </span>
+</button>
+
+    </div>
+  </div>
+</div>
+
+<button
+  id="reaction-butt-comment"
+  aria-label="Jump to Comments"
+  aria-pressed="false"
+  class="crayons-reaction crayons-reaction--comment crayons-tooltip__activator relative"
+  data-category="comment">
+    <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M10 3h4a8 8 0 010 16v3.5c-5-2-12-5-12-11.5a8 8 0 018-8zm2 14h2a6 6 0 000-12h-4a6 6 0 00-6 6c0 3.61 2.462 5.966 8 8.48V17z"></path>
+</svg>
+
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-comment" data-count="0">
+      <span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span>
+    </span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Jump to Comments
+    </span>
+</button>
+
+<button
+  id="reaction-butt-readinglist"
+  aria-label="Add to reading list"
+  aria-pressed="false"
+  class="crayons-reaction crayons-reaction--readinglist crayons-tooltip__activator relative"
+  data-category="readinglist">
+    <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z"></path>
+</svg>
+
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-readinglist"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Save
+    </span>
+</button>
+
+
+    <div id="mod-actions-menu-btn-area" class="print-hidden hidden align-center"></div>
+    <div class="align-center m:relative">
+      <button id="article-show-more-button" aria-controls="article-show-more-dropdown" aria-expanded="false" aria-haspopup="true" class="dropbtn crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon-rounded" aria-label="Share post options">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aoks67a30vvwftclic8i2w2pc36swckz" aria-hidden="true" class="crayons-icon dropdown-icon"><title id="aoks67a30vvwftclic8i2w2pc36swckz">More...</title><path fill-rule="evenodd" clip-rule="evenodd" d="M7 12a2 2 0 11-4 0 2 2 0 014 0zm7 0a2 2 0 11-4 0 2 2 0 014 0zm5 2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+
+      </button>
+
+      <div id="article-show-more-dropdown" class="crayons-dropdown side-bar left-2 right-2 m:right-auto m:left-100 s:left-auto mb-1 m:mb-0 top-unset bottom-100 m:top-0 m:bottom-unset">
+        <div>
+          <button
+            id="copy-post-url-button"
+            class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0"
+            data-postUrl="https://dev.to/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp">
+            <span class="fw-bold">Copy link</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="article-copy-icon" role="img" aria-labelledby="a81vu49smywhfogwv48pyfrmvuayy2l" aria-hidden="true" class="crayons-icon mx-2 shrink-0"><title id="a81vu49smywhfogwv48pyfrmvuayy2l">Copy link</title>
+    <path d="M7 6V3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1 1 0 013 21l.003-14c0-.552.45-1 1.007-1H7zm2 0h8v10h2V4H9v2zm-2 5v2h6v-2H7zm0 4v2h6v-2H7z"></path>
+</svg>
+
+          </button>
+          <div id="article-copy-link-announcer" aria-live="polite" class="crayons-notice crayons-notice--success my-2 p-1" aria-live="polite" hidden>Copied to Clipboard</div>
+        </div>
+
+        <div class="Desktop-only">
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href='https://twitter.com/intent/tweet?text=%22A%20Beginner%27s%20Guide%20to%20Prompt%20Engineering%20with%20GitHub%20Copilot%22%20by%20%40blackgirlbytes%20%23DEVCommunity%20https%3A%2F%2Fdev.to%2Fgithub%2Fa-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp'>
+            Share to Twitter
+          </a>
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdev.to%2Fgithub%2Fa-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp&title=A%20Beginner%27s%20Guide%20to%20Prompt%20Engineering%20with%20GitHub%20Copilot&summary=When%20I%20started%20using%20GitHub%20Copilot%20and%20other%20generative%20AI%20tools%2C%20I%20felt%20frustrated%20because%20I%20wasn%27t...&source=DEV%20Community">
+            Share to LinkedIn
+          </a>
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href="https://www.reddit.com/submit?url=https%3A%2F%2Fdev.to%2Fgithub%2Fa-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp&title=A%20Beginner%27s%20Guide%20to%20Prompt%20Engineering%20with%20GitHub%20Copilot">
+            Share to Reddit
+          </a>
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fdev.to%2Fgithub%2Fa-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp&t=A%20Beginner%27s%20Guide%20to%20Prompt%20Engineering%20with%20GitHub%20Copilot">
+            Share to Hacker News
+          </a>
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdev.to%2Fgithub%2Fa-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp">
+            Share to Facebook
+          </a>
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href="https://toot.kytta.dev/?text=https%3A%2F%2Fdev.to%2Fgithub%2Fa-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp">
+            Share to Mastodon
+          </a>
+        </div>
+
+        <web-share-wrapper shareurl="https://dev.to/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp" sharetitle="A Beginner&#39;s Guide to Prompt Engineering with GitHub Copilot" sharetext="When I started using GitHub Copilot and other generative AI tools, I felt frustrated because I wasn&#39;t..." template="web-share-button">
+        </web-share-wrapper>
+        <template id="web-share-button">
+          <a href="#" class="dropdown-link-row crayons-link crayons-link--block">Share Post via...</a>
+        </template>
+
+        <a href="/report-abuse" class="crayons-link crayons-link--block">Report Abuse</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </aside>
+
+  <main id="main-content" class="crayons-layout__content grid gap-4">
+    <div class="article-wrapper">
+
+
+      <article class="crayons-card crayons-article mb-4"
+        id="article-show-container"
+        data-article-id="1424065"
+        data-article-slug="a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp"
+        data-author-id="302741"
+        data-author-name="Rizèl Scarlett"
+        data-author-username="github"
+        data-co-author-ids=""
+        data-path="/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp"
+        data-pin-path="/stories/feed/pinned_article"
+        data-pinned-article-id=""
+        data-published="true"
+        data-scheduled="false"
+         >
+        <header class="crayons-article__header" id="main-title">
+            <div class="crayons-article__cover">
+              <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--sMFukokY--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czg3bbsq68zhkstcgxph.png" width="1000" height="420" style="background-color:#dddddd;" class="crayons-article__cover__image" alt="Cover image for A Beginner&#39;s Guide to Prompt Engineering with GitHub Copilot">
+            </div>
+
+          <div class="crayons-article__header__meta">
+            <div class="flex s:items-start flex-col s:flex-row">
+              <div id="action-space" class="crayons-article__actions mb-4 s:mb-0 s:order-last"></div>
+              <div class="flex flex-1 mb-5 items-start">
+                <div class="relative">
+                    <a href="/github"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--c3iXzjpJ--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2575/3da37f64-b46e-4fa5-bf86-01b63ba5f57b.png" class="radius-default align-middle" width="40" height="40" alt="GitHub profile image"></a>
+                    <a href="/blackgirlbytes" class="absolute -right-2 -bottom-2 radius-full border border-solid border-2 border-base-inverted inline-flex">
+                      <img class="radius-full align-middle" src="https://res.cloudinary.com/practicaldev/image/fetch/s--88SG0NgW--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/302741/c8926063-089b-4c92-95b8-ec8bf1cab822.jpeg" width="24" height="24" alt="Rizèl Scarlett" />
+                    </a>
+                </div>
+                <div class="pl-3 flex-1">
+                  <a href="/blackgirlbytes" class="crayons-link fw-bold">Rizèl Scarlett</a>
+                    <span class="color-base-60"> for </span><a href="/github" class="crayons-link">GitHub</a>
+                  <p class="fs-xs color-base-60">
+                      Posted on <time datetime="2023-04-03T20:19:57Z" class="date-no-year">Apr 3</time>
+
+
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="multiple_reactions_engagement">
+    <span class="reaction_engagement_like hidden">
+      <img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="24" height="24" />
+      <span id="reaction_engagement_like_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_unicorn hidden">
+      <img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="24" height="24" />
+      <span id="reaction_engagement_unicorn_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_exploding_head hidden">
+      <img src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="24" height="24" />
+      <span id="reaction_engagement_exploding_head_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_raised_hands hidden">
+      <img src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="24" height="24" />
+      <span id="reaction_engagement_raised_hands_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_fire hidden">
+      <img src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="24" height="24" />
+      <span id="reaction_engagement_fire_count">&nbsp;</span>
+    </span>
+
+  <span class="placeholder" style="width: 24px; height: 24px;">&nbsp;</span>
+</div>
+
+
+            <h1 class="fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 medium">
+              A Beginner&#39;s Guide to Prompt Engineering with GitHub Copilot
+            </h1>
+
+              <div class="spec__tags flex flex-wrap">
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 0, 0, 0.10);
+        --tag-prefix: #000000;
+        --tag-bg-hover: rgba(0, 0, 0, 0.10);
+        --tag-prefix-hover: #000000;
+      " href="/t/github"><span class="crayons-tag__prefix">#</span>github</a>
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(13, 17, 23, 0.10);
+        --tag-prefix: #0d1117;
+        --tag-bg-hover: rgba(13, 17, 23, 0.10);
+        --tag-prefix-hover: #0d1117;
+      " href="/t/githubcopilot"><span class="crayons-tag__prefix">#</span>githubcopilot</a>
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(45, 42, 42, 0.10);
+        --tag-prefix: #2d2a2a;
+        --tag-bg-hover: rgba(45, 42, 42, 0.10);
+        --tag-prefix-hover: #2d2a2a;
+      " href="/t/ai"><span class="crayons-tag__prefix">#</span>ai</a>
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(137, 6, 6, 0.10);
+        --tag-prefix: #890606;
+        --tag-bg-hover: rgba(137, 6, 6, 0.10);
+        --tag-prefix-hover: #890606;
+      " href="/t/programming"><span class="crayons-tag__prefix">#</span>programming</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="crayons-article__main">
+            
+  <nav class="series-switcher crayons-card crayons-card--secondary">
+    <header class="crayons-card__header">
+      <h2 class="crayons-subtitle-2">
+        <a href="/blackgirlbytes/series/19058">GitHub Copilot for Developer Productivity (6 Part Series)</a>
+      </h2>
+    </header>
+
+    <div class="series-switcher__list">
+
+          <a
+            href="/github/use-copilot-to-write-and-translate-a-binary-search-algorithm-lcm"
+            class="crayons-link crayons-link--contentful series-switcher__link  "
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--WL0ZA8ui--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3w4qn4soc07bs22om98u.png"
+            title="Published Apr 13 &#39;22">
+            <span class="series-switcher__num">1</span>
+            <span class="series-switcher__title">Use Copilot to Write and Translate a Binary Search Algorithm</span>
+          </a>
+
+          <a
+            href="/github/why-use-github-copilot-and-copilot-labs-practical-use-cases-for-the-ai-pair-programmer-4hf4"
+            class="crayons-link crayons-link--contentful series-switcher__link  "
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--8XoR-zPX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sb1yxfht2b1myzo64lqo.png"
+            title="Published Apr 13 &#39;22">
+            <span class="series-switcher__num">2</span>
+            <span class="series-switcher__title">Why Use GitHub Copilot And Copilot Labs: Practical Use Cases for the AI Pair Programmer</span>
+          </a>
+            <a
+              href="/github/how-to-send-a-tweet-with-github-copilot-4ih7"
+              class="crayons-link crayons-link--contentful series-switcher__link  series-switcher__link--inbetween"
+              data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--HI7W8lLq--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c3qnqr2t8slgkmcbio2.png"
+              id="collection-link-inbetween"
+              data-no-instant
+              title="View more">
+              <span class="series-switcher__num">...</span>
+              <span class="series-switcher__title">2 more parts...</span>
+            </a>
+
+          <a
+            href="/github/how-to-send-a-tweet-with-github-copilot-4ih7"
+            class="crayons-link crayons-link--contentful series-switcher__link  series-switcher__link--hidden"
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--HI7W8lLq--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c3qnqr2t8slgkmcbio2.png"
+            title="Published Jul 26 &#39;22">
+            <span class="series-switcher__num">3</span>
+            <span class="series-switcher__title">How to Send a Tweet with GitHub Copilot</span>
+          </a>
+
+          <a
+            href="/github/could-github-copilot-be-a-valuable-investment-for-my-team-4l9h"
+            class="crayons-link crayons-link--contentful series-switcher__link  series-switcher__link--hidden"
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--ILbTLCPY--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6ayel7c89nq0mjd0tpgk.png"
+            title="Published Feb 9">
+            <span class="series-switcher__num">4</span>
+            <span class="series-switcher__title">Could GitHub Copilot be a valuable investment for my team?</span>
+          </a>
+
+          <a
+            href="/github/how-to-build-a-rock-paper-scissors-game-with-github-copilot-1flo"
+            class="crayons-link crayons-link--contentful series-switcher__link  "
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--5WNR42fJ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9lkxpjxesde4n0bni11k.png"
+            title="Published Mar 3">
+            <span class="series-switcher__num">5</span>
+            <span class="series-switcher__title">How to build a rock, paper, scissors game with GitHub Copilot</span>
+          </a>
+
+          <a
+            href="/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp"
+            class="crayons-link crayons-link--contentful series-switcher__link series-switcher__link--active "
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--sMFukokY--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czg3bbsq68zhkstcgxph.png"
+            title="Published Apr 3">
+            <span class="series-switcher__num">6</span>
+            <span class="series-switcher__title">A Beginner&#39;s Guide to Prompt Engineering with GitHub Copilot</span>
+          </a>
+    </div>
+  </nav>
+
+
+          <div class="crayons-article__body text-styles spec__body" data-article-id="1424065" id="article-body">
+            <p>When I started using GitHub Copilot and other generative AI tools, I felt frustrated because I wasn't receiving the expected results. How were people feeling so successful with these tools, and why weren't they doing what I wanted? For example, I would ask GitHub Copilot to solve a LeetCode problem for me. The GitHub Copilot icon would spin to indicate that it's thinking, and then I would receive an incongruent suggestion or no suggestion at all. I was annoyed, but it turns out – I was using it wrong! After more experimentation, I improved my communication methods with GitHub Copilot by providing context, examples, and clear instructions in the form of comments and code. Later on, I learned that this practice is called prompt engineering. In this blog post, I'll discuss top tips to help you get the most out of GitHub Copilot. </p>
+
+<p>First, let's start with the basics for folks who are unfamiliar with GitHub Copilot or prompt engineering.</p>
+
+<h2>
+  <a name="what-is-github-copilot" href="#what-is-github-copilot">
+  </a>
+  What is GitHub Copilot?
+</h2>
+
+<p>GitHub Copilot is an AI pair programmer developed by GitHub and GitHub Copilot is powered by OpenAI Codex, a generative pre-trained language model created by OpenAI.that provides contextualized code suggestions based on context from comments and code. To use it, you can install the GitHub Copilot extension available to you in the following Integrated Development Environments (IDEs):</p>
+
+<ul>
+<li>Visual Studio</li>
+<li>Visual Studio Code</li>
+<li>Neovim</li>
+<li>JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc)</li>
+</ul>
+
+<h2>
+  <a name="can-github-copilot-code-on-its-own" href="#can-github-copilot-code-on-its-own">
+  </a>
+  Can GitHub Copilot code on its own?
+</h2>
+
+<p>At GitHub, we use the terms "AI pair programmer," "AI assistant," and "Copilot" to since this tool cannot work without you – the developer! In fact, AI systems can only perform the tasks that developers program them to perform, and they do not possess free will or the ability to make decisions independently. In this case, GitHub Copilot leverages context from the code and comments you write to suggest code instantly! With GitHub Copilot, you can convert comments to code, autofill repetitive code, and show alternative suggestions. </p>
+
+<h2>
+  <a name="how-does-github-copilot-work-under-the-hood" href="#how-does-github-copilot-work-under-the-hood">
+  </a>
+  How does GitHub Copilot work under the hood?
+</h2>
+
+<p>Under the hood, GitHub Copilot draws context from comments and code, instantly suggesting individual lines and whole functions. OpenAI Codex, a machine-learning model that can translate natural language into code, powers GitHub Copilot</p>
+
+<h2>
+  <a name="what-is-prompt-engineering" href="#what-is-prompt-engineering">
+  </a>
+  What is prompt engineering?
+</h2>
+
+<p>Prompt engineering is the practice of giving an AI model specific instructions to produce the results you want. A prompt is a sequence of text or a line of code that can trigger a response from an AI model. You can liken this concept to receiving a prompt for an essay. You can receive a prompt to write an essay about a time you overcame a challenge or a prompt to write about a classic book, such as the Great Gatsby. As a result, you give a response to the prompt based on what you've learned. A logic learning machine or LLM will behave similarly. </p>
+
+<p><strong>Here's another illustration of prompt engineering:</strong> <br>
+When I learned to code, I participated in an activity where I gave a robot instructions on how to make a sandwich. It was a fun, silly activity that taught me that:</p>
+
+<ul>
+<li>Computers can only do what you tell them to do</li>
+<li>You need to be very specific with your instructions</li>
+<li>They're better at taking orders one step at a time</li>
+<li>Algorithms are just a series of instructions</li>
+</ul>
+
+<p>For example, if I were to tell the "robot", to make a sandwich, I need to tell it:</p>
+
+<ol>
+<li>Open the bag of bread</li>
+<li>Take the first two slices of bread out of the bag</li>
+<li>Lay the slices of bread side by side on the counter</li>
+<li>Spread peanut butter on one slice of bread with a butter knife</li>
+<li>Et cetera, et cetera, et cetera</li>
+</ol>
+
+<p><a href="https://i.giphy.com/media/3o7TKxwP5Xm3HYMcOk/giphy-downsized-large.gif" class="article-body-image-wrapper"><img src="https://i.giphy.com/media/3o7TKxwP5Xm3HYMcOk/giphy-downsized-large.gif" loading="lazy" width="480" height="399" data-animated="true"></a></p>
+
+<p>Without those clear instructions, the robot might do something silly, like spread peanut butter on both slices of bread, or it might not do anything at all. The robot doesn't know what a sandwich is, and it doesn't know how to make one. It just knows how to follow instructions. </p>
+
+<p>Similarly, GitHub Copilot needs clear, step-by-step instructions to generate the code that best helps you. </p>
+
+<p>Let's discuss best practices for prompt engineering to give clear instructions to GitHub Copilot and generate your desired results.</p>
+<h2>
+  <a name="best-practices-for-prompt-engineering-with-github-copilot" href="#best-practices-for-prompt-engineering-with-github-copilot">
+  </a>
+  Best Practices for Prompt Engineering with GitHub Copilot
+</h2>
+<h3>
+  <a name="provide-highlevel-context-followed-by-more-detailed-instructions" href="#provide-highlevel-context-followed-by-more-detailed-instructions">
+  </a>
+  Provide high-level context followed by more detailed instructions
+</h3>
+
+<p>The best technique for me is providing high-level context in a comment at the top of the file, followed by more detailed instructions in the form of comments and code.</p>
+
+<p>For example, if I'm building a to-do application. At the top, I'll write a comment that says, "Build a to-do application using Next.js that allows user to add, edit, and delete to do items." Then on the following lines, I'll write a comment to create the:</p>
+
+<ul>
+<li>to-do list component, and I'll let GitHub Copilot generate the component underneath the comment</li>
+<li>button component, and I'll let GitHub Copilot generate the component underneath the comment</li>
+<li>input component, and I'll let GitHub Copilot generate the component underneath the comment</li>
+<li>add function, and I'll let GitHub Copilot generate the function underneath the comment</li>
+<li>edit function, and I'll let GitHub Copilot generate the function underneath the comment</li>
+<li>delete function, and I'll let GitHub Copilot generate the function underneath the comment</li>
+<li>etcetra, etcetera, etcetera... </li>
+</ul>
+
+<p><strong>Here's an example of me using this technique to build a house with p5.js:</strong></p>
+
+<p>In the following GIF, I write a comment at the top describing at a high-level what I want p5.js to draw. I want to draw a white house with a red roof, a red door, and a brown chimney. Then, I write a comment for each element of the house, and I let GitHub Copilot generate the code for each element.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--JWcFGkbl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y1dqqnba10i2ltlzcq2d.gif" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--JWcFGkbl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y1dqqnba10i2ltlzcq2d.gif" alt="p5js" loading="lazy" width="600" height="390" data-animated="true"></a></p>
+<h3>
+  <a name="provide-specific-details" href="#provide-specific-details">
+  </a>
+  Provide specific details
+</h3>
+
+<p>When you provide specific details, GitHub Copilot will be able to generate more accurate code suggestions. For example, if you want GitHub Copilot to retrieve data from an API, you need to tell it what type of data you want to retrieve, how to process the data, and what API endpoint you're hoping to hit.</p>
+
+<p>Here's an example of a non-specific comment (prompt) where GitHub Copilot will be less likely to generate a useful suggestion:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="c1">// Get data from API</span>
+<span class="kd">function</span> <span class="nx">getData</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//code goes here</span>
+<span class="p">}</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>In the example above, GitHub Copilot didn't generate anything for me besides the name of the function and the opening and closing brackets.</p>
+
+<p>Here's an example of a specific comment (prompt) where GitHub Copilot will be more likely to generate a useful suggestion:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight javascript"><code><span class="c1">// Pass in user ids and retrieve user data from jsonplaceholder.typicode.com API, then return it as a JSON object</span>
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">getUserData</span><span class="p">(</span><span class="nx">userId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://jsonplaceholder.typicode.com/users/</span><span class="p">${</span><span class="nx">userId</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+    <span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<h3>
+  <a name="provide-examples" href="#provide-examples">
+  </a>
+  Provide examples
+</h3>
+
+<p>In addition to telling GitHub Copilot what you want it to do, you can also show it what you want it to do with examples in your preferred coding style. While GitHub Copilot is using an AI model that is already trained on a large amount of data, providing examples to GitHub Copilot help it understand the context and constraints of a particular code snippet. Showing AI models examples of what you want them to do is a common practice in machine learning.</p>
+
+<p>Here are a few approaches engineers use to train AI models:</p>
+
+<ul>
+<li>Zero-shot learning</li>
+<li>One-shot learning</li>
+<li>Few-shot learning</li>
+</ul>
+
+<p>I asked ChatGPT to explain the difference between these methods to me like I was 5 years old, and here’s what it gave me: According to ChatGPT, here are the differences between these approaches:</p>
+
+<h4>
+  <a name="zeroshot-learning" href="#zeroshot-learning">
+  </a>
+  Zero-shot learning
+</h4>
+
+<p>This is like when you see a new toy you've never seen before, but you know what it is because it looks like other toys you've seen. For example, if you've seen many different kinds of stuffed animals, you might be able to recognize a new one even if you've never seen that exact one before. Similarly, a computer can learn to recognize new things by using what it knows about similar things to make educated guesses about the new thing.</p>
+
+<h4>
+  <a name="oneshot-learning" href="#oneshot-learning">
+  </a>
+  One-shot learning
+</h4>
+
+<p>This is like when you see a new toy for the first time, and your mom or dad tells you what it's called and what it does. After hearing about it just once, you remember what it is and can recognize it the next time you see it. A computer can learn to recognize new things in the same way by being shown just a few examples and learning from them.</p>
+
+<h4>
+  <a name="fewshot-learning" href="#fewshot-learning">
+  </a>
+  Few-shot learning
+</h4>
+
+<p>Few-shot learning is like learning to do something new by seeing only a few examples. For example, let's say you want to learn how to draw a cat, but you've only seen a few pictures of cats before. With few-shot learning, you can still learn how to draw a cat even if you haven't seen many cats before. It's like a magic power that helps you learn new things quickly, even if you don't have a lot of examples to learn from!</p>
+
+<p>Here's what happened when I showed GitHub Copilot examples vs. when I didn't show it examples:</p>
+
+<h4>
+  <a name="no-example" href="#no-example">
+  </a>
+  No example
+</h4>
+
+
+
+<div class="highlight js-code-highlight">
+<pre class="highlight python"><code><span class="c1"># Create a list of the first 10 prime numbers
+</span><span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">num</span><span class="p">)):</span>
+        <span class="n">primes</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>In the code snippet above, GitHub Copilot will accurately return the first 10 numbers, however it's inefficient because it will loop through all 29 numbers between 2 and 30. We can get more efficient results by providing an specific example of what we want GitHub Copilot to do.</p>
+
+<h4>
+  <a name="with-example" href="#with-example">
+  </a>
+  With example
+</h4>
+
+
+
+<div class="highlight js-code-highlight">
+<pre class="highlight python"><code><span class="c1"># Create a list of the first 10 prime numbers
+# Example: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+</span><span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">num</span><span class="p">)):</span>
+        <span class="n">primes</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>In the above code snippet, GitHub Copilot will return the first ten prime numbers and stop when it's found all 10. My goal was to get accurate but fast results, and GitHub Copilot successfully achieved that after I nudged it in the right direction.</p>
+
+<h2>
+  <a name="additional-tips" href="#additional-tips">
+  </a>
+  Additional tips
+</h2>
+
+<h3>
+  <a name="iterate-your-prompts" href="#iterate-your-prompts">
+  </a>
+  Iterate your prompts
+</h3>
+
+<p>If your initial prompt elicits the desired response, delete the generated code suggestion, edit your comment with more details and examples, and try again! It's a learning process for you and GitHub Copilot. The more you use it, the better you'll get at communicating with GitHub Copilot. </p>
+
+<h3>
+  <a name="keep-a-tab-opened-of-relevant-files-in-your-ide" href="#keep-a-tab-opened-of-relevant-files-in-your-ide">
+  </a>
+  Keep a tab opened of relevant files in your IDE
+</h3>
+
+<p>Currently, GitHub Copilot does not have the ability to gain context for your entire codebase. However, it can read your current file and any files that are opened in your IDE. I've found it helpful to keep an open tab of relevant files that I want GitHub Copilot to reference. For example, if I'm writing a function that uses a variable from another file, I'll keep that file open in my IDE. This will help GitHub Copilot provide more accurate suggestions.  </p>
+
+<h3>
+  <a name="give-your-ai-assistant-an-identity" href="#give-your-ai-assistant-an-identity">
+  </a>
+  Give your AI assistant an identity
+</h3>
+
+<p>I received this advice from <a href="https://twitter.com/_LeilahSimone">Leilah Simone</a>, a Developer Advocate at BitRise. I've yet to try this with GitHub Copilot, but it was helpful advice. It helps to control the type of response the user will receive. In Leila's case, she requests that ChatGPT behave as a senior iOS engineer. She says, "It's helped her reduce syntax and linting issues." </p>
+
+<h3>
+  <a name="use-predictable-patterns" href="#use-predictable-patterns">
+  </a>
+  Use predictable patterns
+</h3>
+
+<p>As we saw in the many examples above, GitHub Copilot will follow patterns in your code. AI enthusiast and Developer Content Creator, <a href="https://twitter.com/ykdojo">YK aka CS Dojo</a>, shares how he uses this to his advantage:</p>
+
+
+<blockquote class="ltag__twitter-tweet" data-url="https://twitter.com/ykdojo/status/1640629300595671040">
+
+  <div class="ltag__twitter-tweet__main" data-url="https://twitter.com/ykdojo/status/1640629300595671040">
+    <div class="ltag__twitter-tweet__header">
+      <img class="ltag__twitter-tweet__profile-image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--3H7odVor--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://pbs.twimg.com/profile_images/1632835786772193280/nPjr7I5G_normal.jpg" alt="YK aka CS Dojo 📺🐦 profile image" loading="lazy">
+      <div class="ltag__twitter-tweet__full-name">
+        YK aka CS Dojo 📺🐦
+      </div>
+      <div class="ltag__twitter-tweet__username">
+        @ykdojo
+      </div>
+      <div class="ltag__twitter-tweet__twitter-logo">
+        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ir1kO05j--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/twitter-f95605061196010f91e64806688390eb1a4dbc9e913682e043eb8b1e06ca484f.svg" alt="twitter logo" loading="lazy">
+      </div>
+    </div>
+    <div class="ltag__twitter-tweet__body">
+      <a href="https://twitter.com/blackgirlbytes">@blackgirlbytes</a> Hope it's not too late - but here it is:<br><br>I've found that it works best when I follow a predictable pattern, and when I let it do its own thing instead of fighting it.<br><br>For example, when I write:<br><br>print('some_variab<br><br>It already knows that I want to print that variable.<br><br>Then I… <a href="https://t.co/yBwH8M5TS8">twitter.com/i/web/status/1…</a>
+    </div>
+    <div class="ltag__twitter-tweet__date">
+      08:18 AM - 28 Mar 2023
+    </div>
+
+
+    <div class="ltag__twitter-tweet__actions">
+      <a href="https://twitter.com/intent/tweet?in_reply_to=1640629300595671040" class="ltag__twitter-tweet__actions__button">
+        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--fFnoeFxk--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/twitter-reply-action-238fe0a37991706a6880ed13941c3efd6b371e4aefe288fe8e0db85250708bc4.svg" alt="Twitter reply action" loading="lazy">
+      </a>
+      <a href="https://twitter.com/intent/retweet?tweet_id=1640629300595671040" class="ltag__twitter-tweet__actions__button">
+        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--k6dcrOn8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/twitter-retweet-action-632c83532a4e7de573c5c08dbb090ee18b348b13e2793175fea914827bc42046.svg" alt="Twitter retweet action" loading="lazy">
+      </a>
+      <a href="https://twitter.com/intent/like?tweet_id=1640629300595671040" class="ltag__twitter-tweet__actions__button">
+        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--SRQc9lOp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev.to/assets/twitter-like-action-1ea89f4b87c7d37465b0eb78d51fcb7fe6c03a089805d7ea014ba71365be5171.svg" alt="Twitter like action" loading="lazy">
+      </a>
+    </div>
+  </div>
+</blockquote>
+
+
+<h3>
+  <a name="use-consistent-specific-naming-conventions-for-variables-and-functions-that-describe-their-purpose" href="#use-consistent-specific-naming-conventions-for-variables-and-functions-that-describe-their-purpose">
+  </a>
+  Use consistent, specific naming conventions for variables and functions that describe their purpose
+</h3>
+
+<p>When declaring variables or functions, use names specific to the variable's purpose. This will help GitHub Copilot understand the context of the variable and generate more relevant suggestions. For example, instead of using a generic variable name like "value," use a more specific name like "input_string" or "output_file."</p>
+
+<p>GitHub Copilot will also use the naming conventions you use in your code. For example, if you use camelCase for variables, GitHub Copilot will suggest camelCase variables. If you use snake_case for variables, GitHub Copilot will suggest snake_case variables. </p>
+
+<h3>
+  <a name="use-good-coding-practices" href="#use-good-coding-practices">
+  </a>
+  Use good coding practices
+</h3>
+
+<p>While GitHub Copilot can be a powerful tool for generating code suggestions, it's important to remember that it's not a replacement for your own programming skills and expertise. AI models are only as good as the data they have been trained on, Therefore, it's important to use these tools as aids and not rely on them entirely. I encourage every user of GitHub Copilot to:</p>
+
+<ul>
+<li>Review code</li>
+<li>Run unit tests, integration tests, and any other programatic forms of testing code</li>
+<li>Manually test code to ensure it's working as intended</li>
+<li>And to use good coding practices because GitHub Copilot will follow your coding style and patterns as a guide for its suggestions.</li>
+</ul>
+
+<h2>
+  <a name="beyond-your-editor" href="#beyond-your-editor">
+  </a>
+  Beyond your editor
+</h2>
+
+<p>Currently, GitHub Copilot is an extension that is available in the most popular IDEs. There's also GitHub Copilot Labs, a separate experimental extension available with GitHub Copilot access. Copilot Labs can help you translate, debug, test, document, and refactor code. Additionally, we recently launched Copilot X, a suite of features that improve developer productivity outside of the IDE. Copilot X includes:</p>
+
+<ul>
+<li>
+<a href="https://githubnext.com/projects/copilot-for-docs">Copilot for Docs</a> - saves developers from scouring reams of documentation.</li>
+<li>
+<a href="https://githubnext.com/projects/copilot-for-pull-requests/">Copilot for Pull Requests</a> - helps you write better PR descriptions and to help your team review and merge PRs faster/</li>
+<li>
+<a href="https://github.com/github-copilot/chat_waitlist_signup/join">Copilot Chat</a> - a ChatGPT-like experience in your editor with GitHub Copilot chat.</li>
+<li>
+<a href="https://githubnext.com/projects/copilot-cli/">Copilot for CLI</a> - helps you remember shell commands and flags to run commands in your terminal faster.
+</li>
+<li>
+<a href="https://githubnext.com/projects/copilot-voice/">Copilot Voice</a> - write and edit code, navigate the codebase, and control Visual Studio Code with your voice.</li>
+</ul>
+
+<p>Copilot X features/products are currently in technical preview. If you'd like access to one of the features above, sign up for the waitlist at <a href="https://github.com/features/preview/copilot-x">https://github.com/features/preview/copilot-x</a>.</p>
+
+<h2>
+  <a name="start-practicing-prompt-engineering-with-github-copilot" href="#start-practicing-prompt-engineering-with-github-copilot">
+  </a>
+  Start practicing prompt engineering with GitHub Copilot
+</h2>
+
+<p>The best way to learn how to use GitHub Copilot optimally is to start using it. You can sign up for access to GitHub Copilot <a href="https://github.com/features/copilot">here</a>.</p>
+
+<p>If you're a business leader and you'd like to give your entire team access to GitHub Copilot, sign up for GitHub Copilot for Business <a href="https://github.com/github-copilot/business_signup/choose_business_type">here</a>.</p>
+
+<h2>
+  <a name="lets-keep-learning-together" href="#lets-keep-learning-together">
+  </a>
+  Let's keep learning together
+</h2>
+
+<p>Thanks for reading this blog post. I'd love to hear from you! I'm still learning more about artificial intelligence, GitHub Copilot, and prompt engineering. If you're a GitHub Copilot fan and have learned how to use it to improve your developer workflow, share some of your tips in the comments below!</p>
+
+<p>For similar content, follow GitHub and me on DEV.to! Also, check out other resources to learn more about prompt engineering:</p>
+
+<ul>
+<li><a href="https://microsoft.github.io/prompt-engineering/">How to get Codex to produce the code you want</a></li>
+<li>
+<a href="https://platform.openai.com/docs/guides/completion/prompt-design">Prompt Design</a> from OpenAI</li>
+<li><a href="https://youtu.be/q1rvp0k6MTs">Prompt Engineering 101: Introduction to Codex</a></li>
+<li>
+<a href="https://github.com/dair-ai/Prompt-Engineering-Guide">Prompt Engineering Guide</a> by Elvis Saravia</li>
+</ul>
+
+
+          </div>
+
+            
+  <nav class="series-switcher crayons-card crayons-card--secondary">
+    <header class="crayons-card__header">
+      <h2 class="crayons-subtitle-2">
+        <a href="/blackgirlbytes/series/19058">GitHub Copilot for Developer Productivity (6 Part Series)</a>
+      </h2>
+    </header>
+
+    <div class="series-switcher__list">
+
+          <a
+            href="/github/use-copilot-to-write-and-translate-a-binary-search-algorithm-lcm"
+            class="crayons-link crayons-link--contentful series-switcher__link  "
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--WL0ZA8ui--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3w4qn4soc07bs22om98u.png"
+            title="Published Apr 13 &#39;22">
+            <span class="series-switcher__num">1</span>
+            <span class="series-switcher__title">Use Copilot to Write and Translate a Binary Search Algorithm</span>
+          </a>
+
+          <a
+            href="/github/why-use-github-copilot-and-copilot-labs-practical-use-cases-for-the-ai-pair-programmer-4hf4"
+            class="crayons-link crayons-link--contentful series-switcher__link  "
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--8XoR-zPX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sb1yxfht2b1myzo64lqo.png"
+            title="Published Apr 13 &#39;22">
+            <span class="series-switcher__num">2</span>
+            <span class="series-switcher__title">Why Use GitHub Copilot And Copilot Labs: Practical Use Cases for the AI Pair Programmer</span>
+          </a>
+            <a
+              href="/github/how-to-send-a-tweet-with-github-copilot-4ih7"
+              class="crayons-link crayons-link--contentful series-switcher__link  series-switcher__link--inbetween"
+              data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--HI7W8lLq--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c3qnqr2t8slgkmcbio2.png"
+              id="collection-link-inbetween"
+              data-no-instant
+              title="View more">
+              <span class="series-switcher__num">...</span>
+              <span class="series-switcher__title">2 more parts...</span>
+            </a>
+
+          <a
+            href="/github/how-to-send-a-tweet-with-github-copilot-4ih7"
+            class="crayons-link crayons-link--contentful series-switcher__link  series-switcher__link--hidden"
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--HI7W8lLq--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c3qnqr2t8slgkmcbio2.png"
+            title="Published Jul 26 &#39;22">
+            <span class="series-switcher__num">3</span>
+            <span class="series-switcher__title">How to Send a Tweet with GitHub Copilot</span>
+          </a>
+
+          <a
+            href="/github/could-github-copilot-be-a-valuable-investment-for-my-team-4l9h"
+            class="crayons-link crayons-link--contentful series-switcher__link  series-switcher__link--hidden"
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--ILbTLCPY--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6ayel7c89nq0mjd0tpgk.png"
+            title="Published Feb 9">
+            <span class="series-switcher__num">4</span>
+            <span class="series-switcher__title">Could GitHub Copilot be a valuable investment for my team?</span>
+          </a>
+
+          <a
+            href="/github/how-to-build-a-rock-paper-scissors-game-with-github-copilot-1flo"
+            class="crayons-link crayons-link--contentful series-switcher__link  "
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--5WNR42fJ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9lkxpjxesde4n0bni11k.png"
+            title="Published Mar 3">
+            <span class="series-switcher__num">5</span>
+            <span class="series-switcher__title">How to build a rock, paper, scissors game with GitHub Copilot</span>
+          </a>
+
+          <a
+            href="/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp"
+            class="crayons-link crayons-link--contentful series-switcher__link series-switcher__link--active "
+            data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--sMFukokY--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/czg3bbsq68zhkstcgxph.png"
+            title="Published Apr 3">
+            <span class="series-switcher__num">6</span>
+            <span class="series-switcher__title">A Beginner&#39;s Guide to Prompt Engineering with GitHub Copilot</span>
+          </a>
+    </div>
+  </nav>
+
+        </div>
+          <section id="comments" data-follow-button-container="true" data-updated-at="2023-04-03 20:20:09 UTC" class="text-padding mb-4 border-t-1 border-0 border-solid border-base-10">
+      <header class="relative flex justify-between items-center mb-6">
+        <div class="flex items-center">
+          <h2 class="crayons-subtitle-1">
+            Top comments <span class="js-comments-count" data-comments-count="0">(0)</span>
+          </h2>
+          <button class="c-btn c-btn--ghost crayons-btn--icon-left" id="toggle-comments-sort-dropdown" aria-controls="comments-sort-dropdown-container" aria-expanded="false" aria-label="Sort comments" aria-haspopup="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="mt-2"><title>Crown</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+          </button>
+        </div>
+
+        <nav class="crayons-dropdown p-4" id="comments-sort-dropdown-container" aria-labelledby="comments-sort-title">
+            <h3 id="comments-sort-title" class="mb-3">Sort discussion: </h3>
+            <ul class="comments-sort-dropdown__list">
+              <li class="comment-sort-option">
+  <a
+    href="/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp?comments_sort=top#toggle-comments-sort-dropdown"
+    class="comment-sort-option__header pl-7 pb-0 crayons-link--block block"
+    aria-describedby="top-description-text"
+    aria-current="page">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="ahl7wqnq15nnmqz6vxcm8gdjw5c2fd0g" aria-hidden="true" class="crayons-icon"><title id="ahl7wqnq15nnmqz6vxcm8gdjw5c2fd0g">Selected Sort Option</title>
+    <path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414 4.95 4.95z"></path>
+</svg>
+
+       Top
+    </div>
+     <div id="top-description-text" class="crayons-field__description">
+      Most upvoted and relevant comments will be first
+    </div>
+  </a>
+</li>
+
+              <li class="comment-sort-option">
+  <a
+    href="/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp?comments_sort=latest#toggle-comments-sort-dropdown"
+    class="comment-sort-option__header pl-7 pb-0 crayons-link--block block"
+    aria-describedby="latest-description-text"
+    aria-current="">
+    <div>
+      
+       Latest
+    </div>
+     <div id="latest-description-text" class="crayons-field__description">
+      Most recent comments will be first
+    </div>
+  </a>
+</li>
+
+              <li class="comment-sort-option">
+  <a
+    href="/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp?comments_sort=oldest#toggle-comments-sort-dropdown"
+    class="comment-sort-option__header pl-7 pb-0 crayons-link--block block"
+    aria-describedby="oldest-description-text"
+    aria-current="">
+    <div>
+      
+       Oldest
+    </div>
+     <div id="oldest-description-text" class="crayons-field__description">
+      The oldest comments will be first
+    </div>
+  </a>
+</li>
+
+            </ul>
+        </nav>
+
+        <div id="comment-subscription" class="print-hidden">
+          <div class="crayons-btn-group">
+            <span class="crayons-btn crayons-btn--outlined">Subscribe</span>
+          </div>
+        </div>
+      </header>
+
+      <div
+        id="comments-container"
+        data-testid="comments-container"
+        data-commentable-id="1424065"
+        data-commentable-type="Article"
+        data-has-recent-comment-activity="true">
+
+          <div id="response-templates-data" class="hidden"></div>
+<script src="https://dev.to/packs/js/runtime~validateFileInputs-6f6f79168b31561b7c74.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/validateFileInputs-f7fc1ddb14414e6c1b6f.chunk.js" defer="defer"></script>
+
+
+<form class="comment-form print-hidden" id="new_comment" action="/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+
+  <input type="hidden" name="authenticity_token" value="NOTHING" id="new_comment_authenticity_token">
+
+    <input value="1424065" autocomplete="off" type="hidden" name="comment[commentable_id]" id="comment_commentable_id" />
+    <input value="Article" autocomplete="off" type="hidden" name="comment[commentable_type]" id="comment_commentable_type" />
+    
+
+  <span class="crayons-avatar m:crayons-avatar--l mr-2 shrink-0">
+    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" width="32" height="32" alt="pic" class="crayons-avatar__image overflow-hidden" id="comment-primary-user-profile--avatar" loading="lazy" />
+  </span>
+  <div class="comment-form__inner">
+    <div class="comment-form__field" data-tracking-name="comment_form_textfield">
+      <textarea placeholder="Add to the discussion" onfocus="handleFocus(event)" onkeyup="handleKeyUp(event)" onkeydown="handleKeyDown(event)" oninput="handleChange(event)" id="text-area" required="required" class="crayons-textfield comment-textarea crayons-textfield--ghost" aria-label="Add a comment to the discussion" name="comment[body_markdown]">
+</textarea>
+
+    </div>
+
+    <div class="response-templates-container crayons-card crayons-card--secondary p-4 mb-4 comment-form__templates fs-base hidden">
+      <header class="mb-3">
+        <button type="button" class="crayons-btn personal-template-button active" data-target-type="personal" data-form-id="new_comment">Personal</button>
+        <button type="button" class="crayons-btn moderator-template-button hidden" data-target-type="moderator" data-form-id="new_comment">Trusted User</button>
+      </header>
+
+      <img class="loading-img hidden" src="https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg" alt="loading" loading="lazy" />
+
+      <div class="personal-responses-container">
+      </div>
+      <div class="moderator-responses-container hidden">
+      </div>
+
+      <a target="_blank" rel="noopener nofollow" href="/settings/response-templates">
+        Create template
+      </a>
+      <p>Templates let you quickly answer FAQs or store snippets for re-use.</p>
+    </div>
+
+    <div class="comment-form__preview text-styles text-styles--secondary" id="preview-div"></div>
+
+    <div class="comment-form__buttons mb-4">
+      <button type="submit" class="crayons-btn mr-2 js-btn-enable" onclick="validateField(event)" data-tracking-name="comment_submit_button" disabled>Submit</button>
+      <button type="button" class="preview-toggle crayons-btn crayons-btn--secondary comment-action-preview js-btn-enable mr-2" data-tracking-name="comment_preview_button" disabled>Preview</button>
+      <a href="/404.html" class="dismiss-edit-comment crayons-btn crayons-btn--ghost js-btn-dismiss hidden">Dismiss</a>
+    </div>
+  </div>
+
+  <div class="code-of-conduct" id="toggle-code-of-conduct-checkbox"></div>
+</form>
+
+
+        <div class="comments" id="comment-trees-container">
+        </div>
+      </div>
+
+      <div class="align-center">
+
+
+  <nav class="fs-s align-center block" aria-label="Conduct controls">
+  <a href="/code-of-conduct" class="crayons-link crayons-link--secondary">Code of Conduct</a>
+  <span class="opacity-25 px-2" role="presentation">&bull;</span>
+  <a href="/report-abuse" class="crayons-link crayons-link--secondary">Report abuse</a>
+</nav>
+
+</div>
+
+  </section>
+  <div id="hide-comments-modal" class="hidden">
+  <form id="hide-comments-modal__form" class="hide-comments-modal__form" data-type="json" action="/comments/hide" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="_method" value="patch" autocomplete="off" /><input type="hidden" name="authenticity_token" value="xLtYDtRYANXtGORbRDtXQIJmMa8FKs1oVszFp8qZXAskqrdBXYwZRnJlje8flruYbqgDdVCZJbYiLO3acJ2TKA" autocomplete="off" />
+    <div class="hide-comments-modal__content">
+      <p class="pb-2">
+        Are you sure you want to hide this comment? It will become hidden in your post, but will still be visible via the comment's <a id="hide-comments-modal__comment-permalink" href="#">permalink</a>.
+      </p>
+      <label class="crayons-field crayons-field--checkbox my-2">
+        <input name="hide_children" type="hidden" value="0" autocomplete="off" /><input class="hide_children crayons-checkbox" type="checkbox" value="1" name="hide_children" id="hide_children" />
+        <p class="crayons-field__label">Hide child comments as well</p>
+      </label>
+      <p class="pb-4 pt-2">
+        <button type="submit" class="crayons-btn">
+          Confirm
+        </button>
+      </p>
+    </div>
+</form>  <p class="fs-s color-base-60">For further actions, you may consider blocking this person and/or <a id="hide-comments-modal__report-link" href="/report-abuse">reporting abuse</a></p>
+</div>
+
+
+
+      </article>
+
+          <div class="pb-4 crayons-layout__comments-display-ad">
+            <div class="crayons-card crayons-card--secondary crayons-sponsorship"
+  data-display-unit data-id="1241"
+  data-category-click="click"
+  data-category-impression="impression"
+  data-context-type="article"
+  data-type-of="in_house">
+  <div class="crayons-sponsorship__header relative">
+      <div class="crayons-sponsorship__title">DEV Community</div>
+
+    <button id="sponsorship-dropdown-trigger-1241" aria-controls="sponsorship-dropdown-1241" aria-expanded="false" aria-haspopup="true"
+      class="dropBtn crayons-sponsorship__dropdown crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon"
+      aria-label="Toggle dropdown menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="abwahm4hdvf6nw0uhodh5hq6urp4ppel" class="crayons-icon pointer-events-none"><title id="abwahm4hdvf6nw0uhodh5hq6urp4ppel">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+
+    <div id="sponsorship-dropdown-1241" class="crayons-dropdown right-0">
+      <ul class="list-none m-0">
+          <li>
+            <a class="crayons-link crayons-link--block" href='/billboards'>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
+</svg>
+
+              What&#39;s a billboard?
+            </a>
+          </li>
+        <li>
+          <a class="crayons-link crayons-link--block" href='/settings/customization#sponsors'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M3.34 16.9999C2.91727 16.2689 2.58866 15.4874 2.362 14.6739C2.85531 14.423 3.26959 14.0406 3.55903 13.5688C3.84846 13.0971 4.00176 12.5545 4.00197 12.0011C4.00218 11.4476 3.84928 10.9049 3.5602 10.4329C3.27112 9.961 2.85712 9.57821 2.364 9.32694C2.81604 7.69243 3.67673 6.1999 4.865 4.98994C5.32909 5.29167 5.86762 5.45911 6.42098 5.47373C6.97434 5.48834 7.52095 5.34958 8.00033 5.07278C8.47971 4.79598 8.87315 4.39194 9.13713 3.90539C9.4011 3.41883 9.52531 2.86872 9.496 2.31594C11.1381 1.89157 12.8612 1.89226 14.503 2.31795C14.474 2.87071 14.5984 3.42073 14.8626 3.90715C15.1268 4.39357 15.5204 4.79742 15.9998 5.07401C16.4793 5.35059 17.0259 5.48913 17.5793 5.4743C18.1326 5.45946 18.671 5.29183 19.135 4.98994C19.714 5.57994 20.228 6.25095 20.66 6.99995C21.093 7.74895 21.417 8.52995 21.638 9.32595C21.1447 9.57685 20.7304 9.95932 20.441 10.4311C20.1515 10.9028 19.9982 11.4454 19.998 11.9988C19.9978 12.5523 20.1507 13.095 20.4398 13.5669C20.7289 14.0389 21.1429 14.4217 21.636 14.6729C21.184 16.3075 20.3233 17.8 19.135 19.0099C18.6709 18.7082 18.1324 18.5408 17.579 18.5262C17.0257 18.5115 16.479 18.6503 15.9997 18.9271C15.5203 19.2039 15.1268 19.6079 14.8629 20.0945C14.5989 20.5811 14.4747 21.1312 14.504 21.6839C12.8619 22.1083 11.1388 22.1076 9.497 21.6819C9.52605 21.1292 9.4016 20.5792 9.13742 20.0927C8.87324 19.6063 8.47964 19.2025 8.00017 18.9259C7.5207 18.6493 6.97405 18.5108 6.42073 18.5256C5.8674 18.5404 5.32896 18.7081 4.865 19.0099C4.27399 18.4069 3.76159 17.7315 3.34 16.9999ZM9 17.1959C10.0656 17.8106 10.8668 18.797 11.25 19.9659C11.749 20.0129 12.25 20.0139 12.749 19.9669C13.1324 18.7978 13.934 17.8114 15 17.1969C16.0652 16.5806 17.3205 16.3794 18.525 16.6319C18.815 16.2239 19.065 15.7889 19.273 15.3339C18.4524 14.4174 17.9991 13.2302 18 11.9999C18 10.7399 18.47 9.56295 19.273 8.66595C19.0635 8.21109 18.8125 7.77658 18.523 7.36795C17.3193 7.62025 16.0648 7.41942 15 6.80395C13.9344 6.18932 13.1332 5.20293 12.75 4.03394C12.251 3.98694 11.75 3.98594 11.251 4.03294C10.8676 5.20209 10.066 6.1885 9 6.80295C7.93478 7.41926 6.67948 7.62046 5.475 7.36795C5.18556 7.77623 4.93513 8.21081 4.727 8.66595C5.54757 9.5825 6.00088 10.7697 6 11.9999C6 13.2599 5.53 14.4369 4.727 15.3339C4.93647 15.7888 5.18754 16.2233 5.477 16.6319C6.68072 16.3796 7.93521 16.5805 9 17.1959ZM12 14.9999C11.2044 14.9999 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 11.9999C9 11.2043 9.31607 10.4412 9.87868 9.87862C10.4413 9.31602 11.2044 8.99995 12 8.99995C12.7956 8.99995 13.5587 9.31602 14.1213 9.87862C14.6839 10.4412 15 11.2043 15 11.9999C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 14.9999 12 14.9999ZM12 12.9999C12.2652 12.9999 12.5196 12.8946 12.7071 12.7071C12.8946 12.5195 13 12.2652 13 11.9999C13 11.7347 12.8946 11.4804 12.7071 11.2928C12.5196 11.1053 12.2652 10.9999 12 10.9999C11.7348 10.9999 11.4804 11.1053 11.2929 11.2928C11.1054 11.4804 11 11.7347 11 11.9999C11 12.2652 11.1054 12.5195 11.2929 12.7071C11.4804 12.8946 11.7348 12.9999 12 12.9999Z" fill="black"></path>
+</svg>
+
+            Manage preferences
+          </a>
+        </li>
+        <hr />
+        <li>
+          <a class="crayons-link crayons-link--block" href="/report-abuse?billboard=1241">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 17" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+  <path d="M2.16667 11.3333V16.3333H0.5V0.5H8.31833C8.47305 0.500083 8.62469 0.543236 8.75627 0.624627C8.88785 0.706018 8.99417 0.822433 9.06333 0.960833L9.66667 2.16667H14.6667C14.8877 2.16667 15.0996 2.25446 15.2559 2.41074C15.4122 2.56703 15.5 2.77899 15.5 3V12.1667C15.5 12.3877 15.4122 12.5996 15.2559 12.7559C15.0996 12.9122 14.8877 13 14.6667 13H9.34833C9.19361 12.9999 9.04197 12.9568 8.91039 12.8754C8.77882 12.794 8.67249 12.6776 8.60333 12.5392L8 11.3333H2.16667ZM2.16667 2.16667V9.66667H9.03L9.86333 11.3333H13.8333V3.83333H8.63667L7.80333 2.16667H2.16667Z" fill="#404040"></path>
+</svg>
+
+            Report billboard
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="p-1 pt-3 text-styles text-styles--display-ad">
+    <h3>  <a href="#the-ai-brief-top-posts-from-the-ai-ecosystem" class="anchor">  </a>  The AI Brief: Top Posts from the AI Ecosystem 🤖</h3><p><strong>1. <a href="https://dev.to/wesen/llms-will-fundamentally-change-software-engineering-3oj8">LLMs will fundamentally change software engineering</a></strong></p><p><em>Large Language Models (LLMs), such as GPT-family, will revolutionize the way we build and interact with software. This article dives into the possibilities and implications of LLMs influencing the industry.</em></p><p><strong>2. <a href="https://dev.to/heyitsuzair/will-ai-replace-developers-2oop">Will AI Replace Developers?</a></strong></p><p><em>While the rise of AI often leads to concerns of developers being replaced, the reality is likely more nuanced. Explore the intricate relationship between AI and software development.</em></p><p><strong>3. <a href="https://dev.to/xata/semantic-search-with-xata-openai-typescript-and-deno-31lb">Semantic Search With Xata, OpenAI, TypeScript, and Deno</a></strong></p><p><em>Upgrade your search capabilities by using OpenAI's embeddings API, TypeScript, and Deno for Semantic Search implementation to go beyond just matching keywords in your search system.</em></p>
+  </div>
+</div>
+
+          </div>
+
+          <section class="crayons-card crayons-card--secondary text-padding mb-4 print-hidden" id="bottom-content-read-next">
+    <h2 class="crayons-subtitle-1">Read next</h2>
+      <a href="/bytebodger/thank-you-for-your-worthless-comment-4o67" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--pa-KxVAZ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wxogr7qacm1xscgvelus.jpg" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="bytebodger profile image" class="crayons-avatar__image" width="100" height="100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--QToY3uNJ--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/337841/75deba0f-8d8a-476a-b62b-557c6de1bc8f.jpg" />
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Thank You For Your (Worthless) Comment!</h3>
+            <p class="opacity-75 pt-1">
+              Adam Nathaniel Davis - <time datetime="2023-03-30T06:13:35Z">Mar 30</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/documatic/graph-databases-vs-relational-databases-what-and-why-5d6g" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--sXae0V0o--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/chqyz93mdq8iurc4c8e6.png" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="j471n profile image" class="crayons-avatar__image" width="100" height="100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--PIC0xKhR--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/495014/9ebab45e-599d-4d92-bb2b-e8a2dfbf8d3a.jpg" />
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Graph Databases vs Relational Databases: What and why?</h3>
+            <p class="opacity-75 pt-1">
+              Jatin Sharma  - <time datetime="2023-03-29T12:00:00Z">Mar 29</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/fullstackjo/javascript-tutorial-series-selecting-elements-1fe3" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--AUJyNo8l--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o93a6jetswvtttbooajh.png" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="fullstackjo profile image" class="crayons-avatar__image" width="100" height="100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--q-behiWQ--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1007666/f0eb93d9-ebd6-4042-aa20-de68797b97e1.jpg" />
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">JavaScript Tutorial Series: Selecting elements</h3>
+            <p class="opacity-75 pt-1">
+              Joanna - <time datetime="2023-03-02T20:28:49Z">Mar 2</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/hy_piyush/top-20-vs-code-extensions-for-programmers-2h5d" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--bMPDmoj_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/soi83xoetvw33kweispl.png" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="hy_piyush profile image" class="crayons-avatar__image" width="100" height="100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--GxH5jjvt--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/980079/83b5f400-8a9b-4676-a8a1-06c94265f7d4.jpg" />
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Top 20 VS Code Extensions for programmers</h3>
+            <p class="opacity-75 pt-1">
+              💡Piyush Kesarwani - <time datetime="2023-03-25T07:34:40Z">Mar 25</time>
+            </p>
+          </div>
+        </div>
+      </a>
+  </section>
+
+    </div>
+  </main>
+
+  <aside class="crayons-layout__sidebar-right" aria-label="Author details">
+    <div class="crayons-article-sticky grid gap-4 break-word" id="article-show-primary-sticky-nav">
+  <div class="crayons-card crayons-card--secondary branded-7 p-4 pt-0 gap-4 grid" style="border-top-color: #090909;">
+    <div class="-mt-4">
+  <a href="/github" class="flex">
+    <span class="crayons-logo crayons-logo--xl  mr-2 shrink-0">
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--mnP6DgnH--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2575/3da37f64-b46e-4fa5-bf86-01b63ba5f57b.png" class="crayons-logo__image" alt="" loading="lazy" />
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">GitHub</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;Organization&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:2575,&quot;name&quot;:&quot;GitHub&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 " aria-label="Follow organization: GitHub" aria-pressed="false">Follow</button>
+</div>
+
+
+  </div>
+
+      <div class="crayons-card crayons-card--secondary">
+        <header class="crayons-card__header">
+          <h3 class="crayons-subtitle-2">
+            More from <a href="/github">GitHub</a>
+          </h3>
+        </header>
+        <div>
+            <a class="crayons-link crayons-link--contentful" href="/github/rompiendo-las-barreras-a-la-colaboracion-open-source-y-github-codespaces-20di">
+              Rompiendo las barreras a la colaboración: Open Source y GitHub Codespaces
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>opensource</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>github</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>spanish</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>containers</span>
+              </div>
+            </a>
+            <a class="crayons-link crayons-link--contentful" href="/github/entenda-seu-codigo-com-a-ajuda-do-github-copilot-2j58">
+              Entenda seu código com a ajuda do GitHub Copilot
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>braziliandevs</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>githubbrazil</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>tutorial</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>ai</span>
+              </div>
+            </a>
+            <a class="crayons-link crayons-link--contentful" href="/github/how-to-build-a-rock-paper-scissors-game-with-github-copilot-1flo">
+              How to build a rock, paper, scissors game with GitHub Copilot
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>tutorial</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>githubcopilot</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>python</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>githubcodespaces</span>
+              </div>
+            </a>
+        </div>
+      </div>
+</div>
+
+    <div class="crayons-article-sticky grid gap-4 break-word pt-4">
+      <div class="crayons-card crayons-card--secondary crayons-sponsorship"
+  data-display-unit data-id="875"
+  data-category-click="click"
+  data-category-impression="impression"
+  data-context-type="article"
+  data-type-of="in_house">
+  <div class="crayons-sponsorship__header relative">
+      <div class="crayons-sponsorship__title">DEV Community</div>
+
+    <button id="sponsorship-dropdown-trigger-875" aria-controls="sponsorship-dropdown-875" aria-expanded="false" aria-haspopup="true"
+      class="dropBtn crayons-sponsorship__dropdown crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon"
+      aria-label="Toggle dropdown menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="acsnamny1yt0pnubpqlhmlxok22zc6qx" class="crayons-icon pointer-events-none"><title id="acsnamny1yt0pnubpqlhmlxok22zc6qx">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+
+    <div id="sponsorship-dropdown-875" class="crayons-dropdown right-0">
+      <ul class="list-none m-0">
+          <li>
+            <a class="crayons-link crayons-link--block" href='/billboards'>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
+</svg>
+
+              What&#39;s a billboard?
+            </a>
+          </li>
+        <li>
+          <a class="crayons-link crayons-link--block" href='/settings/customization#sponsors'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+    <path d="M3.34 16.9999C2.91727 16.2689 2.58866 15.4874 2.362 14.6739C2.85531 14.423 3.26959 14.0406 3.55903 13.5688C3.84846 13.0971 4.00176 12.5545 4.00197 12.0011C4.00218 11.4476 3.84928 10.9049 3.5602 10.4329C3.27112 9.961 2.85712 9.57821 2.364 9.32694C2.81604 7.69243 3.67673 6.1999 4.865 4.98994C5.32909 5.29167 5.86762 5.45911 6.42098 5.47373C6.97434 5.48834 7.52095 5.34958 8.00033 5.07278C8.47971 4.79598 8.87315 4.39194 9.13713 3.90539C9.4011 3.41883 9.52531 2.86872 9.496 2.31594C11.1381 1.89157 12.8612 1.89226 14.503 2.31795C14.474 2.87071 14.5984 3.42073 14.8626 3.90715C15.1268 4.39357 15.5204 4.79742 15.9998 5.07401C16.4793 5.35059 17.0259 5.48913 17.5793 5.4743C18.1326 5.45946 18.671 5.29183 19.135 4.98994C19.714 5.57994 20.228 6.25095 20.66 6.99995C21.093 7.74895 21.417 8.52995 21.638 9.32595C21.1447 9.57685 20.7304 9.95932 20.441 10.4311C20.1515 10.9028 19.9982 11.4454 19.998 11.9988C19.9978 12.5523 20.1507 13.095 20.4398 13.5669C20.7289 14.0389 21.1429 14.4217 21.636 14.6729C21.184 16.3075 20.3233 17.8 19.135 19.0099C18.6709 18.7082 18.1324 18.5408 17.579 18.5262C17.0257 18.5115 16.479 18.6503 15.9997 18.9271C15.5203 19.2039 15.1268 19.6079 14.8629 20.0945C14.5989 20.5811 14.4747 21.1312 14.504 21.6839C12.8619 22.1083 11.1388 22.1076 9.497 21.6819C9.52605 21.1292 9.4016 20.5792 9.13742 20.0927C8.87324 19.6063 8.47964 19.2025 8.00017 18.9259C7.5207 18.6493 6.97405 18.5108 6.42073 18.5256C5.8674 18.5404 5.32896 18.7081 4.865 19.0099C4.27399 18.4069 3.76159 17.7315 3.34 16.9999ZM9 17.1959C10.0656 17.8106 10.8668 18.797 11.25 19.9659C11.749 20.0129 12.25 20.0139 12.749 19.9669C13.1324 18.7978 13.934 17.8114 15 17.1969C16.0652 16.5806 17.3205 16.3794 18.525 16.6319C18.815 16.2239 19.065 15.7889 19.273 15.3339C18.4524 14.4174 17.9991 13.2302 18 11.9999C18 10.7399 18.47 9.56295 19.273 8.66595C19.0635 8.21109 18.8125 7.77658 18.523 7.36795C17.3193 7.62025 16.0648 7.41942 15 6.80395C13.9344 6.18932 13.1332 5.20293 12.75 4.03394C12.251 3.98694 11.75 3.98594 11.251 4.03294C10.8676 5.20209 10.066 6.1885 9 6.80295C7.93478 7.41926 6.67948 7.62046 5.475 7.36795C5.18556 7.77623 4.93513 8.21081 4.727 8.66595C5.54757 9.5825 6.00088 10.7697 6 11.9999C6 13.2599 5.53 14.4369 4.727 15.3339C4.93647 15.7888 5.18754 16.2233 5.477 16.6319C6.68072 16.3796 7.93521 16.5805 9 17.1959ZM12 14.9999C11.2044 14.9999 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 11.9999C9 11.2043 9.31607 10.4412 9.87868 9.87862C10.4413 9.31602 11.2044 8.99995 12 8.99995C12.7956 8.99995 13.5587 9.31602 14.1213 9.87862C14.6839 10.4412 15 11.2043 15 11.9999C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 14.9999 12 14.9999ZM12 12.9999C12.2652 12.9999 12.5196 12.8946 12.7071 12.7071C12.8946 12.5195 13 12.2652 13 11.9999C13 11.7347 12.8946 11.4804 12.7071 11.2928C12.5196 11.1053 12.2652 10.9999 12 10.9999C11.7348 10.9999 11.4804 11.1053 11.2929 11.2928C11.1054 11.4804 11 11.7347 11 11.9999C11 12.2652 11.1054 12.5195 11.2929 12.7071C11.4804 12.8946 11.7348 12.9999 12 12.9999Z" fill="black"></path>
+</svg>
+
+            Manage preferences
+          </a>
+        </li>
+        <hr />
+        <li>
+          <a class="crayons-link crayons-link--block" href="/report-abuse?billboard=875">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 17" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+  <path d="M2.16667 11.3333V16.3333H0.5V0.5H8.31833C8.47305 0.500083 8.62469 0.543236 8.75627 0.624627C8.88785 0.706018 8.99417 0.822433 9.06333 0.960833L9.66667 2.16667H14.6667C14.8877 2.16667 15.0996 2.25446 15.2559 2.41074C15.4122 2.56703 15.5 2.77899 15.5 3V12.1667C15.5 12.3877 15.4122 12.5996 15.2559 12.7559C15.0996 12.9122 14.8877 13 14.6667 13H9.34833C9.19361 12.9999 9.04197 12.9568 8.91039 12.8754C8.77882 12.794 8.67249 12.6776 8.60333 12.5392L8 11.3333H2.16667ZM2.16667 2.16667V9.66667H9.03L9.86333 11.3333H13.8333V3.83333H8.63667L7.80333 2.16667H2.16667Z" fill="#404040"></path>
+</svg>
+
+            Report billboard
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="p-1 pt-3 text-styles text-styles--display-ad">
+    <p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--IxrGprDT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbsvcwqnj5mgkzuwy24r.png" alt="OpenAI" width="930" height="400" loading="lazy"></p><h2>  <a href="#how-will-chatgpt-will-affect-the-future-of-software-development" class="anchor">  </a>  How will ChatGPT will affect the future of software development?</h2><p><strong>We're not sure either</strong>, but the DEV community is figuring this out together.</p><h3>  <a href="#create-a-dev-account-it-only-takes-a-minute-and-is-100-free" class="anchor">  </a>  <a href="https://dev.to/enter?state=new-user">Create a DEV account</a>. It only takes a minute and is 100% free.</h3><p>New AI content every day.</p>
+  </div>
+</div>
+
+    </div>
+
+  </aside>
+</div>
+
+
+<div class="mod-actions-menu print-hidden"></div>
+<div data-testid="unpublish-post-modal-container" class="unpublish-post-modal-container hidden"></div>
+<div id="suspend-modal-content" class="hidden">
+  <p>
+    Once suspended, github will not be able to comment or publish posts until their suspension is removed.
+  </p>
+
+  <div class="crayons-field mt-4">
+    <label
+      for="suspend-reason-userid-302741"
+      class="crayons-field__label">
+      Note:
+    </label>
+    <textarea
+      id="suspend-reason-userid-302741"
+      rows="4"
+      cols="70"
+      placeholder="Reason for suspension"
+      class="crayons-textfield"
+      aria-describedby="suspension-reason-error"
+      required></textarea>
+    <p
+      id="suspension-reason-error"
+      data-testid="suspension-reason-error"
+      class="suspend-reason-error crayons-field__description"
+      style="color: red;"
+      aria-live="assertive">
+    </p>
+  </div>
+  <div class="mt-4">
+    <button
+      id="submit-user-suspend-btn"
+      class="c-btn c-btn--primary c-btn--destructive"
+      data-btn-action="suspend"
+      data-reason-selector="#suspend-reason-userid-302741"
+      data-user-id="302741"
+      data-username="github">
+      Submit &amp; Suspend
+    </button>
+  </div>
+</div>
+
+<div id="unsuspend-modal-content" class="hidden">
+  <p>
+    Once unsuspended, github will be able to comment and publish posts again.
+  </p>
+
+  <div class="crayons-field mt-4">
+    <label
+      for="unsuspend-reason-userid-302741"
+      class="crayons-field__label">
+      Note:
+    </label>
+    <textarea
+      id="unsuspend-reason-userid-302741"
+      rows="4"
+      cols="70"
+      placeholder="Reason for unsuspension"
+      class="crayons-textfield"
+      aria-describedby="unsuspension-reason-error"
+      required></textarea>
+    <p
+      id="unsuspension-reason-error"
+      data-testid="unsuspension-reason-error"
+      class="unsuspend-reason-error crayons-field__description"
+      style="color: red;"
+      aria-live="assertive">
+    </p>
+  </div>
+  <div class="mt-4">
+    <button
+      id="submit-user-unsuspend-btn"
+      class="c-btn c-btn--primary"
+      data-btn-action="unsuspend"
+      data-reason-selector="#unsuspend-reason-userid-302741"
+      data-user-id="302741"
+      data-username="github">
+      Submit &amp; Unsuspend
+    </button>
+  </div>
+</div>
+
+<div id="unpublish-all-posts" class="hidden">
+  <p>
+    Once unpublished, all posts by github will become hidden and only accessible to themselves.
+  </p>
+  <p class="mt-2">
+    If github is not suspended, they can still re-publish their posts from their dashboard.
+  </p>
+  <p class="mt-2"><label for="note_content">Note:</label><textarea name="note[content]" id="note_content" class="crayons-textfield note_content" placeholder="Note text">
+</textarea></p>
+  <div class="mt-4">
+    <button
+      id="unpublish-all-posts-submit-btn"
+      class="c-btn c-btn--destructive c-btn--primary"
+      data-user-id="302741">
+      Unpublish all posts
+    </button>
+  </div>
+</div>
+
+<div id="unpublish-post-modal" class="hidden">
+  <p>
+    Once unpublished, this post will become invisible to the public and only accessible to Rizèl Scarlett.
+  </p>
+  <p>They can still re-publish the post if they are not suspended.</p>
+  <div class="mt-4">
+    <button
+      destructive
+      variant="primary"
+      class="c-btn c-btn--primary c-btn--destructive"
+      id="confirm-unpublish-post-action">
+      Unpublish Post
+    </button>
+  </div>
+</div>
+
+<div id="flag-user-modal-content" class="hidden">
+  <p>
+    Thanks for keeping DEV Community safe. Here is what you can do to flag github:
+  </p>
+
+  <div class="crayons-field crayons-field--radio mt-4">
+    <input
+      type="radio"
+      id="flag-user-radio-input"
+      name="flag-user-radio-input"
+      class="crayons-radio"
+      data-reactable-id="302741"
+      data-category="vomit"
+      data-reactable-type="User" />
+    <label for="flag-user-radio-input" class="crayons-field__label">
+      Make all posts by github less visible
+      <p class="crayons-field__description">
+        github consistently posts content that violates DEV Community's
+        code of conduct because it is harassing, offensive or spammy.
+      </p>
+    </label>
+  </div>
+
+  <div class="mt-4">
+    <a
+      href="javascript:void(0);"
+      id="report-inappropriate-content"
+      data-report-abuse-link="/report-abuse?url=https://dev.to/github/a-beginners-guide-to-prompt-engineering-with-github-copilot-3ibp">
+      Report other inappropriate conduct
+    </a>
+  </div>
+
+  <div class="mt-6">
+    <p
+      id="unselected-radio-error"
+      data-testid="unselected-radio-error"
+      class="crayons-field__description mb-4"
+      style="color: red;"
+      aria-live="assertive">
+    </p>
+    <button
+      id="confirm-flag-user-action"
+      class="c-btn c-btn--primary c-btn--destructive"
+      data-category="vomit"
+      data-reactable-type="User"
+      data-user-id="302741"
+      data-username="github">
+      Confirm Flag
+    </button>
+  </div>
+</div>
+
+<div id="unflag-user-modal-content" class="hidden">
+  <p>
+    Unflagging github will restore default visibility to their posts.
+  </p>
+
+  <div class="mt-6">
+    <button
+      id="confirm-unflag-user-action"
+      class="c-btn c-btn--primary"
+      data-category="vomit"
+      data-reactable-type="User"
+      data-user-id="302741"
+      data-username="github">
+      Confirm Unflag
+    </button>
+  </div>
+</div>
+
+
+<div class="fullscreen-code js-fullscreen-code"></div>
+<script src="https://dev.to/packs/js/runtime~followButtons-728c603f2dc8755ce211.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/6-b93c1529963bca9369db.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/followButtons-b70c2c080f62af0daafb.chunk.js" defer="defer"></script>
+
+  <script>
+    var waitingOnPodcast = setInterval(function() {
+  if (typeof initializePodcastPlayback !== 'undefined') {
+    initializePodcastPlayback();
+    clearInterval(waitingOnPodcast);
+  }
+}, 1);
+
+    if (document.head.querySelector('meta[name="user-signed-in"][content="true"]')) {
+  function displayPollResults(json) {
+    var totalVotes = json.voting_data.votes_count;
+    json.voting_data.votes_distribution.forEach(function(point) {
+      var pollOptionItem = document.getElementById('poll_option_list_item_'+point[0]);
+      var optionText = document.getElementById('poll_option_label_'+point[0]).textContent;
+      if (json.user_vote_poll_option_id === point[0]) {
+        var votedClass = 'optionvotedfor'
+      } else {
+        var votedClass = 'optionnotvotedfor'
+      }
+      if (totalVotes === 0) {
+        var percent = 0;
+      } else {
+        var percent = (point[1]/totalVotes)*100;
+      }
+      var roundedPercent = Math.round( percent * 10 ) / 10
+      var percentFromRight = (100-roundedPercent)
+      var html = '<span><span class="ltag-votepercent ltag-'+votedClass+'" style="right:'+percentFromRight+'%"></span>        <span class="ltag-votepercenttext">'+optionText+' — '+roundedPercent+'%</span></span>';
+      pollOptionItem.innerHTML = html;
+      pollOptionItem.classList.add('already-voted')
+      document.getElementById('showmethemoney-'+json.poll_id).innerHTML = '<span class="ltag-voting-results-count">'+totalVotes+' total votes</span>';
+    })
+  }
+
+  var polls = document.getElementsByClassName('ltag-poll');
+  for (var i = 0; i < polls.length; i += 1) {
+    var poll = polls[i]
+    var pollId = poll.dataset.pollId
+    window.fetch('/poll_votes/'+pollId)
+    .then(function(response){
+      response.json().then(
+        function(json) {
+          if (json.voted) {
+            displayPollResults(json)
+          } else {
+            var els = document.getElementById('poll_'+json.poll_id).getElementsByClassName('ltag-polloption');
+
+            for (i = 0; i < els.length; i += 1) {
+              els[i].addEventListener('click', function(e) {
+                var tokenMeta = document.querySelector("meta[name='csrf-token']")
+                if (!tokenMeta) {
+                  alert('Whoops. There was an error. Your vote was not counted. Try refreshing the page.')
+                  return
+                }
+                var csrfToken = tokenMeta.getAttribute('content')
+                var optionId = e.target.dataset.optionId
+                window.fetch('/poll_votes', {
+                  method: 'POST',
+                  headers: {
+                    'X-CSRF-Token': csrfToken,
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({poll_vote: { poll_option_id: optionId } }),
+                  credentials: 'same-origin',
+                }).then(function(response){
+                  response.json().then(function(j){displayPollResults(j)})
+                })
+              });
+            }
+
+            document.getElementById('showmethemoney-'+json.poll_id).addEventListener('click', function() {
+              pollId = this.dataset.pollId
+              window.fetch('/poll_skips', {
+                method: 'POST',
+                headers: {
+                  'X-CSRF-Token': csrfToken,
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({poll_skip: {poll_id: pollId }}),
+                credentials: 'same-origin',
+              }).then(function(response){
+                response.json().then(function(j){displayPollResults(j)})
+              })
+            });
+          }
+        }
+      )
+    })
+  }
+} else {
+    var els = document.getElementsByClassName('ltag-poll')
+    for (i = 0; i < els.length; i += 1) {
+      els[i].onclick = function(e) {
+        if (typeof showLoginModal !== "undefined") {
+          showLoginModal();
+        }
+      }
+    }
+}
+
+    function activateRunkitTags() {
+  if (!areAnyRunkitTagsPresent())
+    return
+
+  var checkRunkit = setInterval(function() {
+    try {
+      dynamicallyLoadRunkitLibrary()
+
+      if (typeof(RunKit) === 'undefined') {
+        return
+      }
+
+      replaceTagContentsWithRunkitWidget()
+      clearInterval(checkRunkit);
+    } catch(e) {
+      console.error(e);
+      clearInterval(checkRunkit);
+    }
+  }, 200);
+}
+
+function isRunkitTagAlreadyActive(runkitTag) {
+  return runkitTag.querySelector("iframe") !== null;
+};
+
+function areAnyRunkitTagsPresent() {
+  var presentRunkitTags = document.getElementsByClassName("runkit-element");
+
+  return presentRunkitTags.length > 0
+}
+
+function replaceTagContentsWithRunkitWidget() {
+  var targets = document.getElementsByClassName("runkit-element");
+  for (var i = 0; i < targets.length; i++) {
+    if (isRunkitTagAlreadyActive(targets[i])) {
+      continue;
+    }
+
+    var wrapperContent = targets[i].textContent;
+    if (/^(<iframe src)/.test(wrapperContent) === false) {
+      if (targets[i].children.length > 0) {
+        var preamble = targets[i].children[0].textContent;
+        var content = targets[i].children[1].textContent;
+        targets[i].innerHTML = "";
+        var notebook = RunKit.createNotebook({
+          element: targets[i],
+          source: content,
+          preamble: preamble
+        });
+      }
+    }
+  }
+};
+
+function dynamicallyLoadRunkitLibrary() {
+  if (typeof(dynamicallyLoadScript) === "undefined")
+    return
+
+  dynamicallyLoadScript("//embed.runkit.com")
+}
+
+activateRunkitTags();
+
+    var videoPreviews = document.getElementsByClassName("ltag__twitter-tweet__media__video-wrapper");
+[].forEach.call(videoPreviews, function(el) {
+  el.onclick = function(e) {
+    var divHeight = el.offsetHeight;
+    el.style.maxHeight = divHeight + "px";
+    el.getElementsByClassName("ltag__twitter-tweet__media--video-preview")[0].style.display = "none";
+    el.getElementsByClassName("ltag__twitter-tweet__video")[0].style.display = "block";
+    el.getElementsByTagName("video")[0].play();
+  }
+});
+var tweets = document.getElementsByClassName("ltag__twitter-tweet__main");
+[].forEach.call(tweets, function(tweet){
+  tweet.onclick = function(e) {
+    if (e.target.nodeName == "A" || e.target.parentElement.nodeName == "A") {
+      return;
+    }
+    window.open(tweet.dataset.url,"_blank");
+  }
+});
+
+  </script>
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  </body>
+  </html>

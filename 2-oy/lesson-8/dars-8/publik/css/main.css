@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color:rgb(131, 24, 128);
+    --bg-color2:rgb(187, 41, 182);
+}
+body{
+   display: flex;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+header{
+    width: 10%;
+    background-color: var(--bg-color);
+    padding:  10px;
+}
+main{
+    width: 90%;
+    display: flex;
+}
+.users{
+    width: 50%;
+    padding:  10px;
+    background-color: var(--bg-color2);
+}
+.chat{
+    width: 50%;
+    padding:  10px;
+    background-color: var(--bg-color);
+}

@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "username": "Islom",
+        "filepath": "/video.mp4"
+    },
+    {
+        "username": "Olim",
+        "password": "1232123",
+        "gender": "Male",
+        "imagePath": "/images/nomi.jpg",
+        "id": 2
+    },
+    {
+        "username": "Olim",
+        "password": "1232123",
+        "gender": "Male",
+        "imagePath": "/images/1920px-Wikimedia_Servers.svg.png",
+        "id": 3
+    },
+    {
+        "username": "Olim",
+        "password": "1232123",
+        "gender": "Male",
+        "imagePath": "/images/1.png",
+        "id": 4
+    },
+    {
+        "username": "Olim",
+        "password": "1232123",
+        "gender": "Male",
+        "imagePath": "/images/cb3baab3-4402-4b13-a096-dcdc922bd535.jpg",
+        "id": 5
+    }
+]

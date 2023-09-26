@@ -1,0 +1,32 @@
+[
+    {
+        "id": "400a30ef-6d60-4f6c-984d-98c939ccf7b8",
+        "username": "Farqiyoq",
+        "email": "farqiyoq@email",
+        "password": "$2a$12$4o9NLsLAcfoZ8IQJ.aD5te1G3nTcOu55Km7287PbuuFDz2W1CKIcG"
+    },
+    {
+        "id": "3943c883-3680-4f02-bc01-98fa19b078de",
+        "username": "Anvar",
+        "email": "anvar@email",
+        "password": "$2a$12$Vz8HuKW4momdT4u01we8Ueo4M7xiIP902608kZx6Rw178fb3Qzoz6"
+    },
+    {
+        "id": "8e8aef6e-e96d-4174-8e96-a596de12dc9e",
+        "username": "Davlat",
+        "email": "talaba2020sarvar@gmail.com",
+        "password": "$2a$12$sG3Oki.E6CCfJk7PBEUHQOKnbXNuj.vwFlI.T1DGsfvUbO5FfuzFq"
+    },
+    {
+        "id": "dc116824-a949-4048-8a2a-b6d489cdb1c0",
+        "username": "MuhammadQodir",
+        "email": "MuhammadQodir@gmail.com",
+        "password": "$2a$12$rSMveg6cUrPR5JNCGRkmcerOE59JeQME1DjShUm/H0sU5xtoNTsxC"
+    },
+    {
+        "id": "6543de12-25ea-4c4a-b37e-460f639755e6",
+        "username": "ziyadem",
+        "email": "ziyadem@gmail.com",
+        "password": "$2a$12$XVcgFe36UCGJfCOwr5jorOE1CUqtoljpcjyYBT0BIld03nmyqT1Au"
+    }
+]

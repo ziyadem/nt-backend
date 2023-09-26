@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Frequently Asked Questions 🤔 - DEV Community</title>
+      <meta name="last-updated" content="2023-04-03 13:10:15 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1680527415">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://dev.to/assets/base-9367e1923af849f8b2501fbc3dbb112ec2a9c13b7b7095d2a6c9fa25064774e4.js" defer="defer"></script>
+        <script src="https://dev.to/packs/js/runtime~base-c78c7355d34f41bec100.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-e69699ee885daf54b5a1.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+      
+  <link rel="canonical" href="https://dev.to/page/faq" />
+  <meta name="description" content="Frequently Asked Questions 🤔 — DEV Community">
+  <meta name="keywords" content="software development, engineering, rails, javascript, ruby">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://dev.to/page/faq" />
+  <meta property="og:title" content="Frequently Asked Questions 🤔 — DEV Community" />
+  <meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+  <meta property="og:description" content="For your information" />
+  <meta property="og:site_name" content="DEV Community" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thepracticaldev">
+  <meta name="twitter:title" content="Frequently Asked Questions 🤔 — DEV Community">
+  <meta name="twitter:description" content="For your information">
+  <meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192" />
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+      <meta property="forem:domain" content="dev.to" />
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-locale="en"
+        data-honeybadger-key="a45862f6"
+        data-deployed-at="2023-04-03T13:01:56Z"
+        data-latest-commit-id="197b7f712826532a28ad1b00c6e12bcd89f85769"
+        data-ga-tracking="UA-71991109-1"
+        data-ga4-tracking-id="G-TYEM8Y3JN3"
+        >
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="alsfsm1hzbaeh5uur2zz1zmnl9upy086" class="crayons-icon"><title id="alsfsm1hzbaeh5uur2zz1zmnl9upy086">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aoqyp5f3vutwsj5xlg8liwqwyr1qwyk" aria-hidden="true" class="crayons-icon"><title id="aoqyp5f3vutwsj5xlg8liwqwyr1qwyk">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae5iz7sny2vmdrg0jv1ugmxep2byfmew" class="crayons-icon"><title id="ae5iz7sny2vmdrg0jv1ugmxep2byfmew">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ai4zvrkhkswkq4bw5admorefy4nuc2fg" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="ai4zvrkhkswkq4bw5admorefy4nuc2fg">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper pages pages-faq" data-current-page="pages-faq">
+  <div id="page-content-inner">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+<main id="main-content">
+    <div class="crayons-layout crayons-layout--limited-l">
+      <div class="crayons-card text-styles text-padding">
+        <h1 class="fs-3xl s:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-4 mt-0">Frequently Asked Questions 🤔</h1>
+
+        <p><em>Some of these are not actually asked frequently, but they're still good to know.</em></p>
+
+<h3>
+  <a name="who-can-post-to-devto" href="#who-can-post-to-devto">
+  </a>
+  Who can post to dev.to?
+</h3>
+
+<p>Anyone! Yes, you have permission to make a new post of any kind as long as it meets our community guidelines and gets through common-sense spam filters. Your post is subject to removal at the discretion of the moderators if they believe it does not meet the requirements of our <a href="https://dev.to/code-of-conduct">code of conduct</a>.</p>
+
+<h3>
+  <a name="how-do-i-post-article-on-devto" href="#how-do-i-post-article-on-devto">
+  </a>
+  How do I post article on dev.to?
+</h3>
+
+<p>Click on "Write a Post" in the top right corner of the site. Write your article, give it a title, tag it with appropriate tags, and fill out any other relevant fields. Then, once you're ready, change <code>published: false</code> to <code>published: true</code> in the front matter of the post and save. Your post will now be published.</p>
+
+<h3>
+  <a name="is-there-a-guide-for-how-to-use-devs-editor" href="#is-there-a-guide-for-how-to-use-devs-editor">
+  </a>
+  Is there a guide for how to use DEV's editor?
+</h3>
+
+<p>Yes! Here is our <a href="https://dev.to/p/editor_guide">editor guide</a>, you can also find it by clicking the "?" page in the <a href="https://dev.to/new">editor</a>. </p>
+
+<h3>
+  <a name="how-do-i-get-featured-on-the-home-page" href="#how-do-i-get-featured-on-the-home-page">
+  </a>
+  How do I get featured on the home page?
+</h3>
+
+<p>The home page is selected by our editorial team. You can email us with any specific questions.</p>
+
+<h3>
+  <a name="can-i-crosspost-something-ive-already-written-on-my-own-blog-or-medium" href="#can-i-crosspost-something-ive-already-written-on-my-own-blog-or-medium">
+  </a>
+  Can I cross-post something I've already written on my own blog or Medium?
+</h3>
+
+<p>Absolutely, as long as you have the rights you need to do so! And if it's of high quality, we'll feature it.</p>
+
+<h3>
+  <a name="how-do-i-change-my-twittergithub-username" href="#how-do-i-change-my-twittergithub-username">
+  </a>
+  How do I change my Twitter/GitHub username?
+</h3>
+
+<p>You can add or remove Twitter/GitHub associations from <a href="https://dev.to/settings/account">your settings</a>, but note that you can only do this if both Twitter and GitHub are connected to your account. If you have any issues with this, email <a href="mailto:yo@dev.to">yo@dev.to</a> and we'll take care of it.</p>
+
+<h3>
+  <a name="what-about-my-posts-google-ranking" href="#what-about-my-posts-google-ranking">
+  </a>
+  What about my post's Google ranking?
+</h3>
+
+<p>You can set the canonical_url of your post before publishing so that Google knows where to send the link juice (that precious, precious link juice).</p>
+
+<h3>
+  <a name="how-do-i-add-a-canonical-url" href="#how-do-i-add-a-canonical-url">
+  </a>
+  How do I add a canonical URL?
+</h3>
+
+<p>In your post editor, click the menu button:</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--6IowK_B8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/nywq81sq9e2cz46g3yfa.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--6IowK_B8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/nywq81sq9e2cz46g3yfa.png" alt="" loading="lazy"></a></p>
+
+<p>Then fill in your canonical URL!</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--vgbE90M2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/hbcz7f08a4psiaova7yf.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--vgbE90M2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/hbcz7f08a4psiaova7yf.png" alt="" loading="lazy"></a></p>
+
+<p>If you're using the basic markdown editor, you can add it inside the triple dashes, like so:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight plaintext"><code>---
+title:
+published: false
+tags: 
+canonical_url: https://mycoolsite.com/my-post
+---
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+    <path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewbox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+    <path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<h3>
+  <a name="i-found-a-bug-not-a-security-vulnerability-how-do-i-report-it" href="#i-found-a-bug-not-a-security-vulnerability-how-do-i-report-it">
+  </a>
+  I found a bug (not a security vulnerability). How do I report it?
+</h3>
+
+<p>Please create an issue on <a href="https://github.com/thepracticaldev/dev.to">our repo</a>.</p>
+
+<h3>
+  <a name="i-found-a-security-vulnerability-how-do-i-report-it" href="#i-found-a-security-vulnerability-how-do-i-report-it">
+  </a>
+  I found a security vulnerability. How do I report it?
+</h3>
+
+<p>Please email <a href="mailto:yo@dev.to">yo@dev.to</a>.</p>
+
+<h3>
+  <a name="how-do-i-report-spam" href="#how-do-i-report-spam">
+  </a>
+  How do I report spam?
+</h3>
+
+<p>For a specific comment: navigate to the comment and click the dropdown arrow to report abuse. </p>
+
+<p>For a specific article: navigate to the article, scroll to the bottom and click report abuse. </p>
+
+<p>In general, you can fill out the <a href="https://dev.to/report-abuse">report abuse</a> form.</p>
+
+<h3>
+  <a name="how-does-devto-make-money" href="#how-does-devto-make-money">
+  </a>
+  How does dev.to make money?
+</h3>
+
+<p>Right now, we count on <a href="https://dev.to/listings">listings</a> and <a href="https://dev.to/sponsorships">sponsors</a>. We also sell some merchandise on The DEV Shop.</p>
+
+<h3>
+  <a name="whats-up-with-your-sponsors" href="#whats-up-with-your-sponsors">
+  </a>
+  What's up with your sponsors?
+</h3>
+
+<p>If you have questions about sponsorships (i.e. how to turn off sponsor displays), visit our <a href="https://dev.to/sponsorship-info">sponsorship info</a> page.</p>
+
+<h3>
+  <a name="how-do-i-delete-my-account" href="#how-do-i-delete-my-account">
+  </a>
+  How do I delete my account?
+</h3>
+
+<p>You'll find the option to delete your account in your <a href="https://dev.to/settings/account">settings</a>. Self-deletion will remove your DEV profile, and all articles, comments, Connect messages, etc. </p>
+
+<p>If you require a full GDPR deletion, please e-mail <a href="mailto:yo@dev.to">yo@dev.to</a> with the subject line "GDPR Delete Request" and we will ensure that any of your remaining data is purged from all systems.</p>
+
+<h3>
+  <a name="do-i-own-the-articles-that-i-publish" href="#do-i-own-the-articles-that-i-publish">
+  </a>
+  Do I own the articles that I publish?
+</h3>
+
+<p>Yes, you own the rights to the content you create and post on dev.to and you have the full authority to post, edit, and remove your content as you see fit. </p>
+
+<p>By posting content on dev.to, you give us a nonexclusive license to publish it, including anything reasonably related to publishing it (like storing, displaying, reformatting, and distributing it).</p>
+
+<h3>
+  <a name="will-you-put-ads-on-my-posts-pages" href="#will-you-put-ads-on-my-posts-pages">
+  </a>
+  Will you put ads on my posts' pages?
+</h3>
+
+<p>No ad will ever be placed next to a user's post without their consent in the matter.</p>
+
+<h3>
+  <a name="how-do-i-set-a-cover-image-on-my-post" href="#how-do-i-set-a-cover-image-on-my-post">
+  </a>
+  How do I set a cover image on my post?
+</h3>
+
+<p>Include <code>cover_image: [url]</code> in the front matter of your post. For more information on our editor, check out our <a href="https://dev.to/p/editor_guide">editor guide</a>.</p>
+
+<h3>
+  <a name="how-does-comment-threading-work" href="#how-does-comment-threading-work">
+  </a>
+  How does comment threading work?
+</h3>
+
+<p>Comments are threaded with a maximum depth, and then they become flat. You can respond to flattened-out threads by replying to the last comment in the overall thread.</p>
+
+<h3>
+  <a name="can-i-hide-comments-on-my-own-posts" href="#can-i-hide-comments-on-my-own-posts">
+  </a>
+  Can I hide comments on my own posts?
+</h3>
+
+<p>Yes.  To hide a comment that was added to one of your posts, simply click the dropdown connected to the comment and select the "Hide" option.  You can read our <a href="https://dev.to/devteam/changelog-hidden-comments-53l9">original changelog post</a> on the feature for more information.</p>
+
+<h3>
+  <a name="can-i-use-profanity-in-my-posts" href="#can-i-use-profanity-in-my-posts">
+  </a>
+  Can I use profanity in my posts?
+</h3>
+
+<p>We don’t disallow profanity in general, but we do have an internal policy of not boosting posts through our social channels that have profanity in the title, so you might want to keep that in mind.</p>
+
+<h3>
+  <a name="can-i-follow-rsses-on-dev" href="#can-i-follow-rsses-on-dev">
+  </a>
+  Can I follow RSSes on DEV?
+</h3>
+
+<p>Yes, you can. The link for our main feed can be found here: <a href="https://dev.to/feed">https://dev.to/feed</a>. For user-specific feeds, you can find them via <code>https://dev.to/feed/username</code>. For tag-specific feeds, you can find them via <code>https://dev.to/feed/tag/tagname</code>.</p>
+
+<h3>
+  <a name="upon-sign-in-why-do-you-require-authorization-to-allow-the-dev-community-to-access-info-on-my-twitter-account" href="#upon-sign-in-why-do-you-require-authorization-to-allow-the-dev-community-to-access-info-on-my-twitter-account">
+  </a>
+  Upon sign in, why do you require authorization to allow the DEV Community to access info on my Twitter account?
+</h3>
+
+<p>The authorization page being talked about looks like the following:</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--LTQiA9Be--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/5rkd4thx2y29epj7dt7q.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LTQiA9Be--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/5rkd4thx2y29epj7dt7q.png" alt="https://dev-to-uploads.s3.amazonaws.com/i/5rkd4thx2y29epj7dt7q.png" loading="lazy"></a></p>
+
+<p>This is the default scope for Twitter and to our knowledge we can't get any more granular than this. Here's a picture of our options and what we've chosen:</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--IXC4O-w0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/m3wnwz9rdofwdljyn7w7.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--IXC4O-w0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/m3wnwz9rdofwdljyn7w7.png" alt="https://dev-to-uploads.s3.amazonaws.com/i/m3wnwz9rdofwdljyn7w7.png" loading="lazy"></a></p>
+
+<p>We take a strong stance against collecting unnecessary data on our users as stated on our <a href="https://dev.to/privacy">privacy page</a>.</p>
+
+<h3>
+  <a name="i-signed-up-to-dev-with-githubtwitter-but-cant-figure-out-how-to-disconnect-or-switch-out-this-oauth-method-from-my-account-can-you-help-me" href="#i-signed-up-to-dev-with-githubtwitter-but-cant-figure-out-how-to-disconnect-or-switch-out-this-oauth-method-from-my-account-can-you-help-me">
+  </a>
+  I signed up to DEV with GitHub/Twitter, but can't figure out how to disconnect or switch out this OAuth method from my account. Can you help me?
+</h3>
+
+<p>The problem you're running into is because you must have one OAuth method always connected to your DEV account. </p>
+
+<p>The easiest way to go about solving this issue is to add another OAuth method to your DEV account. There are a couple of ways you can approach this…</p>
+
+<p>Firstly, you can add a Forem account to your DEV account by <a href="https://account.forem.com/">creating one here</a> and then connecting it to your account via your <a href="https://dev.to/settings/account">settings</a>. Once you’ve done so, you can then disconnect your GitHub/Twitter account from your DEV profile and add your desired account.</p>
+
+<p>Just scroll down underneath the "Danger Zone" and click "Remove GitHub" or "Remove Twitter" (whichever is applicable). After refreshing the page, you'll see the option to add the new account.</p>
+
+<p>If you’d rather not create a Forem account, you can use the same process above but connect a GitHub/Twitter account to your DEV account instead prior to removing the GitHub/Twitter account you'd like to remove.</p>
+
+<p>Alternatively, if you'd rather not connect a GitHub/Twitter account to your DEV account. You can create a new DEV account with your desired OAuth method and email us at <a href="mailto:yo@dev.to">yo@dev.to</a> requesting that we merge your two accounts together. If this is the case, be prepared to prove ownership over both of your accounts.</p>
+
+<h3>
+  <a name="can-i-sign-up-with-email-and-password" href="#can-i-sign-up-with-email-and-password">
+  </a>
+  Can I sign up with email and password?
+</h3>
+
+<p>As part of our spam prevention defense, we do not currently offer folks the option to sign up via email.</p>
+
+<p>Right now we only offer the option to sign up using OAuth. We offer traditional OAuth methods like Twitter, Apple, and GitHub, but also offer sign up via our own OAuth method called Forem Passport which you can learn about here. In short, Forem passport will allow you to easily sign up with any Forem community like DEV, CodeNewbie, or others.</p>
+
+
+      </div>
+    </div>
+</main>
+<div id="IS_CENTERED_PAGE"></div>
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  </body>
+  </html>

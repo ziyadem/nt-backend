@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Videos - DEV Community</title>
+      <meta name="last-updated" content="2023-04-04 03:20:10 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1680578410">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://dev.to/assets/base-9367e1923af849f8b2501fbc3dbb112ec2a9c13b7b7095d2a6c9fa25064774e4.js" defer="defer"></script>
+        <script src="https://dev.to/packs/js/runtime~base-c78c7355d34f41bec100.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-e69699ee885daf54b5a1.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+      
+  <link rel="canonical" href="https://dev.to/videos" />
+  <meta name="description" content="A constructive and inclusive social network for software developers. With you every step of your journey.">
+  <meta name="keywords" content="software development, engineering, rails, javascript, ruby">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dev.to/videos" />
+  <meta property="og:title" content="Videos - DEV Community" />
+  <meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+  <meta property="og:description" content="All videos on DEV Community" />
+  <meta property="og:site_name" content="DEV Community" />
+
+  <meta name="twitter:site" content="@thepracticaldev">
+  <meta name="twitter:title" content="Videos - DEV Community">
+  <meta name="twitter:description" content="All videos on DEV Community">
+  <meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico" />
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192" />
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" />
+      <meta property="forem:domain" content="dev.to" />
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-locale="en"
+        data-honeybadger-key="a45862f6"
+        data-deployed-at="2023-04-03T21:49:30Z"
+        data-latest-commit-id="b412daa3eaf890d4c0c17fe5e4412f1193910e30"
+        data-ga-tracking="UA-71991109-1"
+        data-ga4-tracking-id="G-TYEM8Y3JN3"
+        >
+        <link rel="stylesheet" href="https://dev.to/assets/minimal-2c667aea90bcfdf7cbbaa64adb374d442dedce4719e29eb54ecdb44c3513e4f2.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://dev.to/assets/crayons-c3fc53b3b8180e47c2d711b1b897c01f424c015290ed93770e6ccf89a6e17a2d.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ayongsjw4ll6q4rtzc1vfl0r18bs9l3" class="crayons-icon"><title id="ayongsjw4ll6q4rtzc1vfl0r18bs9l3">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a8nehxm88wubs64haup80t18ybl40pxo" aria-hidden="true" class="crayons-icon"><title id="a8nehxm88wubs64haup80t18ybl40pxo">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="apioonfurkwj33nleilss6m3znep0l1q" class="crayons-icon"><title id="apioonfurkwj33nleilss6m3znep0l1q">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ajc6e7864lium1lizbjrq8thajtnevpj" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="ajc6e7864lium1lizbjrq8thajtnevpj">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper videos videos-index" data-current-page="videos-index">
+  <div id="page-content-inner">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+
+<div id="index-container" data-which="videos" data-params="{}">
+
+  <main id="main-content" class="crayons-layout crayons-layout--header-inside">
+    <header class="crayons-page-header">
+      <h1 class="crayons-title">DEV Community on Video</h1>
+    </header>
+    <div class="js-video-collection grid gap-2 m:gap-4 s:grid-cols-2 m:grid-cols-3 mb-6">
+        <a href="/rutikkpatel/how-to-create-a-website-using-html-and-css-only-build-a-website-in-30-minutes-html-css-projects-2i2j" id="video-article-1422013" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="How to create a Website Using HTML and CSS Only | Build a Website in 30 minutes | HTML CSS Projects" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--Sm2OiqPJ--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__e9504d484cbb272461a4ab804ccb6c64/thumbs-video-upload__e9504d484cbb272461a4ab804ccb6c64-00001.png" />
+            <span class="media-card__artwork__badge">34:51</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">How to create a Website Using HTML and CSS Only | Build a Website in 30 minutes | HTML CSS Projects</h2>
+            <small class="fs-s">
+              Rutvik Patel
+            </small>
+          </div>
+        </a>
+        <a href="/mmafrar/software-systems-development-session-5-28k0" id="video-article-1420397" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Software Systems Development - Session 5" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--HRkEBJmf--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__9e33224167442ef6e51dce714e1cdce9/thumbs-video-upload__9e33224167442ef6e51dce714e1cdce9-00001.png" />
+            <span class="media-card__artwork__badge">1:07:31</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Software Systems Development - Session 5</h2>
+            <small class="fs-s">
+              Afrar Malakooth
+            </small>
+          </div>
+        </a>
+        <a href="/mmafrar/software-systems-development-session-3-5hea" id="video-article-1395509" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Software Systems Development - Session 3" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--0ocrZXQu--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__4f79bd26cc72e5b094954b46eb129eb4/thumbs-video-upload__4f79bd26cc72e5b094954b46eb129eb4-00001.png" />
+            <span class="media-card__artwork__badge">3:24:13</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Software Systems Development - Session 3</h2>
+            <small class="fs-s">
+              Afrar Malakooth
+            </small>
+          </div>
+        </a>
+        <a href="/mmafrar/software-systems-development-session-2-2dp" id="video-article-1381884" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Software Systems Development - Session 2" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--exOCpctU--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__51f7da7cdf45c858e0474a24fac3ce62/thumbs-video-upload__51f7da7cdf45c858e0474a24fac3ce62-00001.png" />
+            <span class="media-card__artwork__badge">2:04:55</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Software Systems Development - Session 2</h2>
+            <small class="fs-s">
+              Afrar Malakooth
+            </small>
+          </div>
+        </a>
+        <a href="/souviktests/im-planning-to-build-a-new-os-for-embedded-smart-displays-319e" id="video-article-1386212" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="I&#39;m planning to build a new OS for embedded smart displays" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--_poRaDPO--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vtpkyj6vj7tj7d5z7smv.jpg" />
+            <span class="media-card__artwork__badge">00:17</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">I&#39;m planning to build a new OS for embedded smart displays</h2>
+            <small class="fs-s">
+              Souvik Paul
+            </small>
+          </div>
+        </a>
+        <a href="/mmafrar/software-systems-development-session-4-47lc" id="video-article-1407119" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Software Systems Development - Session 4" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--yXlRY6vh--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__a4c0b1e3f89b526ea7b7ab7bde62d1cf/thumbs-video-upload__a4c0b1e3f89b526ea7b7ab7bde62d1cf-00001.png" />
+            <span class="media-card__artwork__badge">2:08:12</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Software Systems Development - Session 4</h2>
+            <small class="fs-s">
+              Afrar Malakooth
+            </small>
+          </div>
+        </a>
+        <a href="/adrai/fastest-way-to-unleash-the-full-power-of-i18next-3bbm" id="video-article-1362099" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Fastest way to unleash the full power of i18next" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--PIhspn9V--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__b1af9575c86c0ea75c555cca29d756ab/thumbs-video-upload__b1af9575c86c0ea75c555cca29d756ab-00001.png" />
+            <span class="media-card__artwork__badge">01:48</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Fastest way to unleash the full power of i18next</h2>
+            <small class="fs-s">
+              Adriano Raiano
+            </small>
+          </div>
+        </a>
+        <a href="/selectdb/design-of-multi-table-materialized-viewapache-doris-summit-2022-2fkm" id="video-article-1356788" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="&quot;Design of Multi-Table Materialized View&quot;_Apache Doris Summit 2022" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--TTu4jprO--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__8705936a974e5e7641f713e4be0f66f6/thumbs-video-upload__8705936a974e5e7641f713e4be0f66f6-00001.png" />
+            <span class="media-card__artwork__badge">08:21</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">&quot;Design of Multi-Table Materialized View&quot;_Apache Doris Summit 2022</h2>
+            <small class="fs-s">
+              SelectDB
+            </small>
+          </div>
+        </a>
+        <a href="/voronovskiy/welcome-to-solcial-web3-social-media-network-on-solana-234h" id="video-article-1399061" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Welcome to Solcial (Web3 Social Media Network on Solana)" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--Y0Y-_EK7--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__fde2598d566281016c1be964fb28e816/thumbs-video-upload__fde2598d566281016c1be964fb28e816-00001.png" />
+            <span class="media-card__artwork__badge">01:03</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Welcome to Solcial (Web3 Social Media Network on Solana)</h2>
+            <small class="fs-s">
+              Vadim Voronovskiy
+            </small>
+          </div>
+        </a>
+        <a href="/jonesrussell/chatgpt-created-reactjs-components-1el1" id="video-article-1397379" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="ChatGPT created ReactJS Components" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--3ZsDVf9l--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__1f5918b92c3425f7a5c70e58caf6d001/thumbs-video-upload__1f5918b92c3425f7a5c70e58caf6d001-00001.png" />
+            <span class="media-card__artwork__badge">11:01</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">ChatGPT created ReactJS Components</h2>
+            <small class="fs-s">
+              Russell Jones
+            </small>
+          </div>
+        </a>
+        <a href="/selectdb/features-of-data-lake-federated-analysisapache-doris-summit-2022-4aa9" id="video-article-1356308" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="&quot;Features of Data Lake Federated Analysis&quot;_Apache Doris Summit 2022" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--UWhpNxf3--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__0643fce1d88fd10e0ff4f812e5652a99/thumbs-video-upload__0643fce1d88fd10e0ff4f812e5652a99-00001.png" />
+            <span class="media-card__artwork__badge">31:03</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">&quot;Features of Data Lake Federated Analysis&quot;_Apache Doris Summit 2022</h2>
+            <small class="fs-s">
+              SelectDB
+            </small>
+          </div>
+        </a>
+        <a href="/devgeetech/human-like-ai-conversations-giving-a-voice-to-chatgpt-with-murf-1k7b" id="video-article-1395504" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Human-like AI Conversations: Giving a Voice to ChatGPT with Murf" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--_JUHJxAo--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__89cb00f76f432c16c9b5debc76512a3c/thumbs-video-upload__89cb00f76f432c16c9b5debc76512a3c-00001.png" />
+            <span class="media-card__artwork__badge">01:47</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Human-like AI Conversations: Giving a Voice to ChatGPT with Murf</h2>
+            <small class="fs-s">
+              Joel Gee Roy
+            </small>
+          </div>
+        </a>
+        <a href="/jonesrussell/add-a-google-font-to-tailwind-css-2023-651" id="video-article-1395810" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Add a Google Font to Tailwind CSS | 2023" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--NS54vwXt--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__fd92fdb18cd92c2ccc3685149b12b150/thumbs-video-upload__fd92fdb18cd92c2ccc3685149b12b150-00001.png" />
+            <span class="media-card__artwork__badge">07:17</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Add a Google Font to Tailwind CSS | 2023</h2>
+            <small class="fs-s">
+              Russell Jones
+            </small>
+          </div>
+        </a>
+        <a href="/oruchepaschal/my-experience-at-techfest-organized-by-the-tech-savvy-law-club-in-ekiti-state-university-nigeria-1062" id="video-article-1394467" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="My experience at TechFest organized by the Tech Savvy Law club in Ekiti State University, Nigeria." loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--tgURY-vJ--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__c3482952173eb662d7d9a799a2891bce/thumbs-video-upload__c3482952173eb662d7d9a799a2891bce-00001.png" />
+            <span class="media-card__artwork__badge">01:22</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">My experience at TechFest organized by the Tech Savvy Law club in Ekiti State University, Nigeria.</h2>
+            <small class="fs-s">
+              Oruche Paschal
+            </small>
+          </div>
+        </a>
+        <a href="/selectdb/dorissummit2022-mpp-query-execution-modelvectorized-executionadaptive-executionmemory-management-639" id="video-article-1350317" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="DorisSummit2022: MPP Query Execution Model&amp;Vectorized Execution&amp;Adaptive Execution&amp;Memory Management" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--umWssOEv--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__e74685f9cb4ac826cc4ad182bcaac473/thumbs-video-upload__e74685f9cb4ac826cc4ad182bcaac473-00001.png" />
+            <span class="media-card__artwork__badge">37:02</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">DorisSummit2022: MPP Query Execution Model&amp;Vectorized Execution&amp;Adaptive Execution&amp;Memory Management</h2>
+            <small class="fs-s">
+              SelectDB
+            </small>
+          </div>
+        </a>
+        <a href="/mmafrar/software-systems-development-session-1-14nh" id="video-article-1372585" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Software Systems Development - Session 1" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--KpLkD6Ip--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__16c7cf798df46eddb03882433cc54bfc/thumbs-video-upload__16c7cf798df46eddb03882433cc54bfc-00001.png" />
+            <span class="media-card__artwork__badge">2:29:31</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Software Systems Development - Session 1</h2>
+            <small class="fs-s">
+              Afrar Malakooth
+            </small>
+          </div>
+        </a>
+        <a href="/apachedoris/dorissummit2022-new-journey-apache-doris-in-2022-by-mingyu-chen-2mm2" id="video-article-1344627" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="DorisSummit2022: [New Journey—Apache Doris in 2022] by Mingyu Chen" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--TL1HOjXe--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__83a96c784387aa33269a3c1326f87903/thumbs-video-upload__83a96c784387aa33269a3c1326f87903-00001.png" />
+            <span class="media-card__artwork__badge">16:35</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">DorisSummit2022: [New Journey—Apache Doris in 2022] by Mingyu Chen</h2>
+            <small class="fs-s">
+              Apache Doris
+            </small>
+          </div>
+        </a>
+        <a href="/onesdotcom/ones-product-overview-2cn1" id="video-article-1356603" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="ONES Product Overview" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--BtW2TXSx--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__43cff12623b1a99c219642cdc622ca03/thumbs-video-upload__43cff12623b1a99c219642cdc622ca03-00001.png" />
+            <span class="media-card__artwork__badge">02:28</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">ONES Product Overview</h2>
+            <small class="fs-s">
+              Sofia
+            </small>
+          </div>
+        </a>
+        <a href="/jon_snow789/codepen-designs-33-playing-kid-morph-and-skeletal-animation-33ah" id="video-article-1354617" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="CodePen Designs - 33 : playing kid — morph and skeletal animation" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--W5BsswWE--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__445787f60d8b3bdae0dce00a7f8735be/thumbs-video-upload__445787f60d8b3bdae0dce00a7f8735be-00001.png" />
+            <span class="media-card__artwork__badge">00:48</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">CodePen Designs - 33 : playing kid — morph and skeletal animation</h2>
+            <small class="fs-s">
+              Jon Snow
+            </small>
+          </div>
+        </a>
+        <a href="/pyladiesdub/pyladies-dublin-jan-2023-meetup-f88" id="video-article-1349820" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="🎉 PyLadies Dublin Jan 2023 Meetup" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--8QHoZctl--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__524b3922dd41e6f6b0744d81d998cedf/thumbs-video-upload__524b3922dd41e6f6b0744d81d998cedf-00001.png" />
+            <span class="media-card__artwork__badge">58:13</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">🎉 PyLadies Dublin Jan 2023 Meetup</h2>
+            <small class="fs-s">
+              whykay 👩🏻‍💻🐈🏳️‍🌈 (she/her)
+            </small>
+          </div>
+        </a>
+        <a href="/jon_snow789/codepen-designs-28-css-only-cubes-hover-effects-1cig" id="video-article-1345772" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="CodePen Designs - 28 : CSS Only Cubes Hover Effects" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--VhGxF1Ko--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__1e42eb0bab4abb3c63baeb5e8bdfe69f/thumbs-video-upload__1e42eb0bab4abb3c63baeb5e8bdfe69f-00001.png" />
+            <span class="media-card__artwork__badge">00:08</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">CodePen Designs - 28 : CSS Only Cubes Hover Effects</h2>
+            <small class="fs-s">
+              Jon Snow
+            </small>
+          </div>
+        </a>
+        <a href="/ciscoemerge/how-did-we-get-from-legacy-to-microservices-4eml" id="video-article-1336171" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="How did we get from legacy to microservices?" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--UC9xyXCx--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__700ed630bd8526fd2d0d280c311f7071/thumbs-video-upload__700ed630bd8526fd2d0d280c311f7071-00001.png" />
+            <span class="media-card__artwork__badge">05:55</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">How did we get from legacy to microservices?</h2>
+            <small class="fs-s">
+              Michael Chenetz
+            </small>
+          </div>
+        </a>
+        <a href="/avillela/running-tracetest-and-the-opentelemetry-demo-app-on-hashicorp-nomad-44el" id="video-article-1333600" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="Running Tracetest and the OpenTelemetry Demo App on HashiCorp Nomad" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ew9GawSw--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__c019560335a48e5812bb8748971da6bf/thumbs-video-upload__c019560335a48e5812bb8748971da6bf-00001.png" />
+            <span class="media-card__artwork__badge">04:07</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">Running Tracetest and the OpenTelemetry Demo App on HashiCorp Nomad</h2>
+            <small class="fs-s">
+              Adriana Villela
+            </small>
+          </div>
+        </a>
+        <a href="/bishopwm/my-first-server-and-rest-api-essentials-for-frontenders-2gnk" id="video-article-1326573" class="crayons-card media-card">
+          <div class="media-card__artwork">
+            <img alt="My First Server and REST API: Essentials for Frontenders" loading="lazy" class="w-100 object-cover block aspect-16-9 h-auto" width="320" height="180" src="https://res.cloudinary.com/practicaldev/image/fetch/s--cozIvNBj--/c_imagga_scale,f_auto,fl_progressive,h_180,q_auto,w_320/https://dw71fyauz7yz9.cloudfront.net/video-upload__83fa53e1ad61411d444c59d970f3b58f/thumbs-video-upload__83fa53e1ad61411d444c59d970f3b58f-00001.png" />
+            <span class="media-card__artwork__badge">14:08</span>
+          </div>
+          <div class="media-card__content">
+            <h2 class="fs-base mb-2 fw-medium">My First Server and REST API: Essentials for Frontenders</h2>
+            <small class="fs-s">
+              William Bishop
+            </small>
+          </div>
+        </a>
+    </div>
+    <div class="subvideos"></div>
+    <div class="loading-articles" id="loading-articles">
+      loading...
+    </div>
+  </main>
+</div>
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  </body>
+  </html>

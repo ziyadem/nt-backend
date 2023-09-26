@@ -1,0 +1,50 @@
+[
+    {
+        "id": "6dcb8bf6-9b92-4c65-912f-9ae2428f00b2",
+        "userId": "b1cf83b8-6d82-437b-8a6f-bcadddb96cb5",
+        "title": "standart",
+        "price": "200000"
+    },
+    {
+        "id": "bc6a03b3-8bb5-414a-8c96-615f02d851c8",
+        "userId": "b1cf83b8-6d82-437b-8a6f-bcadddb96cb5",
+        "title": "Vue",
+        "price": "12222"
+    },
+    {
+        "id": "3ed0274f-91e8-4448-bdd3-df072aa16a56",
+        "userId": "b1cf83b8-6d82-437b-8a6f-bcadddb96cb5",
+        "title": "Angular",
+        "price": "23454"
+    },
+    {
+        "id": "7b7ef554-66d7-42ac-93eb-e6d5ccb67c19",
+        "userId": "b1cf83b8-6d82-437b-8a6f-bcadddb96cb5",
+        "title": "Node",
+        "price": "348546"
+    },
+    {
+        "id": "935935d7-880b-4e4f-bc56-9b7216ee19fa",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "vue",
+        "price": "111"
+    },
+    {
+        "id": "53290925-b59b-49e3-b92a-c198000be0e9",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "matem",
+        "price": "32872"
+    },
+    {
+        "id": "29b2993e-1449-4132-a207-fe8fcf66fb07",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "node",
+        "price": "800000"
+    },
+    {
+        "id": "daab2178-eb7c-4f94-ab84-60e66e828d8b",
+        "userId": "45cbe94c-898e-4425-922d-c45434cc825b",
+        "title": "angular",
+        "price": "2222"
+    }
+]
